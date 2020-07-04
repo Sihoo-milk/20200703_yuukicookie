@@ -1,0 +1,40 @@
+* {
+  list-style: none;
+  font-family: 遊ゴシック体;
+}
+
+.mv {
+  background-image: url(/img/mv_bg.jpg);
+  background-size: cover;
+  &__title {
+    display: block;
+    width: 100%;
+  }
+  &__btns {
+    display: flex;
+    padding-left: get_vw(222);
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-right: get_vw(15);
+    padding: get_vw(18) get_vw(20);
+    font-size: get_vw(18);
+    text-decoration: none;
+    color: #fff;
+    border-radius: get_vw(10);
+    &--what {
+      background: #0d5289;
+      border-bottom: solid get_vw(4) #002641;
+    }
+    &--here {
+      background: #2d9748;
+      border-bottom:  solid get_vw(4) #08581c;
+    }
+  }
+  &__trial {
+    display: block;
+    width: 100%;
+  }
+}
+

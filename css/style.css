@@ -1,0 +1,140 @@
+@charset "UTF-8";
+* {
+  list-style: none;
+  font-family: 遊ゴシック体;
+}
+
+.mv {
+  background-image: url(/img/mv_bg.jpg);
+  background-size: cover;
+}
+
+.mv__title {
+  display: block;
+  width: 100%;
+}
+
+.mv__btns {
+  display: flex;
+  padding-left: 17.34375vw;
+}
+
+.mv__btn {
+  display: flex;
+  align-items: center;
+  margin-right: 1.17188vw;
+  padding: 1.40625vw 1.5625vw;
+  font-size: 1.40625vw;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0.78125vw;
+}
+
+.mv__btn--what {
+  background: #0d5289;
+  border-bottom: solid 0.3125vw #002641;
+}
+
+.mv__btn--here {
+  background: #2d9748;
+  border-bottom: solid 0.3125vw #08581c;
+}
+
+.mv__trial {
+  display: block;
+  width: 100%;
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding: 0 1.95312vw 0 1.17188vw;
+  color: #0d5289;
+  text-decoration: none;
+}
+
+.round::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  width: 1.95312vw;
+  height: 1.95312vw;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.round::after {
+  position: absolute;
+  top: -0.23438vw;
+  bottom: 0;
+  left: 1.71875vw;
+  margin: auto;
+  content: "";
+  width: 0.78125vw;
+  height: 0.78125vw;
+  border-top: 0.23438vw solid #0d5289;
+  border-right: 0.23438vw solid #0d5289;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeUp {
+  animation-name: fadeUp;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeLeft {
+  animation-name: fadeLeft;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
