@@ -3,8 +3,87 @@
   font-family: 遊ゴシック体;
 }
 
+.bg {
+  background-image: url(../img/bg.png);
+  background-size: cover;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  display: block;
+  width: get_vw(259);
+  height: get_vw(153);
+}
+
+.nav {
+  margin-right: get_vw(30);
+  &__list {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    padding-top: get_vw(55);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: get_vw(14);
+    font-weight: bold;
+    line-height: 3.57142857143;
+    letter-spacing: .1em;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: get_vw(1);
+      height: get_vw(50);
+      margin: auto;
+      background-color: #000;
+    }
+  }
+  &__link {
+    position: relative;
+    margin-left: get_vw(16);
+    padding-top: get_vw(43);
+    line-height: 3.57142857143;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: get_vw(1);
+      height: get_vw(43);
+      margin: auto;
+      background-color: #000;
+    }
+    &-content {
+      height: get_vw(205);
+      padding: get_vw(12) 0;
+      border-bottom: get_vw(3) solid #08581c;
+      border-radius: get_vw(8);
+      background: #2d9748;
+    }
+  }
+  &__btn {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: get_vw(13);
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: #fff;
+  }
+}
+
 .mv {
-  background-image: url(/img/mv_bg.jpg);
+  background-image: url(../img/mv_bg.png);
   background-size: cover;
   &__title {
     display: block;
@@ -18,8 +97,11 @@
     display: flex;
     align-items: center;
     margin-right: get_vw(15);
-    padding: get_vw(18) get_vw(20);
+    padding: 0 get_vw(20);
     font-size: get_vw(18);
+    font-weight: bold;
+    line-height: 3.33333333333;
+    letter-spacing: .15em;
     text-decoration: none;
     color: #fff;
     border-radius: get_vw(10);
@@ -38,3 +120,23 @@
   }
 }
 
+.calorie {
+  display: flex;
+  &__column1 {
+    display: block;
+    width: get_vw(355);
+  }
+  &__column2 {
+  }
+  &__line1 {
+    display: flex;
+  }
+  &__main {
+    display: block;
+    width: get_vw(505);
+  }
+  &__cookie {
+    display: block;
+    width: get_vw(420);
+  }
+}
