@@ -45,7 +45,7 @@
 @keyframes fadeUp {
   from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(get_vw(100));
   }
   to {
       opacity: 1;
@@ -56,7 +56,7 @@
 @keyframes fadeDown {
   from {
       opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(get_vw(-100px));
   }
   to {
       opacity: 1;
@@ -67,10 +67,36 @@
 @keyframes fadeLeft {
   from {
       opacity: 0;
-      transform: translateX(-30px);
+      transform: translateX(get_vw(-100));
   }
   to {
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+.sa {
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.sa--lr {
+  transform: translate(get_vw(-100), 0);
+}
+
+.sa--rl {
+  transform: translate(get_vw(100), 0);
+}
+
+.sa--up {
+  transform: translate(0, get_vw(100));
+}
+
+.sa--down {
+  transform: translate(0, get_vw(100));
 }

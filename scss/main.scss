@@ -139,4 +139,23 @@
     display: block;
     width: get_vw(420);
   }
+  &__line2 {
+    display: flex;
+  }
+  &__txt {
+    width: get_vw(555);
+    padding-left: get_vw(31);
+    text-align: center;
+    font-size: get_vw(16);
+    line-height: 2;
+    letter-spacing: .1em;
+    &--blue {
+      font-weight: bold;
+      color: #0d5289;
+    }
+  }
+  &__girl {
+    display: block;
+    width: get_vw(370);
+  }
 }

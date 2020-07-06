@@ -41,14 +41,43 @@
     </section>
 
     <section class="calorie">
-      <img class="calorie__column1" src="img/calorie_family.png" alt="親子">
+      <img class="calorie__column1 sa sa--lr" src="img/calorie_family.png" alt="親子">
       <div class="calorie__column2">
         <div class="calorie__line1">
-          <img class="calorie__main" src="img/calorie_main.png" alt="">
-          <img class="calorie__cookie" src="img/calorie_cookie.png" alt="">
+          <img class="calorie__main sa sa--up" src="img/calorie_main.png" alt="1日3〜5枚で おこさまのおやつにちょうどいいカロリーがしっかり摂れる">
+          <img class="calorie__cookie sa sa--rl" src="img/calorie_cookie.png" alt="クッキー">
+        </div>
+        <div class="calorie__line2">
+          <p class="calorie__txt sa sa--up">
+            3〜5歳くらいのお⼦さまの1⽇の必要カロリーは<br>
+            1,200〜1,400カロリーくらいが⽬安で、<br>
+            おやつで摂取するカロリーは1⽇の総エネルギーの<br>
+            <span class="calorie__txt--blue">10〜20％(120〜280カロリー)以内が理想</span>と⾔われています。<br>
+            <br>
+            “おいしい有機クッキー”は1枚当たり26〜28カロリーとなっており、<br>
+            5枚で130〜140カロリーが摂れ、また⽐較的糖分も低く、<br>
+            毎⽇⾷べても安⼼なクッキーです。<br>
+          </p>
+          <img class="calorie__girl sa sa--rl" src="img/calorie_girl.png" alt="女の子">
         </div>
       </div>
     </section>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script>
+      $(function(){
+        $(window).scroll(function (){
+          $('.sa').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 400){
+              $(this).addClass('show');
+            }
+          });
+        });
+      });
+    </script>
   </div>
 </body>
 </html>
