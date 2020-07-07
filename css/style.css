@@ -163,7 +163,6 @@
 
 .calorie__txt {
   width: 43.35938vw;
-  padding-left: 2.42188vw;
   text-align: center;
   font-size: 1.25vw;
   line-height: 2;
@@ -178,6 +177,222 @@
 .calorie__girl {
   display: block;
   width: 28.90625vw;
+}
+
+.organic__what {
+  display: flex;
+}
+
+.organic__what-leaf--left {
+  display: block;
+  width: 26.5625vw;
+}
+
+.organic__what-leaf--right {
+  display: block;
+  width: 26.5625vw;
+}
+
+.organic__what-title {
+  display: block;
+  width: 46.875vw;
+}
+
+.organic__kind {
+  display: flex;
+}
+
+.organic__kind-family {
+  display: block;
+  width: 57.03125vw;
+}
+
+.organic__kind-word {
+  display: flex;
+}
+
+.organic__kind-side {
+  padding-top: 6.25vw;
+  padding-left: 4.29688vw;
+}
+
+.organic__kind-dt {
+  margin-top: 2.57812vw;
+  font-size: 1.25vw;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.organic__kind-dt:first-child {
+  margin-top: 0;
+}
+
+.organic__kind-dd {
+  font-size: 1.25vw;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.organic__kind-vertical {
+  padding-top: 1.64062vw;
+  padding-left: 2.73438vw;
+}
+
+.organic__kind-txt {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 2.1875vw;
+  font-weight: bold;
+  line-height: 1.71428571429;
+  letter-spacing: .1em;
+  color: #0d5289;
+}
+
+.organic__sweets {
+  display: flex;
+}
+
+.organic__sweets-leaf {
+  display: block;
+  width: 27.34375vw;
+}
+
+.organic__sweets-title {
+  display: block;
+  width: 72.65625vw;
+}
+
+.organic__manufacture {
+  display: flex;
+  justify-content: space-between;
+}
+
+.organic__manufacture-word {
+  display: flex;
+}
+
+.organic__manufacture-vertical {
+  padding-left: 5.46875vw;
+}
+
+.organic__manufacture-txt {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 2.1875vw;
+  font-weight: bold;
+  line-height: 1.71428571429;
+  letter-spacing: .1em;
+  color: #0d5289;
+}
+
+.organic__manufacture-side {
+  padding-left: 4.29688vw;
+}
+
+.organic__manufacture-dt {
+  margin-top: 2.57812vw;
+  font-size: 1.25vw;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.organic__manufacture-dt:first-child {
+  margin-top: 0;
+}
+
+.organic__manufacture-dd {
+  font-size: 1.25vw;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.organic__manufacture-packing {
+  display: block;
+  width: 57.03125vw;
+}
+
+.organic__jas {
+  display: flex;
+}
+
+.organic__jas-leaf--left {
+  display: block;
+  width: 31.25vw;
+}
+
+.organic__jas-leaf--right {
+  display: block;
+  width: 14.84375vw;
+}
+
+.organic__jas-title {
+  display: block;
+  width: 53.90625vw;
+}
+
+.organic__japan {
+  display: block;
+  width: 100vw;
+}
+
+.organic__boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 7.03125vw;
+}
+
+.organic__boxes-dt {
+  padding-right: 1.17188vw;
+  padding-left: 1.17188vw;
+  font-size: 1.875vw;
+  font-weight: bold;
+  line-height: 1.66666666667;
+  letter-spacing: .1em;
+}
+
+.organic__boxes-dd {
+  font-size: 1.25vw;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.organic__raw-material {
+  display: flex;
+  width: 40.625vw;
+  padding-top: 1.5625vw;
+}
+
+.organic__production-plant {
+  display: flex;
+  width: 40.625vw;
+  padding-top: 1.5625vw;
+}
+
+.organic__order {
+  display: flex;
+  justify-content: center;
+  padding: 4.29688vw 0 10.46875vw;
+}
+
+.organic__btn {
+  display: flex;
+  align-items: center;
+  margin-right: 1.17188vw;
+  padding: 0 1.5625vw;
+  font-size: 1.40625vw;
+  font-weight: bold;
+  line-height: 3.33333333333;
+  letter-spacing: .15em;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0.78125vw;
+}
+
+.organic__btn--here {
+  background: #2d9748;
+  border-bottom: solid 0.3125vw #08581c;
 }
 
 .arrow {
