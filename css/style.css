@@ -2,6 +2,7 @@
 * {
   list-style: none;
   font-family: 遊ゴシック体;
+  font-feature-settings: "palt" 1;
 }
 
 .bg {
@@ -440,6 +441,91 @@
   display: block;
   width: 100vw;
   margin-top: 5.07812vw;
+}
+
+.commitment {
+  position: relative;
+  padding: 9.29688vw 0 9.45312vw;
+}
+
+.commitment__title {
+  display: block;
+  width: 100vw;
+}
+
+.commitment__icon-okara {
+  position: absolute;
+  top: 16.32812vw;
+  display: block;
+  width: 100vw;
+}
+
+.commitment__explanation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.82812vw;
+}
+
+.commitment__okara {
+  width: 40.625vw;
+  height: 52.42188vw;
+  margin-left: 6.40625vw;
+  padding-top: 4.6875vw;
+  padding-right: 4.53125vw;
+  padding-left: 5.3125vw;
+  background-image: url(../img/commitment_okara-bg.png);
+  background-size: cover;
+}
+
+.commitment__okara-title {
+  text-align: center;
+  font-size: 1.875vw;
+  font-weight: bold;
+  line-height: 1.66666666667;
+  letter-spacing: .1em;
+}
+
+.commitment__okara-txt {
+  margin-top: 2.34375vw;
+  font-size: 1.25vw;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.commitment__okara-txt--blue {
+  font-weight: bold;
+  color: #2b5f8f;
+}
+
+.commitment__recipe {
+  width: 40.625vw;
+  height: 52.42188vw;
+  margin-right: 7.03125vw;
+  padding-top: 4.6875vw;
+  padding-right: 4.53125vw;
+  padding-left: 4.6875vw;
+  background-image: url(../img/commitment_recipe-bg.png);
+  background-size: cover;
+}
+
+.commitment__recipe-title {
+  text-align: center;
+  font-size: 1.875vw;
+  font-weight: bold;
+  line-height: 1.66666666667;
+  letter-spacing: .1em;
+}
+
+.commitment__recipe-txt {
+  margin-top: 2.34375vw;
+  font-size: 1.25vw;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.commitment__recipe-txt--blue {
+  font-weight: bold;
+  color: #2b5f8f;
 }
 
 .arrow {

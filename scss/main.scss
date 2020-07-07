@@ -1,6 +1,7 @@
 * {
   list-style: none;
   font-family: 遊ゴシック体;
+  font-feature-settings: "palt" 1;
 }
 
 .bg {
@@ -385,5 +386,79 @@
     display: block;
     width: get_vw(1280);
     margin-top: get_vw(65);
+  }
+}
+
+.commitment {
+  position: relative;
+  padding: get_vw(119) 0 get_vw(121);
+  &__title {
+    display: block;
+    width: get_vw(1280);
+  }
+  &__icon-okara {
+    position: absolute;
+    top: get_vw(209);
+    display: block;
+    width: get_vw(1280);
+  }
+  &__explanation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: get_vw(49);
+  }
+  &__okara {
+    width: get_vw(520);
+    height: get_vw(671);
+    margin-left: get_vw(82);
+    padding-top: get_vw(60);
+    padding-right: get_vw(58);
+    padding-left: get_vw(68);
+    background-image: url(../img/commitment_okara-bg.png);
+    background-size: cover;
+    &-title {
+      text-align: center;
+      font-size: get_vw(24);
+      font-weight: bold;
+      line-height: 1.66666666667;
+      letter-spacing: .1em;
+    }
+    &-txt {
+      margin-top: get_vw(30);
+      font-size: get_vw(16);
+      line-height: 2;
+      letter-spacing: .1em;
+      &--blue {
+        font-weight: bold;
+        color: #2b5f8f;
+      }
+    }
+  }
+  &__recipe {
+    width: get_vw(520);
+    height: get_vw(671);
+    margin-right: get_vw(90);
+    padding-top: get_vw(60);
+    padding-right: get_vw(58);
+    padding-left: get_vw(60);
+    background-image: url(../img/commitment_recipe-bg.png);
+    background-size: cover;
+    &-title {
+      text-align: center;
+      font-size: get_vw(24);
+      font-weight: bold;
+      line-height: 1.66666666667;
+      letter-spacing: .1em;
+    }
+    &-txt {
+      margin-top: get_vw(30);
+      font-size: get_vw(16);
+      line-height: 2;
+      letter-spacing: .1em;
+      &--blue {
+        font-weight: bold;
+        color: #2b5f8f;
+      }
+    }
   }
 }
