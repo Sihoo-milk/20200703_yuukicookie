@@ -379,7 +379,6 @@
 .organic__btn {
   display: flex;
   align-items: center;
-  margin-right: 1.17188vw;
   padding: 0 1.5625vw;
   font-size: 1.40625vw;
   font-weight: bold;
@@ -393,6 +392,54 @@
 .organic__btn--here {
   background: #2d9748;
   border-bottom: solid 0.3125vw #08581c;
+}
+
+.world__title {
+  display: block;
+  width: 100vw;
+  margin-top: 8.59375vw;
+}
+
+.world__words {
+  display: flex;
+  justify-content: space-between;
+}
+
+.world__collect {
+  margin-top: 12.5vw;
+  margin-left: 14.84375vw;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 2.1875vw;
+  font-weight: bold;
+  line-height: 1.71428571429;
+  letter-spacing: .1em;
+  color: #0d5289;
+}
+
+.world__explanation {
+  margin-top: 39.0625vw;
+  font-size: 1.25vw;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.world__delicious {
+  margin-top: 8.98438vw;
+  margin-right: 17.96875vw;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 2.1875vw;
+  font-weight: bold;
+  line-height: 1.71428571429;
+  letter-spacing: .1em;
+  color: #0d5289;
+}
+
+.world__distribution {
+  display: block;
+  width: 100vw;
+  margin-top: 5.07812vw;
 }
 
 .arrow {
