@@ -462,3 +462,45 @@
     }
   }
 }
+
+.type {
+  padding-top: get_vw(150);
+  &__title {
+    display: block;
+    width: get_vw(1280);
+    padding-bottom: get_vw(70);
+  }
+  &__explanation {
+    padding-bottom: get_vw(100);
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 get_vw(82) 0;
+  }
+  &__item {
+    width: get_vw(344);
+    &-img {
+      display: block;
+      width: 100%;
+    }
+    &-name {
+      padding-top: get_vw(15);
+      text-align: center;
+      font-size: get_vw(24);
+      font-weight: bold;
+      line-height: 1.66666666667;
+      letter-spacing: .1em;
+    }
+    &-description {
+      padding: get_vw(20) get_vw(8);
+      font-size: get_vw(16);
+      line-height: 2;
+      letter-spacing: .1em;
+    }
+    &-icon {
+      display: block;
+      width: 100%;
+    }
+  }
+}
