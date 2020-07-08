@@ -578,6 +578,67 @@
   width: 100%;
 }
 
+.fee {
+  padding-bottom: 13.28125vw;
+}
+
+.fee__title {
+  width: 100vw;
+}
+
+.fee__trial {
+  width: 100vw;
+}
+
+.fee__set {
+  display: flex;
+}
+
+.fee__set-img {
+  display: block;
+  width: 50vw;
+}
+
+.fee__payment {
+  display: flex;
+  justify-content: center;
+  padding-top: 7.03125vw;
+}
+
+.fee__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 39.0625vw;
+  padding: 1.95312vw 0;
+  color: #fff;
+  border-radius: 0.78125vw;
+  background-color: #0d5289;
+  border-bottom: solid 0.46875vw #002641;
+}
+
+.fee__btn-wrap {
+  padding-left: 7.57812vw;
+}
+
+.fee__btn-txt {
+  text-align: center;
+  font-size: 1.5625vw;
+  font-weight: bold;
+  letter-spacing: .15em;
+}
+
+.fee__btn-annotation {
+  text-align: center;
+  font-size: 1.09375vw;
+  font-weight: bold;
+  letter-spacing: .15em;
+}
+
+.fee__btn-icon {
+  padding-right: 2.34375vw;
+}
+
 .arrow {
   position: relative;
   display: inline-block;

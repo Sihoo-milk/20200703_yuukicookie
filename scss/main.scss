@@ -504,3 +504,54 @@
     }
   }
 }
+
+.fee {
+  padding-bottom: get_vw(170);
+  &__title {
+    width: get_vw(1280);
+  }
+  &__trial {
+    width: get_vw(1280);
+  }
+  &__set {
+    display: flex;
+    &-img {
+      display: block;
+      width: get_vw(640);
+    }
+  }
+  &__payment {
+    display: flex;
+    justify-content: center;
+    padding-top: get_vw(90);
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: get_vw(500);
+    padding: get_vw(25) 0;
+    color: #fff;
+    border-radius: get_vw(10);
+    background-color: #0d5289;
+    border-bottom:  solid get_vw(6) #002641;
+    &-wrap {
+      padding-left: get_vw(97);
+    }
+    &-txt {
+      text-align: center;
+      font-size: get_vw(20);
+      font-weight: bold;
+      letter-spacing: .15em;
+    }
+    &-annotation {
+      text-align: center;
+      font-size: get_vw(14);
+      font-weight: bold;
+      letter-spacing: .15em;
+    }
+    &-icon {
+      padding-right: get_vw(30);
+    }
+  }
+}
