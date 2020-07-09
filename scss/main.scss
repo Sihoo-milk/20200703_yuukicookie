@@ -751,3 +751,38 @@
   }
 }
 
+.footer {
+  position: relative;
+  &__top {
+    text-align: center;
+    background-color: #ede2d0;
+    font-size: get_vw(14);
+    line-height: 4.28571428571;
+    letter-spacing: .1em;
+  }
+  &__under {
+    padding: get_vw(28) 0 get_vw(25);
+    text-align: center;
+    background-color: #41341e;
+    font-size: get_vw(14);
+    line-height: 4.28571428571;
+    letter-spacing: .1em;
+    color: #988b76;
+  }
+  &__address {
+  }
+  &__sns {
+    display: block;
+    width: get_vw(1280);
+  }
+  &__copyright {
+    font-family: "Markazi Text";
+  }
+  &__btn-top {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: get_vw(94);
+  }
+}

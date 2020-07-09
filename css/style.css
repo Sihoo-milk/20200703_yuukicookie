@@ -850,6 +850,45 @@
   width: 100vw;
 }
 
+.footer {
+  position: relative;
+}
+
+.footer__top {
+  text-align: center;
+  background-color: #ede2d0;
+  font-size: 1.09375vw;
+  line-height: 4.28571428571;
+  letter-spacing: .1em;
+}
+
+.footer__under {
+  padding: 2.1875vw 0 1.95312vw;
+  text-align: center;
+  background-color: #41341e;
+  font-size: 1.09375vw;
+  line-height: 4.28571428571;
+  letter-spacing: .1em;
+  color: #988b76;
+}
+
+.footer__sns {
+  display: block;
+  width: 100vw;
+}
+
+.footer__copyright {
+  font-family: "Markazi Text";
+}
+
+.footer__btn-top {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 7.34375vw;
+}
+
 .arrow {
   position: relative;
   display: inline-block;
