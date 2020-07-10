@@ -516,15 +516,16 @@
   }
   &__set {
     display: flex;
+    padding-bottom: get_vw(90);
     &-img {
       display: block;
       width: get_vw(640);
     }
   }
   &__payment {
+    position: relative;
     display: flex;
     justify-content: center;
-    padding-top: get_vw(90);
   }
   &__btn {
     display: flex;
@@ -532,10 +533,11 @@
     justify-content: space-between;
     width: get_vw(500);
     padding: get_vw(25) 0;
-    color: #fff;
+    border-bottom:  solid get_vw(6) #002641;
     border-radius: get_vw(10);
     background-color: #0d5289;
-    border-bottom:  solid get_vw(6) #002641;
+    color: #fff;
+    cursor: pointer;
     &-wrap {
       padding-left: get_vw(97);
     }
@@ -778,11 +780,17 @@
   &__copyright {
     font-family: "Markazi Text";
   }
-  &__btn-top {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+}
+
+.scroll {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  &__link {
+  }
+  &__btn {
     width: get_vw(94);
+    vertical-align: bottom;
   }
 }

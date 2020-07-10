@@ -1,11 +1,11 @@
 // フェードインの設定
-$(function(){
-  $(window).scroll(function (){
-    $('.sa').each(function(){
+$(function() {
+  $(window).scroll(function () {
+    $('.sa').each(function() {
       var elemPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > elemPos - windowHeight + 300){
+      if (scroll > elemPos - windowHeight + 300) {
         $(this).addClass('show');
       }
     });
@@ -33,30 +33,14 @@ $(document).ready(function () {
   });
 });
 
-// ツールチップの設定
-$(function(){
-  $('.clickToolTip').click(function() {
-    // リンクの #note** を取得
-    var targetNote = $(this).attr('target');
-
-    // [?]の座標を取得
-    var position = $(this).position();
-    var newPositionTop = position.top + 10;        /* + 数値で下方向へ移動 */
-    var newPositionLeft = position.left + 35;      /* + 数値で右方向へ移動 */
-
-    // ツールチップの位置を調整
-    $('p' + targetNote).css({'top': newPositionTop + 'px', 'left': newPositionLeft + 'px'});
-
-    // ツールチップの class="invisible" を削除
-    $('p'+targetNote).removeClass('invisible');
+// ポップアップ
+$(function() {
+  // show popupボタンクリック時の処理
+  $('#show').click(function(e) {
+    $('#popup, #layer').show();
   });
-
-  // 表示されたツールチップを隠す処理（マウスクリックで全て隠す）
-  $('html').mousedown(function() {
-    $('.toolTip').addClass('invisible');
-  });
-  // aクリックを無効
-  $('.clickToolTip').click(function(){
-    return false;
+  // レイヤー/ポップアップのcloseボタンクリック時の処理
+  $('#close, #layer').click(function(e) {
+    $('#popup, #layer').hide();
   });
 });

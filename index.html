@@ -23,7 +23,7 @@
           <li class="nav__link">
             <div class="nav__link-content">
               <div class="nav__btn">価格表とご注⽂はこちら</div>
-              <a href="#" class="arrow arrow--vertical round--vertical"></a>
+              <a href="./" class="arrow arrow--vertical round--vertical"></a>
             </div>
           </li>
         </ul>
@@ -35,8 +35,8 @@
         <img class="mv__title" src="img/mv_title.png" alt="有機JAS認定 工場で製造する おいしく安全な、オーガニック（有機）クッキー 添加物の使用を避け、有機農産物をいかした、お子様だけでなく地球全体にやさしいクッキーです。">
       </h1>
       <div class="mv__btns fadeUp">
-        <button class="mv__btn mv__btn--what"><span>オーガニックとは</span><a href="#" class="arrow arrow--side round--side"></a></button>
-        <button class="mv__btn mv__btn--here"><span>価格表とご注文はこちら</span><a href="#" class="arrow arrow--side round--side"></a></button>
+        <button class="mv__btn mv__btn--what"><span>オーガニックとは</span><a href="./" class="arrow arrow--side round--side"></a></button>
+        <button class="mv__btn mv__btn--here"><span>価格表とご注文はこちら</span><a href="./" class="arrow arrow--side round--side"></a></button>
       </div>
       <img class="mv__trial fadeLeft" src="img/mv_trial.png" alt="お試しセット 3袋1,000円（税込）">
     </section>
@@ -140,7 +140,7 @@
         </div>
       </div>
       <div class="organic__order">
-        <button class="organic__btn organic__btn--here sa sa--up"><span>価格表とご注文はこちら</span><a href="#" class="arrow arrow--side round--side"></a></button>
+        <button class="organic__btn organic__btn--here sa sa--up"><span>価格表とご注文はこちら</span><a href="./" class="arrow arrow--side round--side"></a></button>
       </div>
     </section>
 
@@ -242,12 +242,48 @@
         <img class="fee__set-img" src="img/fee_9.png" alt="通常 9袋 3,980円(税込) オーツ⻨×3袋(5枚⼊り) ココア×3袋(5枚⼊り) ココアーモンド×3袋(5枚⼊り)">
       </div>
       <div class="fee__payment">
-        <div class="fee__btn">
+        <div id="show" class="fee__btn">
           <div class="fee__btn-wrap">
             <p class="fee__btn-txt">お⽀払いと発送に関して</p>
             <p class="fee__btn-annotation">※お⽀払いはクレジットカード決済のみです。</p>
           </div>
           <i class="fee__btn-icon fas fa-plus-circle fa-2x"></i>
+        </div>
+        <div id="layer" class="layer"></div>
+        <div id="popup" class="popup">
+          <div id="close" class="close">
+            <div class="close__content">
+              <div class="my-parts"><span></span></div>
+              <p class="close__txt">閉じる</p>
+            </div>
+          </div>
+          <dl class="popup__dl">
+            <dt class="popup__dt"><span class="popup__dt-num">01.</span>フォームからご注⽂</dt>
+            <dd class="popup__dd">
+            ページ下部のご注⽂フォームに必要事項をご⼊⼒いただき送信。<br>
+            ※お⽀払いはクレジットカード決済のみです。
+            </dd>
+            <dt class="popup__dt"><span class="popup__dt-num">01.</span>フォームからご注⽂</dt>
+            <dd class="popup__dd">
+            ページ下部のご注⽂フォームに必要事項をご⼊⼒いただき送信。<br>
+            ※お⽀払いはクレジットカード決済のみです。
+            </dd>
+            <dt class="popup__dt"><span class="popup__dt-num">01.</span>フォームからご注⽂</dt>
+            <dd class="popup__dd">
+            ページ下部のご注⽂フォームに必要事項をご⼊⼒いただき送信。<br>
+            ※お⽀払いはクレジットカード決済のみです。
+            </dd>
+            <dt class="popup__dt"><span class="popup__dt-num">01.</span>フォームからご注⽂</dt>
+            <dd class="popup__dd">
+            ページ下部のご注⽂フォームに必要事項をご⼊⼒いただき送信。<br>
+            ※お⽀払いはクレジットカード決済のみです。
+            </dd>
+            <dt class="popup__dt"><span class="popup__dt-num">01.</span>フォームからご注⽂</dt>
+            <dd class="popup__dd">
+            ページ下部のご注⽂フォームに必要事項をご⼊⼒いただき送信。<br>
+            ※お⽀払いはクレジットカード決済のみです。
+            </dd>
+          </dl>
         </div>
       </div>
     </section>
@@ -343,31 +379,23 @@
       <img class="order__leaf-right2 sa sa--rl" src="img/order_leaf-right2.png" alt="葉っぱ">
     </section>
 
-    <footer class="footer">
+    <footer>
       <div class="footer__top">プライバシーポリシー  |  特定商取引法に基づく表記</div>
       <div class="footer__under">
         <div class="footer__address">ハニークローバー株式会社 〒108-0074 東京都港区⾼輪4-1-18 ⾼輪ビル4階</div>
         <img class="footer__sns" src="img/footer_sns.png" alt="SNS">
         <div class="footer__copyright">© Honey Clover Co,Ltd. All rights reserved.</div>
       </div>
-      <img class="footer__btn-top" src="img/footer__btn-top.png" alt="ページトップへ">
     </footer>
 
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-    <script>
-      $(function(){
-        $(window).scroll(function (){
-          $('.sa').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 300){
-              $(this).addClass('show');
-            }
-          });
-        });
-      });
-    </script>
+    <div id="goto_top" class="scroll">
+      <a class="scroll__link" href="#">
+        <img class="scroll__btn" src="img/scroll_btn.png" alt="ページトップへ">
+      </a>
+    </div>
   </div>
+
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>

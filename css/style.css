@@ -593,6 +593,7 @@
 
 .fee__set {
   display: flex;
+  padding-bottom: 7.03125vw;
 }
 
 .fee__set-img {
@@ -601,9 +602,9 @@
 }
 
 .fee__payment {
+  position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 7.03125vw;
 }
 
 .fee__btn {
@@ -612,10 +613,11 @@
   justify-content: space-between;
   width: 39.0625vw;
   padding: 1.95312vw 0;
-  color: #fff;
+  border-bottom: solid 0.46875vw #002641;
   border-radius: 0.78125vw;
   background-color: #0d5289;
-  border-bottom: solid 0.46875vw #002641;
+  color: #fff;
+  cursor: pointer;
 }
 
 .fee__btn-wrap {
@@ -881,12 +883,16 @@
   font-family: "Markazi Text";
 }
 
-.footer__btn-top {
-  display: block;
-  position: absolute;
+.scroll {
+  position: fixed;
   bottom: 0;
-  right: 0;
+  width: 100%;
+  text-align: right;
+}
+
+.scroll__btn {
   width: 7.34375vw;
+  vertical-align: bottom;
 }
 
 .arrow {
@@ -1191,4 +1197,126 @@ input[type=checkbox]:checked + .checkbox01::after {
 
 .sa--down {
   transform: translate(0, 7.8125vw);
+}
+
+.layer {
+  display: none;
+  /* 初期表示は非表示 */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  display: none;
+  /* 初期表示は非表示 */
+  position: absolute;
+  top: 10.625vw;
+  left: 50%;
+  width: 62.5vw;
+  margin-left: -31.25vw;
+  padding: 3.82812vw 0 3.82812vw 4.375vw;
+  background-color: #f9f6f1;
+  border: 0.3125vw solid #0d5289;
+  border-radius: 0.625vw;
+  text-align: center;
+  z-index: 10;
+}
+
+.popup:before {
+  content: "";
+  position: absolute;
+  top: -4.60938vw;
+  left: 50%;
+  margin-left: -3.125vw;
+  border: 3.125vw solid transparent;
+  border-bottom: 1.48438vw solid #f9f6f1;
+  z-index: 2;
+}
+
+.popup:after {
+  content: "";
+  position: absolute;
+  top: -5.78125vw;
+  left: 50%;
+  margin-left: -3.90625vw;
+  border: 3.90625vw solid transparent;
+  border-bottom: 1.875vw solid #0d5289;
+  z-index: 1;
+}
+
+.popup__dl {
+  text-align: left;
+  font-size: 1.25vw;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.popup__dt {
+  color: #0d5289;
+}
+
+.popup__dt-num {
+  margin-right: 0.46875vw;
+  font-family: "Markazi Text";
+  font-size: 2.5vw;
+  line-height: 1.875;
+  letter-spacing: .05em;
+}
+
+.popup__dd {
+  margin-left: 3.20312vw;
+  color: #000;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+}
+
+.close__content {
+  display: flex;
+  margin-right: 1.95312vw;
+  cursor: pointer;
+}
+
+.close__txt {
+  margin-left: 0.46875vw;
+  font-size: 1.25vw;
+  line-height: 1;
+  letter-spacing: .1em;
+  border-bottom: 0.07812vw solid #888;
+  color: #888;
+}
+
+.my-parts {
+  display: inline-block;
+  width: 1.25vw;
+  height: 1.25vw;
+  position: relative;
+  cursor: pointer;
+}
+
+.my-parts span::before,
+.my-parts span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 17%;
+  margin: -8% 0 0 -42%;
+  background: #888;
+}
+
+.my-parts span::before {
+  transform: rotate(-45deg);
+}
+
+.my-parts span::after {
+  transform: rotate(45deg);
 }
