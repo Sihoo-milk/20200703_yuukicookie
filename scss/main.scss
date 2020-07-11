@@ -10,22 +10,21 @@
   background-size: cover;
 }
 
-.header {
+.logo {
+  display: block;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  top: 0;
+  width: get_vw(259);
+  height: get_vw(153);
   z-index: 100;
 }
 
-.logo {
-  display: block;
-  width: get_vw(259);
-  height: get_vw(153);
-}
-
 .nav {
+  position: fixed;
+  top: 0;
+  right: 0;
   margin-right: get_vw(30);
+  z-index: 100;
   &__list {
     display: flex;
   }

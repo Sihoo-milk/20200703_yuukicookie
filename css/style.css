@@ -11,22 +11,21 @@
   background-size: cover;
 }
 
-.header {
+.logo {
+  display: block;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  top: 0;
+  width: 20.23438vw;
+  height: 11.95312vw;
   z-index: 100;
 }
 
-.logo {
-  display: block;
-  width: 20.23438vw;
-  height: 11.95312vw;
-}
-
 .nav {
+  position: fixed;
+  top: 0;
+  right: 0;
   margin-right: 2.34375vw;
+  z-index: 100;
 }
 
 .nav__list {
