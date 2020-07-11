@@ -1217,7 +1217,7 @@ input[type=checkbox]:checked + .checkbox01::after {
   left: 50%;
   width: 62.5vw;
   margin-left: -31.25vw;
-  padding: 3.82812vw 0 3.82812vw 4.375vw;
+  padding: 3.51562vw 0 3.90625vw 4.375vw;
   background-color: #f9f6f1;
   border: 0.3125vw solid #0d5289;
   border-radius: 0.625vw;
