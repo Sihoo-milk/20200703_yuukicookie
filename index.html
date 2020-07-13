@@ -358,84 +358,86 @@
       </div>
       <div class="order__form-bg sa sa--up">
         <form method="post" action="">
-          <table class="order__table">
-            <tr>
-              <th>お名前</th>
-              <td class="order__td"><input class="order__txt-box" name="name" type="text" placeholder="入力してください"></td>
-            </tr>
-            <tr>
-              <th>ご注文商品</th>
-              <td class="order__td-select">
-                <div>
-                  <input type="radio" id="01-D" name="radio01" checked="checked">
-                  <label for="01-D" class="radio01">お試し 3袋セット</label>
+          <div class="order__form-contents">
+            <div class="order__item">
+              <div class="order__item-name">お名前</div>
+              <div class="order__wrap-box"><input class="order__txt-box" name="name" type="text" placeholder="入力してください"></div>
+            </div>
+            <div class="order__item">
+              <div class="order__item-name order__item-name--multiple">ご注文商品</div>
+              <div>
+                <div class="order__wrap-select">
+                  <div>
+                    <input type="radio" id="01-D" name="radio01" checked="checked">
+                    <label for="01-D" class="radio01">お試し 3袋セット</label>
+                  </div>
+                  <div class="order__select-item">1,000円</div>
+                  <div class="order__select-item">初回1セットのみ</div>
                 </div>
-                <div class="order__select-item">1,000円</div>
-                <div class="order__select-item">初回1セットのみ</div>
-              </td>
-              <td class="order__td-select">
-                <div class="radio">
-                  <input type="radio" id="01-E" name="radio01">
-                  <label for="01-E" class="radio01">通常 3袋セット</label>
+                <div class="order__wrap-select">
+                  <div class="radio">
+                    <input type="radio" id="01-E" name="radio01">
+                    <label for="01-E" class="radio01">通常 3袋セット</label>
+                  </div>
+                  <div class="order__select-item">1,500円</div>
+                  <div class="order__select-item">数量</div>
+                  <div class="cp_ipselect cp_sl04">
+                    <select required>
+                      <option value="" hidden></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="order__select-item">1,500円</div>
-                <div class="order__select-item">数量</div>
-                <div class="cp_ipselect cp_sl04">
-                  <select required>
-                    <option value="" hidden></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
+                <div class="order__wrap-select">
+                  <div class="radio">
+                    <input type="radio" id="01-F" name="radio01">
+                    <label for="01-F" class="radio01">通常 9袋セット</label>
+                  </div>
+                  <div class="order__select-item">3,980円</div>
+                  <div class="order__select-item">数量</div>
+                  <div class="cp_ipselect cp_sl04">
+                    <select required>
+                      <option value="" hidden></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
                 </div>
-              </td>
-              <td class="order__td-select">
-                <div class="radio">
-                  <input type="radio" id="01-F" name="radio01">
-                  <label for="01-F" class="radio01">通常 9袋セット</label>
-                </div>
-                <div class="order__select-item">3,980円</div>
-                <div class="order__select-item">数量</div>
-                <div class="cp_ipselect cp_sl04">
-                  <select required>
-                    <option value="" hidden></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>メールアドレス</th>
-              <td class="order__td-mail">
+              </div>
+            </div>
+            <div class="order__item">
+              <div class="order__item-name order__item-name--multiple">メールアドレス</div>
+              <div class="order__wrap-mail">
                 <input class="order__txt-box" name="mail" type="tel">
                 <img class="circle" src="img/surprised-mark.png" alt="ビックリマーク">
                 <p class="order__error">エラーメッセージが⼊ります</p>
-              </td>
-            </tr>
-            <tr>
-              <th>その他お問い合わせ</th>
-              <td class="order__td"><textarea class="order__txt-area" name="enquiry" cols="80" rows="8" placeholder="入力してください"></textarea></td>
-            </tr>
-            <tr>
-              <th></th>
-              <td class="order__td">
+              </div>
+            </div>
+            <div class="order__item">
+              <div class="order__item-name order__item-name--multiple">その他お問い合わせ</div>
+              <div class="order__wrap-box"><textarea class="order__txt-area" name="enquiry" cols="80" rows="8" placeholder="入力してください"></textarea></div>
+            </div>
+            <div class="order__item">
+              <div class="order__item-name"></div>
+              <div class="order__wrap-box">
                 <input type="checkbox" id="01-A" name="checkbox01" checked="checked">
                 <label for="01-A" class="checkbox01"><span class="order__txt-border">プライバシーポリシー</span>に同意</label>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
+              </div>
+            </div>
+            <div class="order__item">
+              <div class="order__wrap-btn">
                 <button class="order__btn">
                   <input class="order__btn-txt" type="submit" value="確認する">
                   <span class="arrow--right">〉</span>
                 </button>
-              </td>
-            </tr>
-          </table>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
       <img class="order__cookie1 sa sa--lr" src="img/order_cookie1.png" alt="クッキー">

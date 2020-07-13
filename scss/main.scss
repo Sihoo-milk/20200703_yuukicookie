@@ -301,7 +301,7 @@
     display: block;
     position: absolute;
     top: get_vw(544);
-    width: 100%;
+    width: get_vw(330);
   }
 }
 
@@ -954,29 +954,40 @@
       width: get_vw(900);
       height: get_vw(1048);
       margin: get_vw(55) auto 0;
-      padding: get_vw(70) get_vw(90) get_vw(92);
+      padding: get_vw(80) get_vw(90) get_vw(92);
       background-image: url(../img/order_form-bg.png);
       background-size: cover;
     }
+    &-contents {
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: 0 get_vw(38);
+    }
   }
-  &__table {
-    width: 100%;
-    table-layout: fixed;
-    border-spacing: 0 get_vw(38);
-    & th {
+  &__item {
+    display: flex;
+    padding-bottom: get_vw(45);
+    &-name {
+      display: flex;
+      align-items: center;
       width: get_vw(196);
-      padding-top: get_vw(15);
       vertical-align: top;
       text-align: left;
       font-size: get_vw(16);
       font-weight: bold;
       line-height: 2;
       letter-spacing: .1em;
+      &--multiple {
+        align-items: flex-start;
+        padding-top: get_vw(18);
+      }
     }
   }
-  &__td {
-    width: get_vw(524);
-    padding-left: get_vw(24);
+  &__wrap {
+    &-box {
+      width: get_vw(524);
+      padding-left: get_vw(24);
+    }
     &-select {
       display: flex;
       align-items: center;
@@ -984,7 +995,11 @@
     }
     &-mail {
       position: relative;
+      width: get_vw(524);
       padding-left: get_vw(24);
+    }
+    &-btn {
+      margin: 0 auto;
     }
   }
   &__select-item {
@@ -1040,7 +1055,6 @@
     justify-content: center;
     width: get_vw(420);
     height: get_vw(70);
-    margin: 0 auto;
     background: #2d9748;
     border-bottom: get_vw(6) solid #08581c;
     border-radius: get_vw(7);
@@ -1052,6 +1066,9 @@
     &-txt {
       margin: 0 get_vw(128);
     }
+  }
+  &__contents-sp {
+    display: flex;
   }
   &__cookie {
     &1 {

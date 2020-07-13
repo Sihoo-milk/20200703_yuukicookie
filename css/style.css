@@ -321,7 +321,7 @@
   display: block;
   position: absolute;
   top: 42.5vw;
-  width: 100%;
+  width: 25.78125vw;
 }
 
 .calorie {
@@ -1063,20 +1063,26 @@
   width: 70.3125vw;
   height: 81.875vw;
   margin: 4.29688vw auto 0;
-  padding: 5.46875vw 7.03125vw 7.1875vw;
+  padding: 6.25vw 7.03125vw 7.1875vw;
   background-image: url(../img/order_form-bg.png);
   background-size: cover;
 }
 
-.order__table {
+.order__form-contents {
   width: 100%;
   table-layout: fixed;
   border-spacing: 0 2.96875vw;
 }
 
-.order__table th {
+.order__item {
+  display: flex;
+  padding-bottom: 3.51562vw;
+}
+
+.order__item-name {
+  display: flex;
+  align-items: center;
   width: 15.3125vw;
-  padding-top: 1.17188vw;
   vertical-align: top;
   text-align: left;
   font-size: 1.25vw;
@@ -1085,20 +1091,30 @@
   letter-spacing: .1em;
 }
 
-.order__td {
+.order__item-name--multiple {
+  align-items: flex-start;
+  padding-top: 1.40625vw;
+}
+
+.order__wrap-box {
   width: 40.9375vw;
   padding-left: 1.875vw;
 }
 
-.order__td-select {
+.order__wrap-select {
   display: flex;
   align-items: center;
   padding-left: 1.875vw;
 }
 
-.order__td-mail {
+.order__wrap-mail {
   position: relative;
+  width: 40.9375vw;
   padding-left: 1.875vw;
+}
+
+.order__wrap-btn {
+  margin: 0 auto;
 }
 
 .order__select-item {
@@ -1159,7 +1175,6 @@
   justify-content: center;
   width: 32.8125vw;
   height: 5.46875vw;
-  margin: 0 auto;
   background: #2d9748;
   border-bottom: 0.46875vw solid #08581c;
   border-radius: 0.54688vw;
@@ -1172,6 +1187,10 @@
 
 .order__btn-txt {
   margin: 0 10vw;
+}
+
+.order__contents-sp {
+  display: flex;
 }
 
 .order__cookie1 {
