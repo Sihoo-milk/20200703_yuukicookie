@@ -967,6 +967,9 @@
   &__item {
     display: flex;
     padding-bottom: get_vw(45);
+    &:last-child {
+      padding-bottom: 0;
+    }
     &-name {
       display: flex;
       align-items: center;
