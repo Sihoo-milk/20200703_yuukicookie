@@ -2,8 +2,29 @@
 * {
   box-sizing: border-box;
   list-style: none;
-  font-family: 遊ゴシック体;
+  font-family: "遊ゴシック体";
   font-feature-settings: "palt" 1;
+}
+
+.sp-none {
+  display: block;
+}
+
+.pc-none {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sp-none {
+    display: none;
+  }
+  .pc-none {
+    display: block;
+  }
+}
+
+.markazi {
+  font-family: "Markazi Text";
 }
 
 .bg {
@@ -34,12 +55,12 @@
 
 .nav__item {
   position: relative;
+  margin-right: 2.1875vw;
   padding-top: 4.29688vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 1.09375vw;
   font-weight: bold;
-  line-height: 3.57142857143;
   letter-spacing: .1em;
 }
 
@@ -55,9 +76,13 @@
   background-color: #000;
 }
 
+.nav__item-link {
+  text-decoration: none;
+  color: #000;
+}
+
 .nav__link {
   position: relative;
-  margin-left: 1.25vw;
   padding-top: 3.35938vw;
   line-height: 3.57142857143;
 }
@@ -71,18 +96,20 @@
   width: 0.07812vw;
   height: 3.35938vw;
   margin: auto;
-  background-color: #000;
+  background-color: #2d9748;
 }
 
 .nav__link-content {
-  height: 16.01562vw;
+  display: block;
   padding: 0.9375vw 0;
   border-bottom: 0.23438vw solid #08581c;
   border-radius: 0.625vw;
   background: #2d9748;
+  text-decoration: none;
 }
 
-.nav__btn {
+.nav__btn-txt {
+  margin-bottom: 0.54688vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 1.01562vw;
@@ -91,18 +118,167 @@
   color: #fff;
 }
 
+.nav__btn-img {
+  display: block;
+  width: 1.25vw;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .global-nav {
+    position: fixed;
+    right: -42.96875vw;
+    /* これで隠れる */
+    top: 0;
+    width: 42.96875vw;
+    /* スマホに収まるくらい */
+    padding-top: 10.39062vw;
+    padding-bottom: 2.34375vw;
+    background-color: #f7eddb;
+    border-radius: 0.625vw;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto;
+    /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 12.5vw;
+    /* クリックしやすいようにちゃんと幅を指定する */
+    height: 10.39062vw;
+    /* クリックしやすいようにちゃんと高さを指定する */
+    background-image: url(../img/hamburger_bg.png);
+    background-size: cover;
+    cursor: pointer;
+    z-index: 300;
+  }
+  .global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__item {
+    text-align: left;
+    padding: 0 2.65625vw;
+  }
+  .nav__item-link {
+    display: block;
+    padding: 1.25vw 0;
+    text-decoration: none;
+    font-size: 2.5vw;
+  }
+  .global-nav__item a:hover {
+    background-color: #eee;
+  }
+  .hamburger__line {
+    position: absolute;
+    left: 3.90625vw;
+    width: 4.29688vw;
+    height: 0.07812vw;
+    background-color: #795100;
+    transition: all .6s;
+  }
+  .hamburger__line--1 {
+    top: 2.34375vw;
+  }
+  .hamburger__line--2 {
+    top: 3.90625vw;
+  }
+  .hamburger__line--3 {
+    top: 5.46875vw;
+  }
+  .black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  /* 表示された時用のCSS */
+  .nav-open .global-nav {
+    right: 0;
+  }
+  .nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+  }
+  .nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 3.90625vw;
+  }
+  .nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 3.90625vw;
+  }
+  .nav__link-content {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+  }
+  .nav__btn-txt {
+    margin: 0;
+    writing-mode: unset;
+    font-size: 2.5vw;
+    color: #2d9748;
+  }
+  .nav__btn-img {
+    width: 2.5vw;
+  }
+}
+
 .mv {
+  height: 65.625vw;
   background-image: url(../img/mv_bg.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 .mv__title {
-  display: block;
-  width: 100%;
+  transform: rotate(-2deg);
+  font-size: 5.3125vw;
+  font-family: "851マカポップ";
+  line-height: 1.2;
+  color: #0d5289;
+}
+
+.mv__title-organic {
+  font-size: 4.01016vw;
+  font-family: "851マカポップ";
+  line-height: 1.55854276252;
+}
+
+.mv__title-bg {
+  padding-top: 15.625vw;
+  padding-bottom: 2.34375vw;
+  padding-left: 17.1875vw;
+  background-image: url(../img/mv_title-bg.png);
+  background-size: contain;
+  background-position-y: 16.79688vw;
+}
+
+.mv__subtitle {
+  padding-left: 17.57812vw;
+  font-size: 1.25vw;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: .05em;
+  color: #0d5289;
 }
 
 .mv__btns {
   display: flex;
+  padding-top: 1.95312vw;
   padding-left: 17.34375vw;
 }
 
@@ -120,6 +296,16 @@
   border-radius: 0.78125vw;
 }
 
+.mv__btn-link {
+  text-decoration: none;
+}
+
+.mv__btn-cookie {
+  display: block;
+  width: 1.875vw;
+  margin-left: 1.17188vw;
+}
+
 .mv__btn--what {
   background: #0d5289;
   border-bottom: solid 0.3125vw #002641;
@@ -132,38 +318,39 @@
 
 .mv__trial {
   display: block;
+  position: absolute;
+  top: 42.5vw;
   width: 100%;
 }
 
 .calorie {
-  display: flex;
+  position: relative;
+  height: 70.3125vw;
+  padding-top: 6.64062vw;
 }
 
-.calorie__column1 {
-  display: block;
-  width: 27.73438vw;
+.calorie__title {
+  text-align: center;
+  font-family: "851マカポップ";
+  font-size: 3.4375vw;
+  line-height: 1.36363636364;
+  letter-spacing: .1em;
+  color: #0d5289;
 }
 
-.calorie__line1 {
-  display: flex;
-}
-
-.calorie__main {
-  display: block;
-  width: 39.45312vw;
-}
-
-.calorie__cookie {
-  display: block;
-  width: 32.8125vw;
-}
-
-.calorie__line2 {
-  display: flex;
+.calorie__title-bg {
+  width: 43.75vw;
+  height: 23.82812vw;
+  margin: 0 auto;
+  padding-top: 8.98438vw;
+  background-image: url(../img/calorie_title-bg.png);
+  background-size: cover;
 }
 
 .calorie__txt {
-  width: 43.35938vw;
+  width: 43.75vw;
+  margin: 0 auto;
+  padding-top: 2.34375vw;
   text-align: center;
   font-size: 1.25vw;
   line-height: 2;
@@ -175,37 +362,78 @@
   color: #0d5289;
 }
 
-.calorie__girl {
+.calorie__cookie {
   display: block;
-  width: 28.90625vw;
+  position: absolute;
+  top: 6.64062vw;
+  right: 0;
+  width: 32.65625vw;
 }
 
-.organic__what {
-  display: flex;
+.calorie__family {
+  display: block;
+  position: absolute;
+  top: 25vw;
+  left: 0;
+  width: 28.125vw;
+}
+
+.calorie__girl {
+  display: block;
+  position: absolute;
+  top: 38.67188vw;
+  right: 0;
+  width: 28.125vw;
+}
+
+.organic {
+  height: 206.71875vw;
+  position: relative;
+  padding-top: 15.70312vw;
 }
 
 .organic__what-leaf--left {
   display: block;
+  position: absolute;
+  top: 0;
   width: 26.5625vw;
 }
 
 .organic__what-leaf--right {
   display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 26.5625vw;
 }
 
 .organic__what-title {
-  display: block;
-  width: 46.875vw;
+  margin-left: -1.17188vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.organic__what-title-bg {
+  width: 100vw;
+  height: 7.03125vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url(../img/organic_what-title-bg.png);
+  background-size: cover;
 }
 
 .organic__kind {
   display: flex;
+  margin-top: 4.14062vw;
 }
 
 .organic__kind-family {
   display: block;
   width: 57.03125vw;
+  height: 33.59375vw;
 }
 
 .organic__kind-word {
@@ -214,7 +442,7 @@
 
 .organic__kind-side {
   padding-top: 6.25vw;
-  padding-left: 4.29688vw;
+  padding-left: 4.53125vw;
 }
 
 .organic__kind-dt {
@@ -237,7 +465,7 @@
 
 .organic__kind-vertical {
   padding-top: 1.64062vw;
-  padding-left: 2.73438vw;
+  padding-left: 3.51562vw;
 }
 
 .organic__kind-txt {
@@ -252,16 +480,34 @@
 
 .organic__sweets {
   display: flex;
+  position: relative;
+  padding-top: 12.34375vw;
+  padding-bottom: 3.82812vw;
 }
 
 .organic__sweets-leaf {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 27.34375vw;
 }
 
 .organic__sweets-title {
-  display: block;
-  width: 72.65625vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.organic__sweets-title-bg {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100vw;
+  height: 7.1875vw;
+  background-image: url(../img/organic_sweets-title-bg.png);
+  background-size: cover;
 }
 
 .organic__manufacture {
@@ -288,6 +534,7 @@
 }
 
 .organic__manufacture-side {
+  padding-top: 6.64062vw;
   padding-left: 4.29688vw;
 }
 
@@ -312,25 +559,47 @@
 .organic__manufacture-packing {
   display: block;
   width: 57.03125vw;
+  height: 33.59375vw;
 }
 
 .organic__jas {
   display: flex;
+  position: relative;
+  padding-top: 9.29688vw;
+  padding-bottom: 3.82812vw;
 }
 
 .organic__jas-leaf--left {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 31.25vw;
 }
 
 .organic__jas-leaf--right {
   display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 14.84375vw;
 }
 
 .organic__jas-title {
-  display: block;
-  width: 53.90625vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.organic__jas-title-bg {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100vw;
+  height: 7.1875vw;
+  background-image: url(../img/organic_jas-title-bg.png);
+  background-size: cover;
 }
 
 .organic__japan {
@@ -347,9 +616,10 @@
 .organic__boxes-dt {
   padding-right: 1.17188vw;
   padding-left: 1.17188vw;
+  padding: 0 1.95312vw;
   font-size: 1.875vw;
   font-weight: bold;
-  line-height: 1.66666666667;
+  line-height: 1.2;
   letter-spacing: .1em;
 }
 
@@ -374,20 +644,34 @@
 .organic__order {
   display: flex;
   justify-content: center;
-  padding: 4.29688vw 0 10.46875vw;
+  padding-top: 4.29688vw;
 }
 
 .organic__btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 39.0625vw;
+  height: 7.8125vw;
   padding: 0 1.5625vw;
-  font-size: 1.40625vw;
+  font-size: 1.5625vw;
   font-weight: bold;
-  line-height: 3.33333333333;
+  line-height: 3;
   letter-spacing: .15em;
-  text-decoration: none;
   color: #fff;
   border-radius: 0.78125vw;
+}
+
+.organic__btn-link {
+  text-decoration: none;
+}
+
+.organic__btn-cookie {
+  display: block;
+  position: absolute;
+  right: 2.34375vw;
+  width: 2.42188vw;
 }
 
 .organic__btn--here {
@@ -395,10 +679,27 @@
   border-bottom: solid 0.3125vw #08581c;
 }
 
+.world {
+  height: 91.09375vw;
+  padding-top: 7.65625vw;
+}
+
 .world__title {
-  display: block;
+  padding-left: 1.5625vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.world__title-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
-  margin-top: 8.59375vw;
+  height: 7.8125vw;
+  background-image: url(../img/world_title-bg.png);
+  background-size: cover;
 }
 
 .world__words {
@@ -407,8 +708,8 @@
 }
 
 .world__collect {
-  margin-top: 12.5vw;
-  margin-left: 14.84375vw;
+  margin-top: 11.71875vw;
+  margin-left: 14.0625vw;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   font-size: 2.1875vw;
@@ -426,7 +727,7 @@
 }
 
 .world__delicious {
-  margin-top: 8.98438vw;
+  margin-top: 7.8125vw;
   margin-right: 17.96875vw;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -440,22 +741,37 @@
 .world__distribution {
   display: block;
   width: 100vw;
-  margin-top: 5.07812vw;
+  padding-top: 3.125vw;
 }
 
 .commitment {
   position: relative;
-  padding: 9.29688vw 0 9.45312vw;
+  height: 82.03125vw;
+  padding-top: 8.59375vw;
 }
 
 .commitment__title {
-  display: block;
+  padding-left: 3.51562vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.commitment__title-bg {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   width: 100vw;
+  height: 7.03125vw;
+  padding-top: 2.73438vw;
+  background-image: url(../img/commitment_title-bg.png);
+  background-size: cover;
 }
 
 .commitment__icon-okara {
   position: absolute;
-  top: 16.32812vw;
+  top: 15.625vw;
   display: block;
   width: 100vw;
 }
@@ -529,17 +845,30 @@
 }
 
 .type {
+  height: 74.21875vw;
   padding-top: 11.71875vw;
 }
 
 .type__title {
-  display: block;
+  padding-left: 2.34375vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.type__title-bg {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   width: 100vw;
-  padding-bottom: 5.46875vw;
+  height: 6.25vw;
+  background-image: url(../img/type_title-bg.png);
+  background-size: cover;
 }
 
 .type__explanation {
-  padding-bottom: 7.8125vw;
+  padding-top: 5.39062vw;
 }
 
 .type__items {
@@ -550,6 +879,7 @@
 
 .type__item {
   width: 26.875vw;
+  font-size: 1.25vw;
 }
 
 .type__item-img {
@@ -567,7 +897,7 @@
 }
 
 .type__item-description {
-  padding: 1.5625vw 0.625vw;
+  padding: 1.5625vw 0.39062vw;
   font-size: 1.25vw;
   line-height: 2;
   letter-spacing: .1em;
@@ -579,11 +909,24 @@
 }
 
 .fee {
-  padding-bottom: 13.28125vw;
+  height: 80.3125vw;
 }
 
 .fee__title {
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.fee__title-bg {
   width: 100vw;
+  height: 7.03125vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url(../img/fee_title-bg.png);
+  background-size: cover;
 }
 
 .fee__trial {
@@ -592,24 +935,26 @@
 
 .fee__set {
   display: flex;
-  padding-bottom: 7.03125vw;
 }
 
 .fee__set-img {
   display: block;
   width: 50vw;
+  height: 22.10938vw;
 }
 
 .fee__payment {
   position: relative;
   display: flex;
   justify-content: center;
+  padding-top: 7.03125vw;
 }
 
 .fee__btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
   width: 39.0625vw;
   padding: 1.95312vw 0;
   border-bottom: solid 0.46875vw #002641;
@@ -617,10 +962,6 @@
   background-color: #0d5289;
   color: #fff;
   cursor: pointer;
-}
-
-.fee__btn-wrap {
-  padding-left: 7.57812vw;
 }
 
 .fee__btn-txt {
@@ -637,25 +978,42 @@
   letter-spacing: .15em;
 }
 
-.fee__btn-icon {
-  padding-right: 2.34375vw;
+.fee__btn-cookie {
+  display: block;
+  position: absolute;
+  right: 2.26562vw;
+  width: 2.42188vw;
 }
 
 .order {
+  height: 143.90625vw;
   position: relative;
-  padding-top: 10.15625vw;
-  padding-bottom: 10.46875vw;
+  padding-top: 11.71875vw;
 }
 
 .order__title {
-  display: block;
+  padding-left: 2.34375vw;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.order__title-bg {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   width: 100vw;
+  height: 7.03125vw;
+  background-image: url(../img/order_title-bg.png);
+  background-size: cover;
 }
 
 .order__phone {
-  padding-top: 2.42188vw;
   display: flex;
   justify-content: center;
+  padding-top: 2.42188vw;
+  padding-bottom: 6.48438vw;
 }
 
 .order__phone-box {
@@ -684,9 +1042,20 @@
 }
 
 .order__form-title {
-  display: block;
+  font-family: "851マカポップ";
+  font-size: 4.0625vw;
+  line-height: 1.15384615385;
+  color: #0d5289;
+}
+
+.order__form-title-bg {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   width: 100vw;
-  padding-top: 6.48438vw;
+  height: 7.03125vw;
+  background-image: url(../img/order_form-title-bg.png);
+  background-size: cover;
 }
 
 .order__form-bg {
@@ -731,10 +1100,6 @@
   padding-left: 1.875vw;
 }
 
-.order__td-submit {
-  padding: 0;
-}
-
 .order__select-item {
   margin-left: 2.5vw;
   font-size: 1.25vw;
@@ -763,12 +1128,11 @@
   resize: none;
   width: 100%;
   height: 15.625vw;
-  padding: 0 1.40625vw;
+  padding: 0.78125vw 1.40625vw;
   border: 0.07812vw solid #795100;
   border-radius: 0.3125vw;
   background: #f7eddb;
   font-size: 1.25vw;
-  line-height: 3.75;
   letter-spacing: .1em;
   color: #000;
 }
@@ -813,42 +1177,46 @@
   display: block;
   position: absolute;
   top: -9.375vw;
-  width: 100vw;
+  left: 0;
+  width: 28.125vw;
 }
 
 .order__cookie2 {
   display: block;
   position: absolute;
-  top: 35.15625vw;
-  width: 100vw;
+  top: 36.09375vw;
+  right: 0vw;
+  width: 24.84375vw;
 }
 
 .order__leaf-right1 {
   display: block;
   position: absolute;
-  top: 10.15625vw;
-  width: 100vw;
+  top: 11.71875vw;
+  right: 0;
+  width: 16.01562vw;
 }
 
 .order__leaf-right2 {
   display: block;
   position: absolute;
   top: 117.34375vw;
-  width: 100vw;
+  right: 0;
+  width: 7.8125vw;
 }
 
 .order__leaf-left1 {
   display: block;
   position: absolute;
   top: 39.6875vw;
-  width: 100vw;
+  width: 15.625vw;
 }
 
 .order__leaf-left2 {
   display: block;
   position: absolute;
   top: 73.20312vw;
-  width: 100vw;
+  width: 14.84375vw;
 }
 
 .footer {
@@ -894,78 +1262,8 @@
   vertical-align: bottom;
 }
 
-.arrow {
-  position: relative;
-  display: inline-block;
-  color: #0d5289;
-  text-decoration: none;
-}
-
-.arrow--side {
-  padding: 0 1.95312vw 0 1.17188vw;
-}
-
-.arrow--vertical {
-  position: absolute;
-}
-
 .arrow--right {
   font-size: 1.25vw;
-}
-
-.round--side::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  content: "";
-  width: 1.95312vw;
-  height: 1.95312vw;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.round--side::after {
-  position: absolute;
-  top: -0.23438vw;
-  bottom: 0;
-  left: 1.71875vw;
-  margin: auto;
-  content: "";
-  width: 0.78125vw;
-  height: 0.78125vw;
-  border-top: 0.23438vw solid #0d5289;
-  border-right: 0.23438vw solid #0d5289;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-
-.round--vertical::before {
-  position: absolute;
-  top: 0.3125vw;
-  left: 1.25vw;
-  margin: auto;
-  content: "";
-  width: 1.25vw;
-  height: 1.25vw;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.round--vertical::after {
-  position: absolute;
-  top: 0.625vw;
-  left: 1.5625vw;
-  margin: auto;
-  content: "";
-  width: 0.46875vw;
-  height: 0.46875vw;
-  border-top: 0.15625vw solid #0d5289;
-  border-right: 0.15625vw solid #0d5289;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
 }
 
 input[type=radio] {
@@ -984,10 +1282,10 @@ input[type=radio] {
 
 .radio01::before {
   content: '';
+  display: block;
   position: absolute;
   top: -0.625vw;
   left: 0;
-  display: block;
   width: 3.125vw;
   height: 3.125vw;
   background: #f7eddb;
@@ -1012,41 +1310,61 @@ input[type=radio]:checked + .radio01::after {
   opacity: 1;
 }
 
-.minimal {
-  display: inline-block;
+.cp_ipselect {
   width: 7.03125vw;
   height: 3.125vw;
   margin-left: 1.40625vw;
-  background: #f7eddb;
-  border: 0.07812vw solid #795100;
-  border-radius: 4px;
-  background-image: linear-gradient(45deg, transparent 50%, #865500 50%), linear-gradient(135deg, #865500 50%, transparent 50%);
-  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
 }
 
-.minimal:focus {
-  background-image: linear-gradient(45deg, green 50%, transparent 50%), linear-gradient(135deg, transparent 50%, green 50%), linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-  border-color: green;
-  outline: 0;
+.cp_ipselect select {
+  width: 100%;
+  height: 100%;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+
+.cp_ipselect.cp_sl04 {
+  position: relative;
+  border: 0.07812vw solid #795100;
+  border-radius: 0.3125vw;
+  background: #f7eddb;
+}
+
+.cp_ipselect.cp_sl04::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0.70312vw;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border-top: 0.3125vw solid #865500;
+  border-right: 0.3125vw solid transparent;
+  border-left: 0.3125vw solid transparent;
+  pointer-events: none;
+}
+
+.cp_ipselect select {
+  padding: 0.46875vw 2.96875vw 0.46875vw 0.9375vw;
+  color: #000;
 }
 
 .circle {
   position: absolute;
-  top: 1.5625vw;
+  top: 1.40625vw;
   right: 1.5625vw;
-  width: 1.5625vw;
-  height: 1.5625vw;
-  border-radius: 50%;
-  background: #df1111;
-  text-align: center;
-  line-height: 1.5625vw;
-  font-weight: bold;
-  color: #fff;
+  width: 1.95312vw;
 }
 
 input[type=checkbox] {
@@ -1057,37 +1375,38 @@ input[type=checkbox] {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  cursor: pointer;
-  padding: 0 3.90625vw;
   position: relative;
   width: auto;
   height: 3.125vw;
+  padding-left: 3.90625vw;
+  font-size: 1.25vw;
+  cursor: pointer;
 }
 
 .checkbox01::before {
-  border: 0.07812vw solid #795100;
   content: '';
   display: block;
-  left: 0;
   position: absolute;
+  left: 0;
   width: 3.125vw;
   height: 3.125vw;
-  background: #f7eddb;
+  border: 0.07812vw solid #795100;
   border-radius: 0.3125vw;
+  background: #f7eddb;
 }
 
 .checkbox01::after {
-  border-right: 0.23438vw solid #2d9748;
-  border-bottom: 0.23438vw solid #2d9748;
   content: '';
   display: block;
-  height: 1.95312vw;
-  left: 1.25vw;
-  opacity: 0;
   position: absolute;
   top: 0.46875vw;
-  transform: rotate(45deg);
+  left: 1.25vw;
   width: 0.78125vw;
+  height: 1.95312vw;
+  border-right: 0.23438vw solid #2d9748;
+  border-bottom: 0.23438vw solid #2d9748;
+  opacity: 0;
+  transform: rotate(45deg);
 }
 
 input[type=checkbox]:checked + .checkbox01::after {
@@ -1097,8 +1416,10 @@ input[type=checkbox]:checked + .checkbox01::after {
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
   animation-delay: .5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -1106,8 +1427,10 @@ input[type=checkbox]:checked + .checkbox01::after {
 .fadeUp {
   animation-name: fadeUp;
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
   animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -1115,8 +1438,10 @@ input[type=checkbox]:checked + .checkbox01::after {
 .fadeDown {
   animation-name: fadeDown;
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
   animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -1124,8 +1449,10 @@ input[type=checkbox]:checked + .checkbox01::after {
 .fadeLeft {
   animation-name: fadeLeft;
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
   animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -1142,33 +1469,33 @@ input[type=checkbox]:checked + .checkbox01::after {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(7.8125vw);
+    transform: translate3d(0, 7.8125vw, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes fadeDown {
   from {
     opacity: 0;
-    transform: translateY(-7.8125px*vw);
+    transform: translate3d(0, -7.8125vw, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes fadeLeft {
   from {
     opacity: 0;
-    transform: translateX(-7.8125vw);
+    transform: translate3d(-7.8125vw, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -1195,7 +1522,7 @@ input[type=checkbox]:checked + .checkbox01::after {
 }
 
 .sa--down {
-  transform: translate(0, 7.8125vw);
+  transform: translate(0, -7.8125vw);
 }
 
 .layer {

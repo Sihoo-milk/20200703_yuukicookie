@@ -1,8 +1,29 @@
 * {
   box-sizing: border-box;
   list-style: none;
-  font-family: 遊ゴシック体;
+  font-family: "遊ゴシック体";
   font-feature-settings: "palt" 1;
+}
+
+.sp-none {
+  display: block;
+}
+
+.pc-none {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sp-none {
+    display: none;
+  }
+  .pc-none {
+    display: block;
+  }
+}
+
+.markazi {
+  font-family: "Markazi Text";
 }
 
 .bg {
@@ -30,12 +51,12 @@
   }
   &__item {
     position: relative;
+    margin-right: get_vw(28);
     padding-top: get_vw(55);
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-size: get_vw(14);
     font-weight: bold;
-    line-height: 3.57142857143;
     letter-spacing: .1em;
     &::before {
       content: '';
@@ -48,10 +69,13 @@
       margin: auto;
       background-color: #000;
     }
+    &-link {
+      text-decoration: none;
+      color: #000;
+    }
   }
   &__link {
     position: relative;
-    margin-left: get_vw(16);
     padding-top: get_vw(43);
     line-height: 3.57142857143;
     &::before {
@@ -63,35 +87,184 @@
       width: get_vw(1);
       height: get_vw(43);
       margin: auto;
-      background-color: #000;
+      background-color: #2d9748;
     }
     &-content {
-      height: get_vw(205);
+      display: block;
       padding: get_vw(12) 0;
       border-bottom: get_vw(3) solid #08581c;
       border-radius: get_vw(8);
       background: #2d9748;
+      text-decoration: none;
     }
   }
   &__btn {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: get_vw(13);
-    font-weight: bold;
-    letter-spacing: .1em;
-    color: #fff;
+    &-txt {
+      margin-bottom: get_vw(7);
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: get_vw(13);
+      font-weight: bold;
+      letter-spacing: .1em;
+      color: #fff;
+    }
+    &-img {
+      display: block;
+      width: get_vw(16);
+      margin: 0 auto;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .global-nav {
+    position: fixed;
+    right: get_vw(-550); /* これで隠れる */
+    top: 0;
+    width: get_vw(550); /* スマホに収まるくらい */
+    padding-top: get_vw(133);
+    padding-bottom: get_vw(30);
+    background-color: #f7eddb;
+    border-radius: get_vw(8);
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: get_vw(160); /* クリックしやすいようにちゃんと幅を指定する */
+    height: get_vw(133); /* クリックしやすいようにちゃんと高さを指定する */
+    background-image: url(../img/hamburger_bg.png);
+    background-size: cover;
+    cursor: pointer;
+    z-index: 300;
+  }
+  .global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__item {
+    text-align: left;
+    padding: 0 get_vw(34);
+  }
+  .nav__item-link {
+    display: block;
+    padding: get_vw(16) 0;
+    text-decoration: none;
+    font-size: get_vw(32);
+  }
+  .global-nav__item a:hover {
+    background-color: #eee;
+  }
+  .hamburger__line {
+    position: absolute;
+    left: get_vw(50);
+    width: get_vw(55);
+    height: get_vw(1);
+    background-color: #795100;
+    transition: all .6s;
+  }
+  .hamburger__line--1 {
+    top: get_vw(30);
+  }
+  .hamburger__line--2 {
+    top: get_vw(50);
+  }
+  .hamburger__line--3 {
+    top: get_vw(70);
+  }
+  .black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  /* 表示された時用のCSS */
+  .nav-open .global-nav {
+    right: 0;
+  }
+  .nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+  }
+  .nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: get_vw(50);
+  }
+  .nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: get_vw(50);
+  }
+  .nav {
+    &__link {
+      &-content {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+      }
+    }
+    &__btn {
+      &-txt {
+        margin: 0;
+        writing-mode: unset;
+        font-size: get_vw(32);
+        color: #2d9748;
+      }
+      &-img {
+        width: get_vw(32);
+      }
+    }
   }
 }
 
 .mv {
+  height: get_vw(840);
   background-image: url(../img/mv_bg.png);
-  background-size: cover;
+  background-size: contain;
   &__title {
-    display: block;
-    width: 100%;
+    transform: rotate(-2deg);
+    font-size: get_vw(68);
+    font-family: "851マカポップ";
+    line-height: 1.2;
+    color: #0d5289;
+    &-organic {
+      font-size: get_vw(51.33);
+      font-family: "851マカポップ";
+      line-height: 1.55854276252;
+    }
+    &-bg {
+      padding-top: get_vw(200);
+      padding-bottom: get_vw(30);
+      padding-left: get_vw(220);
+      background-image: url(../img/mv_title-bg.png);
+      background-size: contain;
+      background-position-y: get_vw(215);
+    }
+  }
+  &__subtitle {
+    padding-left: get_vw(225);
+    font-size: get_vw(16);
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: .05em;
+    color: #0d5289;
   }
   &__btns {
     display: flex;
+    padding-top: get_vw(25);
     padding-left: get_vw(222);
   }
   &__btn {
@@ -106,6 +279,14 @@
     text-decoration: none;
     color: #fff;
     border-radius: get_vw(10);
+    &-link {
+      text-decoration: none;
+    }
+    &-cookie {
+      display: block;
+      width: get_vw(24);
+      margin-left: get_vw(15);
+    }
     &--what {
       background: #0d5289;
       border-bottom: solid get_vw(4) #002641;
@@ -117,34 +298,36 @@
   }
   &__trial {
     display: block;
+    position: absolute;
+    top: get_vw(544);
     width: 100%;
   }
 }
 
 .calorie {
-  display: flex;
-  &__column1 {
-    display: block;
-    width: get_vw(355);
-  }
-  &__column2 {
-  }
-  &__line1 {
-    display: flex;
-  }
-  &__main {
-    display: block;
-    width: get_vw(505);
-  }
-  &__cookie {
-    display: block;
-    width: get_vw(420);
-  }
-  &__line2 {
-    display: flex;
+  position: relative;
+  height: get_vw(900);
+  padding-top: get_vw(85);
+  &__title {
+    text-align: center;
+    font-family: "851マカポップ";
+    font-size: get_vw(44);
+    line-height: 1.36363636364;
+    letter-spacing: .1em;
+    color: #0d5289;
+    &-bg {
+      width: get_vw(560);
+      height: get_vw(305);
+      margin: 0 auto;
+      padding-top: get_vw(115);
+      background-image: url(../img/calorie_title-bg.png);
+      background-size: cover;
+    }
   }
   &__txt {
-    width: get_vw(555);
+    width: get_vw(560);
+    margin: 0 auto;
+    padding-top: get_vw(30);
     text-align: center;
     font-size: get_vw(16);
     line-height: 2;
@@ -154,42 +337,80 @@
       color: #0d5289;
     }
   }
+  &__cookie {
+    display: block;
+    position: absolute;
+    top: get_vw(85);
+    right: 0;
+    width: get_vw(418);
+  }
+  &__family {
+    display: block;
+    position: absolute;
+    top: get_vw(320);
+    left: 0;
+    width: get_vw(360);
+  }
   &__girl {
     display: block;
-    width: get_vw(370);
+    position: absolute;
+    top: get_vw(495);
+    right: 0;
+    width: get_vw(360);
   }
 }
 
 .organic {
+  height: get_vw(2646);
+  position: relative;
+  padding-top: get_vw(201);
   &__what {
-    display: flex;
     &-leaf {
       &--left {
         display: block;
+        position:absolute;
+        top: 0;
         width: get_vw(340);
       }
       &--right {
         display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
         width: get_vw(340);
       }
     }
     &-title {
-      display: block;
-      width: get_vw(600);
+      margin-left: get_vw(-15);
+      font-family: "851マカポップ";
+      font-size: get_vw(52);
+      line-height: 1.15384615385;
+      color: #0d5289;
+      &-bg {
+        width: get_vw(1280);
+        height: get_vw(90);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: url(../img/organic_what-title-bg.png);
+        background-size: cover;
+      }
     }
   }
   &__kind {
     display: flex;
+    margin-top: get_vw(53);
     &-family {
       display: block;
       width: get_vw(730);
+      height: get_vw(430);
     }
     &-word {
       display: flex;
     }
     &-side {
       padding-top: get_vw(80);
-      padding-left: get_vw(55);
+      padding-left: get_vw(58);
     }
     &-dt {
       margin-top: get_vw(33);
@@ -208,7 +429,7 @@
     }
     &-vertical {
       padding-top: get_vw(21);
-      padding-left: get_vw(35);
+      padding-left: get_vw(45);
     }
     &-txt {
       -ms-writing-mode: tb-rl;
@@ -222,13 +443,30 @@
   }
   &__sweets {
     display: flex;
+    position: relative;
+    padding-top: get_vw(158);
+    padding-bottom: get_vw(49);
     &-leaf {
       display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: get_vw(350);
     }
     &-title {
-      display: block;
-      width: get_vw(930);
+      font-family: "851マカポップ";
+      font-size: get_vw(52);
+      line-height: 1.15384615385;
+      color: #0d5289;
+      &-bg {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: get_vw(1280);
+        height: get_vw(92);
+        background-image: url(../img/organic_sweets-title-bg.png);
+        background-size: cover;
+      }
     }
   }
   &__manufacture {
@@ -250,6 +488,7 @@
       color: #0d5289;
     }
     &-side {
+      padding-top: get_vw(85);
       padding-left: get_vw(55);
     }
     &-dt {
@@ -270,23 +509,44 @@
     &-packing {
       display: block;
       width: get_vw(730);
+      height: get_vw(430);
     }
   }
   &__jas {
     display: flex;
+    position: relative;
+    padding-top: get_vw(119);
+    padding-bottom: get_vw(49);
     &-leaf {
       &--left {
         display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: get_vw(400);
       }
       &--right {
         display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
         width: get_vw(190);
       }
     }
     &-title {
-      display: block;
-      width: get_vw(690);
+      font-family: "851マカポップ";
+      font-size: get_vw(52);
+      line-height: 1.15384615385;
+      color: #0d5289;
+      &-bg {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: get_vw(1280);
+        height: get_vw(92);
+        background-image: url(../img/organic_jas-title-bg.png);
+        background-size: cover;
+      }
     }
   }
   &__japan {
@@ -300,9 +560,10 @@
     &-dt {
       padding-right: get_vw(15);
       padding-left: get_vw(15);
+      padding: 0 get_vw(25);
       font-size: get_vw(24);
       font-weight: bold;
-      line-height: 1.66666666667;
+      line-height: 1.2;
       letter-spacing: .1em;
     }
     &-dd {
@@ -324,19 +585,31 @@
   &__order {
     display: flex;
     justify-content: center;
-    padding: get_vw(55) 0 get_vw(134);
+    padding-top: get_vw(55);
   }
   &__btn {
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    width: get_vw(500);
+    height: get_vw(100);
     padding: 0 get_vw(20);
-    font-size: get_vw(18);
+    font-size: get_vw(20);
     font-weight: bold;
-    line-height: 3.33333333333;
+    line-height: 3;
     letter-spacing: .15em;
-    text-decoration: none;
     color: #fff;
     border-radius: get_vw(10);
+    &-link {
+      text-decoration: none;
+    }
+    &-cookie {
+      display: block;
+      position: absolute;
+      right: get_vw(30);
+      width: get_vw(31);
+    }
     &--here {
       background: #2d9748;
       border-bottom:  solid get_vw(4) #08581c;
@@ -345,18 +618,31 @@
 }
 
 .world {
+  height: get_vw(1166);
+  padding-top: get_vw(98);
   &__title {
-    display: block;
-    width: get_vw(1280);
-    margin-top: get_vw(110);
+    padding-left: get_vw(20);
+    font-family: "851マカポップ";
+    font-size: get_vw(52);
+    line-height: 1.15384615385;
+    color: #0d5289;
+    &-bg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: get_vw(1280);
+      height: get_vw(100);
+      background-image: url(../img/world_title-bg.png);
+      background-size: cover;
+    }
   }
   &__words {
     display: flex;
     justify-content: space-between;
   }
   &__collect {
-    margin-top: get_vw(160);
-    margin-left: get_vw(190);
+    margin-top: get_vw(150);
+    margin-left: get_vw(180);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-size: get_vw(28);
@@ -372,7 +658,7 @@
     letter-spacing: .1em;
   }
   &__delicious {
-    margin-top: get_vw(115);
+    margin-top: get_vw(100);
     margin-right: get_vw(230);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
@@ -385,20 +671,34 @@
   &__distribution {
     display: block;
     width: get_vw(1280);
-    margin-top: get_vw(65);
+    padding-top: get_vw(40);
   }
 }
 
 .commitment {
   position: relative;
-  padding: get_vw(119) 0 get_vw(121);
+  height: get_vw(1050);
+  padding-top: get_vw(110);
   &__title {
-    display: block;
-    width: get_vw(1280);
+    padding-left: get_vw(45);
+    font-family: "851マカポップ";
+    font-size: get_vw(52);
+    line-height: 1.15384615385;
+    color: #0d5289;
+    &-bg {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: get_vw(1280);
+      height: get_vw(90);
+      padding-top: get_vw(35);
+      background-image: url(../img/commitment_title-bg.png);
+      background-size: cover;
+    }
   }
   &__icon-okara {
     position: absolute;
-    top: get_vw(209);
+    top: get_vw(200);
     display: block;
     width: get_vw(1280);
   }
@@ -464,14 +764,26 @@
 }
 
 .type {
+  height: get_vw(950);
   padding-top: get_vw(150);
   &__title {
-    display: block;
-    width: get_vw(1280);
-    padding-bottom: get_vw(70);
+    padding-left: get_vw(30);
+    font-family: "851マカポップ";
+    font-size: get_vw(52);
+    line-height: 1.15384615385;
+    color: #0d5289;
+    &-bg {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: get_vw(1280);
+      height: get_vw(80);
+      background-image: url(../img/type_title-bg.png);
+      background-size: cover;
+    }
   }
   &__explanation {
-    padding-bottom: get_vw(100);
+    padding-top: get_vw(69);
   }
   &__items {
     display: flex;
@@ -480,6 +792,7 @@
   }
   &__item {
     width: get_vw(344);
+    font-size: get_vw(16);
     &-img {
       display: block;
       width: 100%;
@@ -493,7 +806,7 @@
       letter-spacing: .1em;
     }
     &-description {
-      padding: get_vw(20) get_vw(8);
+      padding: get_vw(20) get_vw(5);
       font-size: get_vw(16);
       line-height: 2;
       letter-spacing: .1em;
@@ -506,30 +819,44 @@
 }
 
 .fee {
-  padding-bottom: get_vw(170);
+  height: get_vw(1028);
   &__title {
-    width: get_vw(1280);
+    font-family: "851マカポップ";
+    font-size: get_vw(52);
+    line-height: 1.15384615385;
+    color: #0d5289;
+    &-bg {
+      width: get_vw(1280);
+      height: get_vw(90);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-image: url(../img/fee_title-bg.png);
+      background-size: cover;
+    }
   }
   &__trial {
     width: get_vw(1280);
   }
   &__set {
     display: flex;
-    padding-bottom: get_vw(90);
     &-img {
       display: block;
       width: get_vw(640);
+      height: get_vw(283);
     }
   }
   &__payment {
     position: relative;
     display: flex;
     justify-content: center;
+    padding-top: get_vw(90);
   }
   &__btn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
     width: get_vw(500);
     padding: get_vw(25) 0;
     border-bottom:  solid get_vw(6) #002641;
@@ -537,9 +864,6 @@
     background-color: #0d5289;
     color: #fff;
     cursor: pointer;
-    &-wrap {
-      padding-left: get_vw(97);
-    }
     &-txt {
       text-align: center;
       font-size: get_vw(20);
@@ -552,24 +876,40 @@
       font-weight: bold;
       letter-spacing: .15em;
     }
-    &-icon {
-      padding-right: get_vw(30);
+    &-cookie {
+      display: block;
+      position: absolute;
+      right: get_vw(29);
+      width: get_vw(31);
     }
   }
 }
 
 .order {
+  height: get_vw(1842);
   position: relative;
-  padding-top: get_vw(130);
-  padding-bottom: get_vw(134);
+  padding-top: get_vw(150);
   &__title {
-    display: block;
-    width: get_vw(1280);
+    padding-left: get_vw(30);
+    font-family: "851マカポップ";
+    font-size: get_vw(52);
+    line-height: 1.15384615385;
+    color: #0d5289;
+    &-bg {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: get_vw(1280);
+      height: get_vw(90);
+      background-image: url(../img/order_title-bg.png);
+      background-size: cover;
+    }
   }
   &__phone {
-    padding-top: get_vw(31);
     display: flex;
     justify-content: center;
+    padding-top: get_vw(31);
+    padding-bottom: get_vw(83);
     &-box {
       display: flex;
       flex-direction: column;
@@ -595,9 +935,19 @@
   }
   &__form {
     &-title {
-      display: block;
-      width: get_vw(1280);
-      padding-top: get_vw(83);
+      font-family: "851マカポップ";
+      font-size: get_vw(52);
+      line-height: 1.15384615385;
+      color: #0d5289;
+      &-bg {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: get_vw(1280);
+        height: get_vw(90);
+        background-image: url(../img/order_form-title-bg.png);
+        background-size: cover;
+      }
     }
     &-bg {
       width: get_vw(900);
@@ -635,9 +985,6 @@
       position: relative;
       padding-left: get_vw(24);
     }
-    &-submit {
-      padding: 0;
-    }
   }
   &__select-item {
     margin-left: get_vw(32);
@@ -665,12 +1012,11 @@
       resize: none;
       width: 100%;
       height: get_vw(200);
-      padding: 0 get_vw(18);
+      padding: get_vw(10) get_vw(18);
       border: get_vw(1) solid #795100;
       border-radius: get_vw(4);
       background: #f7eddb;
       font-size: get_vw(16);
-      line-height: 3.75;
       letter-spacing: .1em;
       color: #000;
       &::placeholder {
@@ -711,13 +1057,15 @@
       display: block;
       position: absolute;
       top: get_vw(-120);
-      width: get_vw(1280);
+      left: 0;
+      width: get_vw(360);
     }
     &2 {
       display: block;
       position: absolute;
-      top: get_vw(450);
-      width: get_vw(1280);
+      top: get_vw(462);
+      right: get_vw(0);
+      width: get_vw(318);
     }
   }
   &__leaf {
@@ -725,14 +1073,16 @@
       &1 {
         display: block;
         position: absolute;
-        top: get_vw(130);
-        width: get_vw(1280);
+        top: get_vw(150);
+        right: 0;
+        width: get_vw(205);
       }
       &2 {
         display: block;
         position: absolute;
         top: get_vw(1502);
-        width: get_vw(1280);
+        right: 0;
+        width: get_vw(100);
       }
     }
     &-left {
@@ -740,13 +1090,13 @@
         display: block;
         position: absolute;
         top: get_vw(508);
-        width: get_vw(1280);
+        width: get_vw(200);
       }
       &2 {
         display: block;
         position: absolute;
         top: get_vw(937);
-        width: get_vw(1280);
+        width: get_vw(190);
       }
     }
   }

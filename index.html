@@ -12,62 +12,99 @@
 <body>
   <div class="bg">
     <img class="logo fadeDown" src="img/header_logo.png" alt="おいしい有機クッキー">
-    <nav class="nav fadeDown">
+    <nav class="nav fadeDown sp-none">
       <ul class="nav__list">
-        <li class="nav__item">オーガニックとは</li>
-        <li class="nav__item">有機JAS認定とは</li>
-        <li class="nav__item">世界中から厳選した有機原材料</li>
-        <li class="nav__item">おいしさのこだわり</li>
-        <li class="nav__item">選べる3つの味</li>
+        <li class="nav__item"><a href="#organic" class="nav__item-link">オーガニックとは</a></li>
+        <li class="nav__item"><a href="#organic__jas" class="nav__item-link">有機JAS認定とは</a></li>
+        <li class="nav__item"><a href="#world" class="nav__item-link">世界中から厳選した有機原材料</a></li>
+        <li class="nav__item"><a href="#commitment" class="nav__item-link">おいしさのこだわり</a></li>
+        <li class="nav__item"><a href="#type" class="nav__item-link">選べる3つの味</a></li>
         <li class="nav__link">
-          <div class="nav__link-content">
-            <div class="nav__btn">価格表とご注⽂はこちら</div>
-            <a href="./" class="arrow arrow--vertical round--vertical"></a>
-          </div>
+          <a href="#fee" class="nav__link-content">
+            <div class="nav__btn-txt">価格表とご注⽂はこちら</div>
+            <img class="nav__btn-img" src="img/header_btn.png" alt="下矢印">
+          </a>
         </li>
       </ul>
     </nav>
+    <div class="pc-none">
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a href="#organic" class="nav__item-link">オーガニックとは</a></li>
+          <li class="global-nav__item"><a href="#organic__jas" class="nav__item-link">有機JAS認定とは</a></li>
+          <li class="global-nav__item"><a href="#world" class="nav__item-link">世界中から厳選した有機原材料</a></li>
+          <li class="global-nav__item"><a href="#commitment" class="nav__item-link">おいしさのこだわり</a></li>
+          <li class="global-nav__item"><a href="#type" class="nav__item-link">選べる3つの味</a></li>
+          <li class="global-nav__item">
+            <a href="#fee" class="nav__link-content">
+              <div class="nav__btn-txt">価格表とご注⽂はこちら</div>
+              <img class="nav__btn-img" src="img/header_btn.png" alt="下矢印">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+    </div>
 
-    <section class="mv fadeIn">
-      <h1 class="fadeUp">
-        <img class="mv__title" src="img/mv_title.png" alt="有機JAS認定 工場で製造する おいしく安全な、オーガニック（有機）クッキー 添加物の使用を避け、有機農産物をいかした、お子様だけでなく地球全体にやさしいクッキーです。">
-      </h1>
+    <section id="mv" class="mv fadeIn">
+      <div class="mv__title-bg fadeUp">
+        <h1 class="mv__title">おいしく安全な、<br>オーガニック<span class="mv__title-organic">(有機)</span>クッキー</h1>
+      </div>
+      <p class="mv__subtitle fadeUp">
+        添加物の使⽤を避け、有機農産物をいかした、<br>
+        お⼦様だけでなく地球全体にやさしいクッキーです。
+      </p>
       <div class="mv__btns fadeUp">
-        <button class="mv__btn mv__btn--what"><span>オーガニックとは</span><a href="./" class="arrow arrow--side round--side"></a></button>
-        <button class="mv__btn mv__btn--here"><span>価格表とご注文はこちら</span><a href="./" class="arrow arrow--side round--side"></a></button>
+        <a href="#organic" class="mv__btn-link">
+          <button class="mv__btn mv__btn--what">
+            <span>オーガニックとは</span>
+            <img class="mv__btn-cookie" src="img/mv_btn-cookie.png" alt="下矢印">
+          </button>
+        </a>
+        <a href="#fee" class="mv__btn-link">
+          <button class="mv__btn mv__btn--here">
+            <span>価格表とご注文はこちら</span>
+            <img class="mv__btn-cookie" src="img/mv_btn-cookie.png" alt="下矢印">
+          </button>
+        </a>
       </div>
       <img class="mv__trial fadeLeft" src="img/mv_trial.png" alt="お試しセット 3袋1,000円（税込）">
     </section>
 
     <section class="calorie">
-      <img class="calorie__column1 sa sa--lr" src="img/calorie_family.png" alt="親子">
-      <div class="calorie__column2">
-        <div class="calorie__line1">
-          <img class="calorie__main sa sa--up" src="img/calorie_main.png" alt="1日3〜5枚で おこさまのおやつにちょうどいいカロリーがしっかり摂れる">
-          <img class="calorie__cookie sa sa--rl" src="img/calorie_cookie.png" alt="クッキー">
-        </div>
-        <div class="calorie__line2">
-          <p class="calorie__txt sa sa--up">
-            3〜5歳くらいのお⼦さまの1⽇の必要カロリーは<br>
-            1,200〜1,400カロリーくらいが⽬安で、<br>
-            おやつで摂取するカロリーは1⽇の総エネルギーの<br>
-            <span class="calorie__txt--blue">10〜20％(120〜280カロリー)以内が理想</span>と⾔われています。<br>
-            <br>
-            “おいしい有機クッキー”は1枚当たり26〜28カロリーとなっており、<br>
-            5枚で130〜140カロリーが摂れ、また⽐較的糖分も低く、<br>
-            毎⽇⾷べても安⼼なクッキーです。<br>
-          </p>
-          <img class="calorie__girl sa sa--rl" src="img/calorie_girl.png" alt="女の子">
-        </div>
+      <div class="calorie__title-bg sa sa--up">
+        <h2 class="calorie__title">
+          おこさまのおやつに<br>
+          ちょうどいいカロリーが<br>
+          しっかり摂れる
+        </h2>
       </div>
+      <p class="calorie__txt sa sa--up">
+        3〜5歳くらいのお⼦さまの1⽇の必要カロリーは<br>
+        1,200〜1,400カロリーくらいが⽬安で、<br>
+        おやつで摂取するカロリーは1⽇の総エネルギーの<br>
+        <span class="calorie__txt--blue">10〜20％(120〜280カロリー)以内が理想</span>と⾔われています。<br>
+        <br>
+        “おいしい有機クッキー”は1枚当たり26〜28カロリーとなっており、<br>
+        <span class="calorie__txt--blue">5枚で130〜140カロリーが摂れ</span>、また⽐較的糖分も低く、<br>
+        毎⽇⾷べても安⼼なクッキーです。<br>
+      </p>
+      <img class="calorie__cookie sa sa--rl" src="img/calorie_cookie.png" alt="クッキー">
+      <img class="calorie__family sa sa--lr" src="img/calorie_family.png" alt="親子">
+      <img class="calorie__girl sa sa--rl" src="img/calorie_girl.png" alt="女の子">
     </section>
 
     <section class="organic">
-      <div class="organic__what">
-        <img class="organic__what-leaf--left sa sa--lr" src="img/organic_what-leaf--left.png" alt="葉っぱ">
-        <img class="organic__what-title sa sa--up" src="img/organic_what-title.png" alt="オーガニック（有機）とは">
-        <img class="organic__what-leaf--right sa sa--rl" src="img/organic_what-leaf--right.png" alt="葉っぱ">
+      <div id="organic" class="organic__what-title-bg sa sa--up">
+        <h2 class="organic__what-title">オーガニック（有機）とは</h2>
       </div>
+      <img class="organic__what-leaf--left sa sa--lr" src="img/organic_what-leaf--left.png" alt="葉っぱ">
+      <img class="organic__what-leaf--right sa sa--rl" src="img/organic_what-leaf--right.png" alt="葉っぱ">
       <div class="organic__kind">
         <img class="organic__kind-family sa sa--lr" src="img/organic_kind-family.png" alt="家族">
         <div class="organic__kind-word sa sa--up">
@@ -77,7 +114,7 @@
               <dd class="organic__kind-dd">化学農薬肥料を使わず、</dd>
               <dd class="organic__kind-dd">環境の負荷を低くし、地球を守ります</dd>
               <dt class="organic__kind-dt">健康にやさしい</dt>
-              <dd class="organic__kind-dd">添加物を避け、健康を守ります</dd>
+              <dd class="organic__kind-dd">添加物を避け、g:健康を守ります</dd>
               <dt class="organic__kind-dt">⼈類にやさしい</dt>
               <dd class="organic__kind-dd">児童労働、植⺠地栽培を排除し、</dd>
               <dd class="organic__kind-dd">⼈類を守ります</dd>
@@ -93,7 +130,9 @@
       </div>
       <div class="organic__sweets">
         <img class="organic__sweets-leaf sa sa--lr" src="img/organic_sweets-leaf.png" alt="葉っぱ">
-        <img class="organic__sweets-title sa sa--up" src="img/organic_sweets-title.png" alt="オーガニックのお菓子とは">
+        <div class="organic__sweets-title-bg sa sa--up">
+          <h2 class="organic__sweets-title">オーガニックのお菓子とは</h2>
+        </div>
       </div>
       <div class="organic__manufacture">
         <div class="organic__manufacture-word sa sa--up">
@@ -118,8 +157,10 @@
       </div>
       <div class="organic__jas">
         <img class="organic__jas-leaf--left sa sa--lr" src="img/organic_jas-leaf--left.png" alt="葉っぱ">
-        <img class="organic__jas-title sa sa--up" src="img/organic_jas-title.png" alt="有機JAS認定とは">
         <img class="organic__jas-leaf--right sa sa--rl" src="img/organic_jas-leaf--right.png" alt="葉っぱ">
+        <div id="organic__jas" class="organic__jas-title-bg sa sa--up">
+          <h2 class="organic__jas-title">有機ＪＡＳ認定とは</h2>
+        </div>
       </div>
       <img class="organic__japan sa sa--up" src="img/organic_japan.png" alt="有機JASマーク JONA JN190305PR">
       <div class="organic__boxes sa sa--up">
@@ -138,12 +179,19 @@
         </div>
       </div>
       <div class="organic__order">
-        <button class="organic__btn organic__btn--here sa sa--up"><span>価格表とご注文はこちら</span><a href="./" class="arrow arrow--side round--side"></a></button>
+        <a href="#fee" class="organic__btn-link">
+          <button class="organic__btn organic__btn--here sa sa--up">
+            <span>価格表とご注文はこちら</span>
+            <img class="organic__btn-cookie" src="img/organic_btn-cookie.png" alt="下矢印">
+          </button>
+        </a>
       </div>
     </section>
 
     <section class="world">
-      <img class="world__title sa sa--up" src="img/world_title.png" alt="世界中から厳選した有機原材料">
+      <div id="world" class="world__title-bg sa sa--up">
+        <h2 class="world__title">世界中から厳選した有機原材料</h2>
+      </div>
       <div class="world__words">
         <p class="world__collect sa sa--lr">
           世界中から原材料を集めて<br>
@@ -162,7 +210,9 @@
     </section>
 
     <section class="commitment">
-      <img class="commitment__title sa sa--up" src="img/commitment_title.png" alt="おいしさへの徹底したこだわり">
+      <div id="commitment" class="commitment__title-bg sa sa--up">
+        <h2 class="commitment__title">おいしさへの徹底したこだわり</h2>
+      </div>
       <div class="commitment__explanation">
         <div class="commitment__okara sa sa--up">
           <div class="commitment__okara-title">おから</div>
@@ -174,10 +224,15 @@
         </div>
         <div class="commitment__recipe sa sa--up">
           <div class="commitment__recipe-title">製法</div>
-          <p class="commitment__recipe-txt">おいしい有機クッキーは、日本で初めて有機JAS認証を受けた有機豆腐製造小売店の生おからを使用しています。</p>
-          <p class="commitment__recipe-txt">余分な加工を行っていないため、大豆本来の香ばしい風味がお楽しみいただけます。</p>
           <p class="commitment__recipe-txt">
-            生のおからは、長時間焼き上げてもギュッと硬くならずにサクサクとした食感となり、<span class="commitment__recipe-txt commitment__okara-txt--blue">お子様のかむ力でもおいしく食べれるクッキーに仕上がっています。</span>
+            ⽣おからをそのまま使⽤し直接焼くことで⼤⾖本来の⾹ばしさがでるようになったり、⾖乳も粉末状ではなく
+            液状の物を使⽤しております。
+          </p>
+          <p class="commitment__recipe-txt">
+            つまり、⼀般的な⼯場などでの加⼯原料を使⽤する⽅法ではなく、<span class="commitment__okara-txt commitment__okara-txt--blue">本物志向でのそのままの原材料を使⽤しております。</span>
+          </p>
+          <p class="commitment__recipe-txt">
+            そのため、低温でじっくり焼成する必要があり、⻑時間かけた、おいしいおからクッキーになっております。
           </p>
         </div>
       </div>
@@ -185,7 +240,9 @@
     </section>
 
     <section class="type">
-      <img class="type__title sa sa--up" src="img/type_title.png" alt="選べる3つの味">
+      <div id="type" class="type__title-bg sa sa--up">
+        <h2 class="type__title">選べる3つの味</h2>
+      </div>
       <div class="type__explanation sa sa--up">
         <div class="type__items">
           <div class="type__item">
@@ -232,20 +289,22 @@
       </div>
     </section>
 
-    <section class="fee">
-      <img class="fee__title" src="img/fee_title.png" alt="料金">
-      <img class="fee__trial" src="img/fee_trial.png" alt="初回お試しセット オーツ⻨×1袋(5枚⼊り) ココア×1袋(5枚⼊り) ココアーモンド×1袋(5枚⼊り) 初回お試し 3袋 1,０00円(税込)">
+    <section id="fee" class="fee">
+      <div class="fee__title-bg sa sa--up">
+        <h2 class="fee__title">料金</h2>
+      </div>
+      <img class="fee__trial sa sa--up" src="img/fee_trial.png" alt="初回お試しセット オーツ⻨×1袋(5枚⼊り) ココア×1袋(5枚⼊り) ココアーモンド×1袋(5枚⼊り) 初回お試し 3袋 1,０00円(税込)">
       <div class="fee__set">
-        <img class="fee__set-img" src="img/fee_3.png" alt="通常 3袋 1,500円(税込) オーツ⻨×1袋(5枚⼊り) ココア×1袋(5枚⼊り) ココアーモンド×1袋(5枚⼊り)">
-        <img class="fee__set-img" src="img/fee_9.png" alt="通常 9袋 3,980円(税込) オーツ⻨×3袋(5枚⼊り) ココア×3袋(5枚⼊り) ココアーモンド×3袋(5枚⼊り)">
+        <img class="fee__set-img sa sa--up" src="img/fee_3.png" alt="通常 3袋 1,500円(税込) オーツ⻨×1袋(5枚⼊り) ココア×1袋(5枚⼊り) ココアーモンド×1袋(5枚⼊り)">
+        <img class="fee__set-img sa sa--up" src="img/fee_9.png" alt="通常 9袋 3,980円(税込) オーツ⻨×3袋(5枚⼊り) ココア×3袋(5枚⼊り) ココアーモンド×3袋(5枚⼊り)">
       </div>
       <div class="fee__payment">
-        <div id="show" class="fee__btn">
-          <div class="fee__btn-wrap">
+        <div id="show" class="fee__btn sa sa--up">
+          <div>
             <p class="fee__btn-txt">お⽀払いと発送に関して</p>
             <p class="fee__btn-annotation">※お⽀払いはクレジットカード決済のみです。</p>
           </div>
-          <i class="fee__btn-icon fas fa-plus-circle fa-2x"></i>
+          <img class="fee__btn-cookie" src="img/fee_btn-cookie.png" alt="プラス">
         </div>
         <div id="layer" class="layer"></div>
         <div id="popup" class="popup">
@@ -285,14 +344,18 @@
     </section>
 
     <section class="order">
-      <img class="order__title sa sa--up" src="img/order_title.png" alt="お電話でのご注文はこちら">
+      <div class="order__title-bg sa sa--up">
+        <h2 class="order__title">お電話でのご注文はこちら</h2>
+      </div>
       <div class="order__phone">
         <div class="order__phone-box sa sa--up">
           <p class="order__number">050-5434-3429</p>
           <p class="order__day">平日 月曜 - 金曜 9:00 - 18:00</p>
         </div>
       </div>
-      <img class="order__form-title sa sa--up" src="img/order_form-title.png" alt="ご注文フォーム">
+      <div class="order__form-title-bg sa sa--up">
+        <h2 class="order__form-title">ご注文フォーム</h2>
+      </div>
       <div class="order__form-bg sa sa--up">
         <form method="post" action="">
           <table class="order__table">
@@ -317,11 +380,15 @@
                 </div>
                 <div class="order__select-item">1,500円</div>
                 <div class="order__select-item">数量</div>
-                <select class="minimal">
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                </select>
+                <div class="cp_ipselect cp_sl04">
+                  <select required>
+                    <option value="" hidden></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
               </td>
               <td class="order__td-select">
                 <div class="radio">
@@ -330,18 +397,22 @@
                 </div>
                 <div class="order__select-item">3,980円</div>
                 <div class="order__select-item">数量</div>
-                <select class="minimal">
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                </select>
+                <div class="cp_ipselect cp_sl04">
+                  <select required>
+                    <option value="" hidden></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
               </td>
             </tr>
             <tr>
               <th>メールアドレス</th>
               <td class="order__td-mail">
                 <input class="order__txt-box" name="mail" type="tel">
-                <div class="circle">!</div>
+                <img class="circle" src="img/surprised-mark.png" alt="ビックリマーク">
                 <p class="order__error">エラーメッセージが⼊ります</p>
               </td>
             </tr>
@@ -357,11 +428,11 @@
               </td>
             </tr>
             <tr>
-              <td class="order__td-submit" colspan="2">
-                <div class="order__btn">
+              <td colspan="2">
+                <button class="order__btn">
                   <input class="order__btn-txt" type="submit" value="確認する">
                   <span class="arrow--right">〉</span>
-                </div>
+                </button>
               </td>
             </tr>
           </table>
@@ -385,7 +456,7 @@
     </footer>
 
     <div id="goto_top" class="scroll">
-      <a class="scroll__link" href="#">
+      <a class="scroll__link" href="#mv">
         <img class="scroll__btn" src="img/scroll_btn.png" alt="ページトップへ">
       </a>
     </div>
