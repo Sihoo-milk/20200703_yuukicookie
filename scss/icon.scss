@@ -44,12 +44,18 @@ input[type=radio] {
 input[type=radio]:checked + .radio01::after {
   opacity: 1;
 }
+@media screen and (max-width: 768px) {
+  .radio01 {
+    width: 100%;
+  }
+}
 
 // セレクトボックス
 .cp_ipselect {
   width: get_vw(90);
   height: get_vw(40);
   margin-left: get_vw(18);
+  line-height: 1;
   & select {
     width: 100%;
     height: 100%;
