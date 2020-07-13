@@ -149,14 +149,12 @@
     text-align: left;
     padding: 0 get_vw(34);
   }
-  .nav__item-link {
+  .global-nav__item-link {
     display: block;
     padding: get_vw(16) 0;
-    text-decoration: none;
     font-size: get_vw(32);
-  }
-  .global-nav__item a:hover {
-    background-color: #eee;
+    text-decoration:none;
+    color: #000;
   }
   .hamburger__line {
     position: absolute;
@@ -207,24 +205,27 @@
     transform: rotate(-45deg);
     top: get_vw(50);
   }
-  .nav {
+  .global-nav {
     &__link {
       &-content {
         display: flex;
         align-items: center;
         background: none;
         border: none;
+        text-decoration: none;
       }
     }
     &__btn {
       &-txt {
         margin: 0;
+        padding: get_vw(16) 0;
         writing-mode: unset;
         font-size: get_vw(32);
         color: #2d9748;
       }
       &-img {
         width: get_vw(32);
+        margin-left: get_vw(20);
       }
     }
   }

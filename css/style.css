@@ -163,14 +163,12 @@
     text-align: left;
     padding: 0 2.65625vw;
   }
-  .nav__item-link {
+  .global-nav__item-link {
     display: block;
     padding: 1.25vw 0;
-    text-decoration: none;
     font-size: 2.5vw;
-  }
-  .global-nav__item a:hover {
-    background-color: #eee;
+    text-decoration: none;
+    color: #000;
   }
   .hamburger__line {
     position: absolute;
@@ -221,20 +219,23 @@
     transform: rotate(-45deg);
     top: 3.90625vw;
   }
-  .nav__link-content {
+  .global-nav__link-content {
     display: flex;
     align-items: center;
     background: none;
     border: none;
+    text-decoration: none;
   }
-  .nav__btn-txt {
+  .global-nav__btn-txt {
     margin: 0;
+    padding: 1.25vw 0;
     writing-mode: unset;
     font-size: 2.5vw;
     color: #2d9748;
   }
-  .nav__btn-img {
+  .global-nav__btn-img {
     width: 2.5vw;
+    margin-left: 1.5625vw;
   }
 }
 
