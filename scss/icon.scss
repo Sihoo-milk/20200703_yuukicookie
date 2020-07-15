@@ -3,6 +3,13 @@
     font-size: get_vw(16);
   }
 }
+@media screen and (min-width: 1280px) {
+  .arrow {
+    &--right {
+      font-size: 16px;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .arrow {
     &--right {
@@ -50,6 +57,25 @@ input[type=radio] {
 }
 input[type=radio]:checked + .radio01::after {
   opacity: 1;
+}
+@media screen and (min-width: 1280px) {
+  .radio01 {
+    width: 187px;
+    padding-left: 55px;
+    font-size: 16px;
+    &::before {
+      top: -8px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #795100;
+    }
+    &::after {
+      top: 5px;
+      left: 13px;
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .radio01 {
@@ -117,6 +143,30 @@ input[type=radio]:checked + .radio01::after {
     color: #000;
   }
 }
+@media screen and (min-width: 1280px) {
+  .cp_ipselect {
+    width: 90px;
+    height: 40px;
+    margin-left: 18px;
+    & select {
+      text-indent: 0.01px;
+    }
+    &.cp_sl04 {
+      border: 1px solid #795100;
+      border-radius: 4px;
+      &::before {
+        right: 9px;
+        border-top: 4px solid #865500;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+    }
+    & select {
+      padding: 6px 38px 6px 12px;
+      color: #000;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .cp_ipselect {
     width: sp-get_vw(90);
@@ -144,6 +194,13 @@ input[type=radio]:checked + .radio01::after {
   top: get_vw(18);
   right: get_vw(20);
   width: get_vw(25);
+}
+@media screen and (min-width: 1280px) {
+  .circle {
+    top: 18px;
+    right: 20px;
+    width: 25px;
+  }
 }
 @media screen and (max-width: 768px) {
   .circle {
@@ -194,6 +251,27 @@ input[type=checkbox] {
 }
 input[type=checkbox]:checked + .checkbox01::after {
   opacity: 1;
+}
+@media screen and (min-width: 1280px) {
+  .checkbox01 {
+    height: 40px;
+    padding-left: 50px;
+    font-size: 16px;
+    &::before {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #795100;
+      border-radius: 4px;
+    }
+    &::after {
+      top: 6px;
+      left: 16px;
+      width: 10px;
+      height: 25px;
+      border-right: 3px solid #2d9748;
+      border-bottom: 3px solid #2d9748;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .checkbox01 {
