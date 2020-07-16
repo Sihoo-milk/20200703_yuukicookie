@@ -20,37 +20,26 @@
 }
 
 .sp-none {
-  display: block;
+  display: block !important;
 }
 .pc-none {
-  display: none;
+  display: none !important;
 }
 @media screen and (max-width: 768px) {
   .sp-none {
-    display: none;
+    display: none !important;
   }
   .pc-none {
-    display: block;
+    display: block !important;
   }
 }
 
 .bg1280 {
+  position: relative;
+  overflow: hidden;
   background-image: url(../img/bg1280.png);
   background-size: cover;
   background-position: top;
-}
-
-.bg {
-  max-width: 1280px;
-  margin: 0 auto;
-  background-image: url(../img/bg.png);
-  background-size: cover;
-  background-position: top;
-}
-@media screen and (max-width: 768px) {
-  .bg {
-    background-image: none;
-  }
 }
 
 .logo {
@@ -305,6 +294,11 @@
   height: get_vw(840);
   background-image: url(../img/mv_bg.png);
   background-size: cover;
+  &__main {
+    height: get_vw(840);
+    background-image: url(../img/mv_main.png);
+    background-size: cover;
+  }
   &__title {
     transform: rotate(-2deg);
     font-size: get_vw(68);
@@ -374,64 +368,20 @@
     width: get_vw(330);
   }
 }
-@media screen and (min-width: 1280px) {
-  .mv {
-    max-width: 1280px;
-    height: 840px;
-    margin: 0 auto;
-    &__title {
-      font-size: 68px;
-      &-organic {
-        font-size: 51.33px;
-      }
-      &-bg {
-        padding-top: 200px;
-        padding-bottom: 30px;
-        padding-left: 220px;
-        background-position-y: 215px;
-      }
-    }
-    &__subtitle {
-      padding-left: 225px;
-      font-size: 16px;
-    }
-    &__btns {
-      padding-top: 25px;
-      padding-left: 222px;
-    }
-    &__btn {
-      margin-right: 15px;
-      padding: 0 20px;
-      font-size: 18px;
-      border-radius: 10px;
-      &-cookie {
-        width: 24px;
-        margin-left: 15px;
-      }
-      &--what {
-        border-bottom: solid 4px #002641;
-      }
-      &--here {
-        border-bottom: solid 4px #08581c;
-      }
-    }
-    &__trial {
-      top: 544px;
-      width: 330px;
-    }
-  }
-}
 @media screen and (max-width: 768px) {
   .mv {
     height: sp-get_vw(800);
     background-image: url(../img/mv_bg-sp.png);
+    &__main {
+      background: none;
+    }
     &__title {
-      font-size: sp-get_vw(68);
+      font-size: sp-get_vw(62);
       &-organic {
         font-size: sp-get_vw(51.33);
       }
       &-bg {
-        padding-top: sp-get_vw(149);
+        padding-top: sp-get_vw(159);
         padding-bottom: sp-get_vw(30);
         padding-left: sp-get_vw(50);
         background-image: url(../img/mv_title-bg-sp.png);
@@ -477,6 +427,8 @@
   position: relative;
   height: get_vw(900);
   padding-top: get_vw(85);
+  background-image: url(../img/calorie_bg.png);
+  background-size: cover;
   &__title {
     text-align: center;
     font-family: "851MkPOP_002";
@@ -564,20 +516,21 @@
 @media screen and (max-width: 768px) {
   .calorie {
     height: sp-get_vw(845);
-    padding-top: sp-get_vw(177);
+    padding-top: sp-get_vw(107);
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
     &__title {
-      font-size: sp-get_vw(30);
+      font-size: sp-get_vw(28);
       &-bg {
-        width: sp-get_vw(768);
-        height: sp-get_vw(135);
-        padding-top: sp-get_vw(0);
-        padding-left: sp-get_vw(0);
+        width: sp-get_vw(332);
+        height: sp-get_vw(195);
+        margin-left: sp-get_vw(180);
+        padding-top: sp-get_vw(70);
+        padding-left: sp-get_vw(40);
         background-image: url(../img/calorie_title-bg-sp.png);
         background-size: cover;
-        background-position-y: sp-get_vw(25);
-        background-position-x: sp-get_vw(80);
+        background-position-y: sp-get_vw(0);
+        background-position-x: sp-get_vw(0);
       }
     }
     &__txt {
@@ -598,10 +551,12 @@
 }
 
 .organic {
-  height: get_vw(2646);
   position: relative;
-  padding-top: get_vw(201);
   &__what {
+    height: get_vw(929);
+    padding-top: get_vw(200);
+    background-image: url(../img/organic_what-bg.png);
+    background-size: cover;
     &-leaf {
       &--left {
         display: block;
@@ -680,11 +635,13 @@
   }
   &__sweets {
     position: relative;
-    padding-top: get_vw(158);
+    height: get_vw(690);
+    background-image: url(../img/organic_sweets-bg.png);
+    background-size: cover;
     &-leaf {
       display: block;
       position: absolute;
-      top: 0;
+      top: get_vw(-163);
       left: 0;
       width: get_vw(350);
     }
@@ -750,12 +707,13 @@
   }
   &__jas {
     position: relative;
-    padding-top: get_vw(119);
+    height: get_vw(888);
+    background-image: url(../img/organic_jas-bg.png);
     &-leaf {
       &--left {
         display: block;
         position: absolute;
-        top: 0;
+        top: get_vw(-118);
         left: 0;
         width: get_vw(400);
       }
@@ -786,7 +744,7 @@
   &__boxes {
     display: flex;
     justify-content: space-between;
-    margin: get_vw(53) get_vw(90) 0;
+    margin: get_vw(50) get_vw(90) 0;
     &-dt {
       padding-right: get_vw(15);
       padding-left: get_vw(15);
@@ -816,7 +774,7 @@
   &__order {
     display: flex;
     justify-content: center;
-    padding-top: get_vw(55);
+    padding-top: get_vw(50);
   }
   &__btn {
     display: flex;
@@ -851,10 +809,10 @@
   .organic {
     position: relative;
     max-width: 1280px;
-    height: 2646px;
     margin: 0 auto;
-    padding-top: 201px;
     &__what {
+      height: 929px;
+      padding-top: 200px;
       &-leaf {
         &--left {
           width: 340px;
@@ -897,8 +855,8 @@
       }
     }
     &__sweets {
-      padding-top: 158px;
       &-leaf {
+        top: -163px;
         width: 350px;
       }
       &-title {
@@ -934,9 +892,10 @@
       }
     }
     &__jas {
-      padding-top: 119px;
+      height: 888px;
       &-leaf {
         &--left {
+          top: -118px;
           width: 400px;
         }
         &--right {
@@ -952,7 +911,7 @@
       }
     }
     &__boxes {
-      margin: 53px 90px 0;
+      margin: 50px 90px 0;
       &-dt {
         padding-right: 15px;
         padding-left: 15px;
@@ -973,7 +932,7 @@
       }
     }
     &__order {
-      padding-top: 55px;
+      padding-top: 50px;
     }
     &__btn {
       width: 500px;
@@ -1022,11 +981,11 @@
         height: 100%;
       }
       &-word {
-        justify-content: center;
+        justify-content: space-around;
       }
       &-side {
         padding-top: sp-get_vw(80);
-        padding-left: 0;
+        padding-left: sp-get_vw(70);
       }
       &-dt {
         margin-top: sp-get_vw(33);
@@ -1040,7 +999,8 @@
       }
       &-vertical {
         padding-top: sp-get_vw(21);
-        padding-left: sp-get_vw(45);
+        padding-right: sp-get_vw(70);
+        padding-left: 0;
       }
       &-txt {
         font-size: sp-get_vw(28);
@@ -1064,7 +1024,7 @@
     &__manufacture {
       flex-direction: column-reverse;
       &-word {
-        justify-content: center;
+        justify-content: space-around;
       }
       &-vertical {
         padding-top: sp-get_vw(21);
@@ -1090,6 +1050,7 @@
       }
     }
     &__jas {
+      height: 100%;
       padding-top: sp-get_vw(119);
       background-image: url(../img/organic_jas-bg-sp.png);
       background-size: cover;
@@ -1144,8 +1105,10 @@
 }
 
 .world {
-  height: get_vw(1166);
-  padding-top: get_vw(98);
+  height: get_vw(1303);
+  padding-top: get_vw(236);
+  background-image: url(../img/world_bg.png);
+  background-size: cover;
   &__title {
     padding-left: get_vw(20);
     font-family: "851MkPOP_002";
@@ -1167,8 +1130,8 @@
     justify-content: space-between;
   }
   &__collect {
-    margin-top: get_vw(150);
-    margin-left: get_vw(180);
+    margin-top: get_vw(120);
+    margin-left: get_vw(190);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-size: get_vw(28);
@@ -1178,14 +1141,14 @@
     color: #0d5289;
   }
   &__explanation {
-    margin-top: get_vw(500);
+    margin-top: get_vw(480);
     font-size: get_vw(16);
     line-height: 2;
     letter-spacing: .1em;
   }
   &__delicious {
     margin-top: get_vw(100);
-    margin-right: get_vw(230);
+    margin-right: get_vw(220);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-size: get_vw(28);
@@ -1196,16 +1159,17 @@
   }
   &__distribution {
     display: block;
-    width: get_vw(1280);
-    padding-top: get_vw(40);
+    width: get_vw(900);
+    margin: 0 auto;
+    padding-top: get_vw(60);
   }
 }
 @media screen and (min-width: 1280px) {
   .world {
     max-width: 1280px;
-    height: 1166px;
+    height: 1303px;
     margin: 0 auto;
-    padding-top: 98px;
+    padding-top: 236px;
     &__title {
       padding-left: 20px;
       font-size: 52px;
@@ -1215,22 +1179,22 @@
       }
     }
     &__collect {
-      margin-top: 150px;
-      margin-left: 180px;
+      margin-top: 120px;
+      margin-left: 190px;
       font-size: 28px;
     }
     &__explanation {
-      margin-top: 500px;
+      margin-top: 480px;
       font-size: 16px;
     }
     &__delicious {
       margin-top: 100px;
-      margin-right: 230px;
+      margin-right: 220px;
       font-size: 28px;
     }
     &__distribution {
-      width: 1280px;
-      padding-top: 40px;
+      width: 900px;
+      padding-top: 60px;
     }
   }
 }
@@ -1264,8 +1228,6 @@
       font-size: sp-get_vw(28);
     }
     &__distribution {
-      width: 100%;
-      height: sp-get_vw(171);
       padding-top: sp-get_vw(40);
     }
   }
@@ -1274,7 +1236,9 @@
 .commitment {
   position: relative;
   height: get_vw(1050);
-  padding-top: get_vw(110);
+  padding-top: get_vw(119);
+  background-image: url(../img/commitment_bg.png);
+  background-size: cover;
   &__title {
     padding-left: get_vw(45);
     font-family: "851MkPOP_002";
@@ -1363,7 +1327,7 @@
     max-width: 1280px;
     height: 1050px;
     margin: 0 auto;
-    padding-top: 110px;
+    padding-top: 119px;
     &__title {
       padding-left: 45px;
       font-size: 52px;
@@ -1470,8 +1434,10 @@
 }
 
 .type {
-  height: get_vw(950);
+  height: get_vw(834);
   padding-top: get_vw(150);
+  background-image: url(../img/type_bg.png);
+  background-size: cover;
   &__title {
     padding-left: get_vw(30);
     font-family: "851MkPOP_002";
@@ -1497,7 +1463,7 @@
     padding: 0 get_vw(82) 0;
   }
   &__item {
-    width: get_vw(344);
+    width: get_vw(340);
     font-size: get_vw(16);
     &-img {
       display: block;
@@ -1512,8 +1478,8 @@
       letter-spacing: .1em;
     }
     &-description {
-      min-height: get_vw(150);
-      padding: get_vw(20) get_vw(5);
+      min-height: get_vw(118);
+      padding: get_vw(11) 0;
       font-size: get_vw(16);
       line-height: 2;
       letter-spacing: .1em;
@@ -1527,7 +1493,7 @@
 @media screen and (min-width: 1280px) {
   .type {
     max-width: 1280px;
-    height: 950px;
+    height: 834px;
     margin: 0 auto;
     padding-top: 150px;
     &__title {
@@ -1545,7 +1511,7 @@
       padding: 0 82px 0;
     }
     &__item {
-      width: 344px;
+      width: 340px;
       font-size: 16px;
       &-name {
         padding-top: 15px;
@@ -1553,8 +1519,8 @@
         font-size: 24px;
       }
       &-description {
-        min-height: 150px;
-        padding: 20px 5px;
+        min-height: 136px;
+        padding: 20px 0;
         font-size: 16px;
       }
     }
@@ -1583,7 +1549,7 @@
       padding: 0 sp-get_vw(42) 0;
     }
     &__item {
-      width: sp-get_vw(344);
+      width: 100%;
       margin: 0 auto;
       padding-bottom: sp-get_vw(100);
       font-size: sp-get_vw(16);
@@ -1606,7 +1572,10 @@
 }
 
 .fee {
-  height: get_vw(1028);
+  height: get_vw(1079);
+  padding-top: get_vw(116);
+  background-image: url(../img/fee_bg.png);
+  background-size: cover;
   &__title {
     font-family: "851MkPOP_002";
     font-size: get_vw(52);
@@ -1623,14 +1592,22 @@
     }
   }
   &__trial {
-    width: get_vw(1280);
+    width: get_vw(1097);
+    margin: 0 auto;
   }
   &__set {
     display: flex;
+    justify-content: space-between;
+    width: get_vw(1097);
+    margin: get_vw(15) auto 0;
     &-img {
       display: block;
-      width: get_vw(640);
-      height: get_vw(283);
+      width: get_vw(535);
+      height: get_vw(267);
+      &3 {
+      }
+      &9 {
+      }
     }
   }
   &__payment {
@@ -1674,7 +1651,8 @@
 @media screen and (min-width: 1280px) {
   .fee {
     max-width: 1280px;
-    height: 1028px;
+    height: 1079px;
+    padding-top: 116px;
     margin: 0 auto;
     &__title {
       font-size: 52px;
@@ -1684,12 +1662,13 @@
       }
     }
     &__trial {
-      width: 1280px;
+      width: 1097px;
     }
     &__set {
+      width: 1097px;
       &-img {
-        width: 640px;
-        height: 283px;
+        width: 535px;
+        height: 267px;
       }
     }
     &__payment {
@@ -1729,6 +1708,16 @@
     &__payment {
       padding-top: sp-get_vw(90);
     }
+    &__set {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      &-img {
+        width: get_vw(1097);
+        height: 100%;
+        margin: 0 auto sp-get_vw(20);
+      }
+    }
     &__btn {
       width: sp-get_vw(500);
       padding: sp-get_vw(25) 0;
@@ -1749,9 +1738,11 @@
 }
 
 .order {
-  height: get_vw(1842);
   position: relative;
-  padding-top: get_vw(150);
+  padding-top: get_vw(250);
+  padding-bottom: get_vw(135);
+  background-image: url(../img/order_bg.png);
+  background-size: cover;
   &__title {
     padding-left: get_vw(30);
     font-family: "851MkPOP_002";
@@ -1937,14 +1928,14 @@
     &1 {
       display: block;
       position: absolute;
-      top: get_vw(-120);
+      top: get_vw(-27);
       left: 0;
       width: get_vw(360);
     }
     &2 {
       display: block;
       position: absolute;
-      top: get_vw(462);
+      top: get_vw(527);
       right: get_vw(0);
       width: get_vw(318);
     }
@@ -1954,14 +1945,14 @@
       &1 {
         display: block;
         position: absolute;
-        top: get_vw(150);
+        top: get_vw(215);
         right: 0;
         width: get_vw(205);
       }
       &2 {
         display: block;
         position: absolute;
-        top: get_vw(1502);
+        top: get_vw(1567);
         right: 0;
         width: get_vw(100);
       }
@@ -1970,13 +1961,13 @@
       &1 {
         display: block;
         position: absolute;
-        top: get_vw(508);
+        top: get_vw(587);
         width: get_vw(200);
       }
       &2 {
         display: block;
         position: absolute;
-        top: get_vw(937);
+        top: get_vw(1002);
         width: get_vw(190);
       }
     }
@@ -1985,9 +1976,9 @@
 @media screen and (min-width: 1280px) {
   .order {
     max-width: 1280px;
-    height: 1842px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 250px;
+    padding-bottom: 135px;
     &__title {
       padding-left: 30px;
       font-size: 52px;
@@ -2091,34 +2082,34 @@
     }
     &__cookie {
       &1 {
-        top: -120px;
+        top: -27px;
         left: 0;
         width: 360px;
       }
       &2 {
         display: block;
-        top: 462px;
+        top: 527px;
         width: 318px;
       }
     }
     &__leaf {
       &-right {
         &1 {
-          top: 150px;
+          top: 215px;
           width: 205px;
         }
         &2 {
-          top: 1502px;
+          top: 1567px;
           width: 100px;
         }
       }
       &-left {
         &1 {
-          top: 508px;
+          top: 587px;
           width: 200px;
         }
         &2 {
-          top: 937px;
+          top: 1002px;
           width: 190px;
         }
       }

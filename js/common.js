@@ -5,12 +5,13 @@ $(function() {
       var elemPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > elemPos - windowHeight + 300) {
+      if (scroll > elemPos - windowHeight + 0) {
         $(this).addClass('show');
       }
     });
   });
 });
+
 
 // スムーススクロールの設定
 $(function() {
@@ -24,6 +25,7 @@ $(function() {
   });
 });
 
+
 // ポップアップ
 $(function() {
   // show popupボタンクリック時の処理
@@ -36,6 +38,8 @@ $(function() {
   });
 });
 
+
+// バーガーメニュー
 function toggleNav() {
   var body = document.body;
   var hamburger = document.getElementById('js-hamburger');
