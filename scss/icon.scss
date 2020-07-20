@@ -16,6 +16,10 @@
       font-size: sp-get_vw(16);
     }
   }
+  .scroll,
+  .scroll__btn {
+    width: 15vw;
+  }
 }
 
 // ラジオボタン
@@ -79,9 +83,9 @@ input[type=radio]:checked + .radio01::after {
 }
 @media screen and (max-width: 768px) {
   .radio01 {
-    width: sp-get_vw(187);
+    width: 32vw;
     padding-left: sp-get_vw(55);
-    font-size: sp-get_vw(16);
+    font-size: 2.7vw;
     &::before {
       top: sp-get_vw(-8);
       width: sp-get_vw(40);

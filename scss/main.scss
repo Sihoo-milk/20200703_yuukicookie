@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   list-style: none;
-  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
   font-feature-settings: "palt" 1;
 }
 
@@ -44,7 +44,7 @@
 
 .logo {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: get_vw(259);
@@ -120,6 +120,13 @@
       border-radius: get_vw(8);
       background: #2d9748;
       text-decoration: none;
+      transition-property: all;
+      transition: 0.3s linear;
+      &:hover {
+        border-bottom-color: #2d9748;
+        opacity: 1;
+        padding: 17px 0 7px;
+      }
     }
   }
   &__btn {
@@ -177,9 +184,9 @@
 @media screen and (max-width: 768px) {
   .global-nav {
     position: fixed;
-    right: sp-get_vw(-350); /* これで隠れる */
+    right: -48vw; /* これで隠れる */
     top: 0;
-    width: sp-get_vw(350); /* スマホに収まるくらい */
+    width: 48; /* スマホに収まるくらい */
     padding-top: sp-get_vw(133);
     padding-bottom: sp-get_vw(30);
     background-color: #f7eddb;
@@ -211,7 +218,7 @@
   .global-nav__item-link {
     display: block;
     padding: sp-get_vw(16) 0;
-    font-size: sp-get_vw(16);
+    font-size: 2.7vw;
     text-decoration:none;
     color: #000;
   }
@@ -219,7 +226,7 @@
     position: absolute;
     left: sp-get_vw(60);
     width: sp-get_vw(55);
-    height: sp-get_vw(1);
+    height: 1px;
     background-color: #795100;
     transition: all .6s;
   }
@@ -279,7 +286,7 @@
         margin: 0;
         padding: sp-get_vw(16) 0;
         writing-mode: unset;
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
         color: #2d9748;
       }
       &-img {
@@ -339,13 +346,18 @@
     padding: 0 get_vw(20);
     font-size: get_vw(18);
     font-weight: bold;
-    line-height: 3.33333333333;
+    height: 77px;
     letter-spacing: .15em;
     text-decoration: none;
     color: #fff;
     border-radius: get_vw(10);
+    transition-property: all;
+    transition: 0.3s linear;
     &-link {
       text-decoration: none;
+      &:hover {
+        opacity: 1;
+      }
     }
     &-cookie {
       display: block;
@@ -355,10 +367,18 @@
     &--what {
       background: #0d5289;
       border-bottom: solid get_vw(4) #002641;
+      &:hover {
+        padding-top: 5px;
+        border-bottom: solid 0.3125vw #0d5289;
+      }
     }
     &--here {
       background: #2d9748;
       border-bottom:  solid get_vw(4) #08581c;
+      &:hover {
+        padding-top: 5px;
+        border-bottom: solid 0.3125vw #2d9748;
+      }
     }
   }
   &__trial {
@@ -370,8 +390,9 @@
 }
 @media screen and (max-width: 768px) {
   .mv {
-    height: sp-get_vw(800);
+    height: 130.16667vw;
     background-image: url(../img/mv_bg-sp.png);
+    background-position: 60% bottom;
     &__main {
       background: none;
     }
@@ -390,7 +411,7 @@
     }
     &__subtitle {
       padding-left: sp-get_vw(91);
-      font-size: sp-get_vw(16);
+      font-size: 2.5vw;
     }
     &__btns {
       flex-direction: column;
@@ -403,8 +424,7 @@
       padding: 0 sp-get_vw(20);
       font-size: sp-get_vw(18);
       border-radius: sp-get_vw(10);
-      &-link {
-      }
+      height: 13.02083vw;
       &-cookie {
         width: sp-get_vw(24);
         margin-left: sp-get_vw(15);
@@ -417,8 +437,8 @@
       }
     }
     &__trial {
-      top: sp-get_vw(605);
-      width: get_vw(330);
+      top: 92.77604vw;
+      width: 35.78125vw;
     }
   }
 }
@@ -515,20 +535,22 @@
 }
 @media screen and (max-width: 768px) {
   .calorie {
-    height: sp-get_vw(845);
+    height: 140.02604vw;
     padding-top: sp-get_vw(107);
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
+    background-position: center;
     &__title {
-      font-size: sp-get_vw(28);
+      font-size: 6.77083vw;
       &-bg {
-        width: sp-get_vw(332);
-        height: sp-get_vw(195);
-        margin-left: sp-get_vw(180);
+        width: 72.22917vw;
+        height: 35.39063vw;
+        margin-left: 16.4375vw;
         padding-top: sp-get_vw(70);
-        padding-left: sp-get_vw(40);
+        padding-left: 2.20833vw;
         background-image: url(../img/calorie_title-bg-sp.png);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position-y: sp-get_vw(0);
         background-position-x: sp-get_vw(0);
       }
@@ -537,7 +559,7 @@
       width: sp-get_vw(560);
       padding-top: sp-get_vw(30);
       text-align: center;
-      font-size: sp-get_vw(16);
+      font-size: 2.7vw;
     }
     &__family {
       width: get_vw(260);
@@ -635,7 +657,7 @@
   }
   &__sweets {
     position: relative;
-    height: get_vw(690);
+    padding-bottom: 90px;
     background-image: url(../img/organic_sweets-bg.png);
     background-size: cover;
     &-leaf {
@@ -802,6 +824,13 @@
     &--here {
       background: #2d9748;
       border-bottom:  solid get_vw(4) #08581c;
+      transition-property: all;
+      transition: 0.3s linear;
+      &:hover {
+        border-bottom-color: #2d9748;
+        opacity: 1;
+        padding-top: 5px;
+      }
     }
   }
 }
@@ -818,7 +847,8 @@
           width: 340px;
         }
         &--right {
-          width: 340px;
+          width: 350px;
+          right: -10px;
         }
       }
       &-title {
@@ -899,7 +929,8 @@
           width: 400px;
         }
         &--right {
-          width: 190px;
+          width: 200px;
+          right: -10px;
         }
       }
       &-title {
@@ -981,25 +1012,31 @@
         height: 100%;
       }
       &-word {
-        justify-content: space-around;
+        width: 100vw;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
       }
       &-side {
-        padding-top: sp-get_vw(80);
-        padding-left: sp-get_vw(70);
+        width: 70vw;
+        padding-top: 9vw;
+        padding-left: 18vw;
       }
       &-dt {
         margin-top: sp-get_vw(33);
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
         &:first-child {
           margin-top: 0;
         }
       }
       &-dd {
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
+        line-height: 1.5;
       }
       &-vertical {
+        width: 30vw;
         padding-top: sp-get_vw(21);
-        padding-right: sp-get_vw(70);
+        padding-right: 0;
         padding-left: 0;
       }
       &-txt {
@@ -1039,10 +1076,11 @@
       }
       &-dt {
         margin-top: sp-get_vw(33);
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
       }
       &-dd {
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
+        line-height: 1.5;
       }
       &-packing {
         width: 100%;
@@ -1066,10 +1104,11 @@
     &__boxes {
       flex-direction: column;
       &-dt {
-        font-size: sp-get_vw(24);
+        font-size: 3.64583vw;
       }
       &-dd {
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
+        line-height: 1.8;
       }
     }
     &__box {
@@ -1091,7 +1130,7 @@
       width: sp-get_vw(500);
       height: sp-get_vw(100);
       padding: 0 sp-get_vw(20);
-      font-size: sp-get_vw(20);
+      font-size: 2.7vw;
       border-radius: sp-get_vw(10);
       &-cookie {
         right: sp-get_vw(30);
@@ -1159,7 +1198,7 @@
   }
   &__distribution {
     display: block;
-    width: get_vw(900);
+    width: 90vw;
     margin: 0 auto;
     padding-top: get_vw(60);
   }
@@ -1204,8 +1243,9 @@
     padding-top: sp-get_vw(160);
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
+    background-position: center;
     &__title {
-      padding-left: sp-get_vw(20);
+      padding-left: 0;
       font-size: sp-get_vw(52);
       &-bg {
         width: sp-get_vw(768);
@@ -1215,16 +1255,20 @@
     }
     &__collect {
       margin-top: sp-get_vw(150);
-      margin-left: sp-get_vw(50);
+      margin-left: 4.51042vw;
       font-size: sp-get_vw(28);
+    }
+    & .br__pc {
+      display: none;
     }
     &__explanation {
       margin-top: sp-get_vw(400);
-      font-size: sp-get_vw(16);
+      font-size: 2.7vw;
+      line-height:1.8;
     }
     &__delicious {
       margin-top: sp-get_vw(100);
-      margin-right: sp-get_vw(75);
+      margin-right: 7.76562vw;
       font-size: sp-get_vw(28);
     }
     &__distribution {
@@ -1400,34 +1444,35 @@
     }
     &__okara {
       width: sp-get_vw(680);
-      height: sp-get_vw(608);
+      height: 113.16667vw;
       margin: 0 auto;
       padding-top: sp-get_vw(60);
       padding-right: sp-get_vw(58);
       padding-left: sp-get_vw(68);
-      background-image: url(../img/commitment_okara-bg-sp.png);
+      background-image: url(../img/commitment_okara-bg.png);
       &-title {
-        font-size: sp-get_vw(24);
+        font-size: 3.64583vw;
       }
       &-txt {
-        margin-top: sp-get_vw(30);
-        font-size: sp-get_vw(16);
+        margin-top: 5vw;
+        font-size: 2.7vw;
       }
     }
     &__recipe {
       width: sp-get_vw(680);
-      height: sp-get_vw(608);
+      height: 113.16667vw;
       margin: 0 auto;
       padding-top: sp-get_vw(60);
       padding-right: sp-get_vw(58);
       padding-left: sp-get_vw(60);
-      background-image: url(../img/commitment_recipe-bg-sp.png);
+      background-image: url(../img/commitment_recipe-bg.png);
+      background-position: center;
       &-title {
-        font-size: sp-get_vw(24);
+        font-size: 3.64583vw;
       }
       &-txt {
-        margin-top: sp-get_vw(30);
-        font-size: sp-get_vw(16);
+        margin-top: 5vw;
+        font-size: 2.7vw;
       }
     }
   }
@@ -1556,16 +1601,14 @@
       &:last-child {
         padding-bottom: 0;
       }
-      &-img {
-      }
       &-name {
         padding-top: sp-get_vw(15);
-        font-size: sp-get_vw(24);
+        font-size: 3.64583vw;
       }
       &-description {
         min-height: sp-get_vw(150);
         padding: sp-get_vw(20) sp-get_vw(5);
-        font-size: sp-get_vw(16);
+        font-size: 2.7vw;
       }
     }
   }
@@ -1628,6 +1671,12 @@
     background-color: #0d5289;
     color: #fff;
     cursor: pointer;
+    transition-property: all;
+    transition: 0.3s linear;
+    :hover {
+      border-bottom-color: #0d5289;
+      padding: 30px 0 20px;
+    }
     &-txt {
       text-align: center;
       font-size: get_vw(20);
@@ -1724,7 +1773,7 @@
       border-bottom:  solid sp-get_vw(6) #002641;
       border-radius: sp-get_vw(10);
       &-txt {
-        font-size: sp-get_vw(20);
+        font-size: 2.7vw;
       }
       &-annotation {
         font-size: sp-get_vw(14);
@@ -1920,6 +1969,12 @@
     line-height: 3;
     letter-spacing: .15em;
     color: #fff;
+    transition-property: all;
+    transition: 0.3s linear;
+    &:hover {
+      border-bottom-color: #2d9748;
+      padding-top: 5px;
+    }
     &-txt {
       margin: 0 get_vw(128);
     }
@@ -2096,7 +2151,8 @@
       &-right {
         &1 {
           top: 215px;
-          width: 205px;
+          width: 250px;
+          right: -50px;
         }
         &2 {
           top: 1567px;
@@ -2110,7 +2166,8 @@
         }
         &2 {
           top: 1002px;
-          width: 190px;
+          left: -10px;
+          width: 200px;
         }
       }
     }
@@ -2141,6 +2198,12 @@
     }
     &__number {
       font-size: sp-get_vw(60);
+      font-size: 6vw;
+      & a {
+        color: #2d9748!important;
+        text-decoration: none;
+        font-family: serif;
+      }
     }
     &__day {
       font-size: sp-get_vw(16);
@@ -2172,7 +2235,7 @@
       &-name {
         width: 100%;
         padding: sp-get_vw(15) 0;
-        font-size: sp-get_vw(16);
+        font-size: 3.64583vw;
       }
     }
     &__wrap {
@@ -2191,7 +2254,7 @@
     }
     &__select-item {
       margin-left: sp-get_vw(32);
-      font-size: sp-get_vw(16);
+      font-size: 2.7vw;
     }
     &__txt {
       &-box {
@@ -2222,10 +2285,10 @@
     }
     &__btn {
       width: sp-get_vw(420);
-      height: sp-get_vw(70);
+      height: 12vw;
       border-bottom: sp-get_vw(6) solid #08581c;
       border-radius: sp-get_vw(7);
-      font-size: sp-get_vw(20);
+      font-size: 2.7vw;
       &-txt {
         margin: 0 sp-get_vw(128);
       }
@@ -2321,10 +2384,10 @@
 .scroll {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  right: 0;
+  width: 123px;
   text-align: right;
-  &__link {
-  }
+  z-index: 900;
   &__btn {
     width: get_vw(94);
     vertical-align: bottom;

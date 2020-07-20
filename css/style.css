@@ -133,6 +133,7 @@
   transition-property: all;
   transition: 0.3s linear;
 }
+
 .nav__link-content:hover {
   border-bottom-color: #2d9748;
   opacity: 1;
@@ -195,7 +196,7 @@
     right: -48vw;
     /* これで隠れる */
     top: 0;
-    width: 48vw;
+    width: 48;
     /* スマホに収まるくらい */
     padding-top: 17.31771vw;
     padding-bottom: 3.90625vw;
@@ -239,7 +240,6 @@
     position: absolute;
     left: 7.8125vw;
     width: 7.16146vw;
-    /*height: 0.13021vw;*/
     height: 1px;
     background-color: #795100;
     transition: all .6s;
@@ -371,11 +371,10 @@
   transition: 0.3s linear;
 }
 
-
-
 .mv__btn-link {
   text-decoration: none;
 }
+
 .mv__btn-link:hover {
   opacity: 1;
 }
@@ -390,16 +389,17 @@
   background: #0d5289;
   border-bottom: solid 0.3125vw #002641;
 }
+
 .mv__btn--what:hover {
   padding-top: 5px;
   border-bottom: solid 0.3125vw #0d5289;
 }
 
-
 .mv__btn--here {
   background: #2d9748;
   border-bottom: solid 0.3125vw #08581c;
 }
+
 .mv__btn--here:hover {
   padding-top: 5px;
   border-bottom: solid 0.3125vw #2d9748;
@@ -704,7 +704,6 @@
 
 .organic__sweets {
   position: relative;
-  /*height: 53.90625vw;*/
   padding-bottom: 90px;
   background-image: url(../img/organic_sweets-bg.png);
   background-size: cover;
@@ -899,6 +898,7 @@
   transition-property: all;
   transition: 0.3s linear;
 }
+
 .organic__btn--here:hover {
   border-bottom-color: #2d9748;
   opacity: 1;
@@ -1338,7 +1338,7 @@
   .world__explanation {
     margin-top: 52.08333vw;
     font-size: 2.7vw;
-    line-height:1.8;
+    line-height: 1.8;
   }
   .world__delicious {
     margin-top: 13.02083vw;
@@ -1776,7 +1776,8 @@
   transition-property: all;
   transition: 0.3s linear;
 }
-.fee__btn:hover {
+
+.fee__btn :hover {
   border-bottom-color: #0d5289;
   padding: 30px 0 20px;
 }
@@ -2099,6 +2100,7 @@
   transition-property: all;
   transition: 0.3s linear;
 }
+
 .order__btn:hover {
   border-bottom-color: #2d9748;
   padding-top: 5px;
@@ -2315,7 +2317,7 @@
     font-size: 6vw;
   }
   .order__number a {
-    color: #2d9748!important;
+    color: #2d9748 !important;
     text-decoration: none;
     font-family: serif;
   }
@@ -3057,31 +3059,29 @@ input[type=checkbox]:checked + .checkbox01::after {
   transform: rotate(45deg);
 }
 
-
-
-
-
-
 /* 問い合わせ ------------------------------------------------------------------------- */
 /* 枠 */
 body#cnfm .bg1280 {
-  background-image: url(../img/confirm/bg_confirm.png),url(../img/confirm/bg_body.png);
+  background-image: url(../img/confirm/bg_confirm.png), url(../img/confirm/bg_body.png);
   background-repeat: repeat-x, repeat;
   background-size: auto;
   background-position: center top;
 }
+
 body#cnfm .order {
   padding-top: 0;
   background-image: none;
   z-index: 10;
 }
+
 #formWrap {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding-top: 370px;
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   body#cnfm .bg1280 {
     background-size: 100%, auto;
     background-position: center top;
@@ -3090,29 +3090,35 @@ body#cnfm .order {
     padding: 35vw 2.5vw 0;
   }
 }
+
 /* フォームパーツ */
 .order__form-confirm-lead {
   text-align: center;
   margin-top: 35px;
 }
+
 .formTable {
   widows: 100%;
 }
+
 .formTable th,
 .formTable td {
   padding-bottom: 45px;
 }
+
 .formTable th {
   width: 196px;
   vertical-align: top;
   text-align: left;
   font-size: 16px;
 }
+
 .formTable td {
   width: 524px;
   padding-left: 24px;
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   .formTable th,
   .formTable td {
     display: block;
@@ -3129,11 +3135,13 @@ body#cnfm .order {
     font-size: 2.7vw;
   }
 }
+
 /* フォームの背景 */
 body#cnfm .order__form-bg {
   position: relative;
   height: auto;
 }
+
 body#cnfm .order__form-bg::after {
   content: "";
   position: absolute;
@@ -3143,7 +3151,8 @@ body#cnfm .order__form-bg::after {
   left: 0;
   background-image: url(../img/confirm/bg_formft.png);
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   body#cnfm .order__form-bg {
     padding: 7vw 7vw 10vw 7vw;
     border-radius: 1.5vw;
@@ -3152,6 +3161,7 @@ body#cnfm .order__form-bg::after {
     width: 100%;
   }
 }
+
 /* ボタン */
 body#cnfm .order__wrap-btn {
   display: -webkit-box;
@@ -3165,6 +3175,7 @@ body#cnfm .order__wrap-btn {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
 body#cnfm .order__btn-back {
   width: 240px;
   height: 70px;
@@ -3172,40 +3183,46 @@ body#cnfm .order__btn-back {
   border: 3px solid #2d9748;
   border-radius: 7px;
   font-size: 20px;
-  box-shadow: 0px 5px 0px -.5px rgba(6,88,28,1);
+  box-shadow: 0px 5px 0px -0.5px #06581c;
   font-weight: 700;
   transition-property: all;
   transition: 0.3s linear;
 }
+
 body#cnfm .order__btn-back:hover {
   height: 75px;
-  box-shadow: 0px 5px 0px -.5px rgba(6,88,28,0);
+  box-shadow: 0px 5px 0px -0.5px rgba(6, 88, 28, 0);
 }
+
 body#cnfm .order__btn-back .order__btn-txt {
   margin: 0px 70px;
   color: #2d9748;
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   body#cnfm .order__btn-back {
     width: 54.6875vw;
     height: 12vw;
     border-width: 0.78125vw;
     border-radius: 0.91146vw;
     font-size: 2.7vw;
-    box-shadow: 0px 0.78125vw 0px -.5px rgba(6,88,28,1);
+    box-shadow: 0px 0.78125vw 0px -0.5px #06581c;
     margin-top: 3vw;
   }
 }
+
 /* フェードインアイテム */
 body#cnfm .order__cookie1 {
   top: -190px;
 }
+
 body#cnfm .order__leaf-right1,
 body#cnfm .order__cookie2,
 body#cnfm .order__leaf-left1 {
   z-index: -1;
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   body#cnfm .order__cookie1 {
     top: -13vw;
     left: -5vw;
@@ -3223,11 +3240,13 @@ body#cnfm .order__leaf-left1 {
     bottom: 2vw;
   }
 }
+
 /* 完了画面不要項目削除 */
 body#cnfm.thanks .formTable tr:nth-last-of-type(1),
 body#cnfm.thanks .formTable tr:nth-last-of-type(2) {
   display: none;
 }
+
 body#cnfm .order__btn-back {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3240,11 +3259,13 @@ body#cnfm .order__btn-back {
   align-items: center;
   text-decoration: none;
 }
+
 /* レスポンシブ */
 .view-sp {
   display: none;
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   .view-sp {
     display: block;
   }
@@ -3252,6 +3273,7 @@ body#cnfm .order__btn-back {
     display: none;
   }
 }
+
 /* エラーチェック */
 .order__wrap-mail .error {
   margin-top: 12px;
@@ -3259,12 +3281,14 @@ body#cnfm .order__btn-back {
   letter-spacing: .1em;
   color: #df1111;
 }
+
 .order__wrap-mail .order__txt-box.error {
   background-image: url(../img/surprised-mark.png);
   background-repeat: no-repeat;
   background-position: right 20px center;
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   .order__wrap-mail .order__txt-box.error {
     background-size: 4vw;
     background-position: right 2vw center;
@@ -3275,30 +3299,17 @@ body#cnfm .order__btn-back {
   }
 }
 
-
 /* フォーカス時のアウトライン非表示 ------------------------------------------------------------------------- */
 *:focus {
-outline: none;
+  outline: none;
 }
-
 
 /* hover設定 ------------------------------------------------------------------------- */
 a {
   transition-property: all;
   transition: 0.3s linear;
 }
+
 a:hover {
   opacity: .8;
 }
-
-  
-
-
-
-
-
-
-
-
-
-
