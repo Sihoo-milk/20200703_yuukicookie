@@ -53,7 +53,7 @@ body#cnfm .order {
   .formTable td {
     display: block;
     width: 100%;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .formTable th {
     padding-bottom: 1vw;
@@ -62,7 +62,7 @@ body#cnfm .order {
     padding-bottom: 5vw;
   }
   .order__form-confirm-lead {
-    font-size: 2.7vw;
+    font-size: 16px;
   }
 }
 /* フォームの背景 */
@@ -127,7 +127,7 @@ body#cnfm .order__btn-back .order__btn-txt {
     height: 12vw;
     border-width: 0.78125vw;
     border-radius: 0.91146vw;
-    font-size: 2.7vw;
+    font-size: 16px;
     box-shadow: 0px 0.78125vw 0px -.5px rgba(6,88,28,1);
     margin-top: 3vw;
   }
