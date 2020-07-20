@@ -85,7 +85,7 @@ input[type=radio]:checked + .radio01::after {
   .radio01 {
     width: 32vw;
     padding-left: sp-get_vw(55);
-    font-size: 2.7vw;
+    font-size: 16px;
     &::before {
       top: sp-get_vw(-8);
       width: sp-get_vw(40);

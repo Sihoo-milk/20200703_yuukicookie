@@ -232,7 +232,7 @@
   .global-nav__item-link {
     display: block;
     padding: 2.08333vw 0;
-    font-size: 2.7vw;
+    font-size: 16px;
     text-decoration: none;
     color: #000;
   }
@@ -296,7 +296,7 @@
     margin: 0;
     padding: 2.08333vw 0;
     writing-mode: unset;
-    font-size: 2.7vw;
+    font-size: 16px;
     color: #2d9748;
   }
   .global-nav__btn-img {
@@ -590,10 +590,10 @@
     background-position-x: 0vw;
   }
   .calorie__txt {
-    width: 72.91667vw;
+    width: 100%;
     padding-top: 3.90625vw;
     text-align: center;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .calorie__family {
     width: 20.3125vw;
@@ -1090,19 +1090,18 @@
   }
   .organic__kind-dt {
     margin-top: 4.29688vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .organic__kind-dt:first-child {
     margin-top: 0;
   }
   .organic__kind-dd {
-    font-size: 2.7vw;
+    font-size: 16px;
     line-height: 1.5;
   }
   .organic__kind-vertical {
-    width: 30vw;
     padding-top: 2.73438vw;
-    padding-right: 0;
+    padding-right: 18vw;
     padding-left: 0;
   }
   .organic__kind-txt {
@@ -1127,25 +1126,26 @@
     flex-direction: column-reverse;
   }
   .organic__manufacture-word {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .organic__manufacture-vertical {
     padding-top: 2.73438vw;
-    padding-left: 9.11458vw;
+    padding-left: 18vw;
   }
   .organic__manufacture-txt {
     font-size: 3.64583vw;
   }
   .organic__manufacture-side {
     padding-top: 11.06771vw;
-    padding-left: 7.16146vw;
+    padding-right: 18vw;
+    padding-left: 0;
   }
   .organic__manufacture-dt {
     margin-top: 4.29688vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .organic__manufacture-dd {
-    font-size: 2.7vw;
+    font-size: 16px;
     line-height: 1.5;
   }
   .organic__manufacture-packing {
@@ -1173,7 +1173,7 @@
     font-size: 3.64583vw;
   }
   .organic__boxes-dd {
-    font-size: 2.7vw;
+    font-size: 16px;
     line-height: 1.8;
   }
   .organic__box {
@@ -1195,7 +1195,7 @@
     width: 65.10417vw;
     height: 13.02083vw;
     padding: 0 2.60417vw;
-    font-size: 2.7vw;
+    font-size: 16px;
     border-radius: 1.30208vw;
   }
   .organic__btn-cookie {
@@ -1337,7 +1337,8 @@
   }
   .world__explanation {
     margin-top: 52.08333vw;
-    font-size: 2.7vw;
+    padding: 5.20833vw;
+    font-size: 16px;
     line-height: 1.8;
   }
   .world__delicious {
@@ -1544,7 +1545,7 @@
   }
   .commitment__okara-txt {
     margin-top: 5vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .commitment__recipe {
     width: 88.54167vw;
@@ -1561,7 +1562,7 @@
   }
   .commitment__recipe-txt {
     margin-top: 5vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
 }
 
@@ -1708,7 +1709,7 @@
   .type__item-description {
     min-height: 19.53125vw;
     padding: 2.60417vw 0.65104vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
 }
 
@@ -2366,7 +2367,7 @@
   }
   .order__select-item {
     margin-left: 4.16667vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .order__txt-box {
     height: 7.8125vw;
@@ -2398,7 +2399,7 @@
     height: 12vw;
     border-bottom: 0.78125vw solid #08581c;
     border-radius: 0.91146vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .order__btn-txt {
     margin: 0 16.66667vw;
@@ -2584,7 +2585,7 @@ input[type=radio]:checked + .radio01::after {
   .radio01 {
     width: 32vw;
     padding-left: 7.16146vw;
-    font-size: 2.7vw;
+    font-size: 16px;
   }
   .radio01::before {
     top: -1.04167vw;

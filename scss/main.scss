@@ -218,7 +218,7 @@
   .global-nav__item-link {
     display: block;
     padding: sp-get_vw(16) 0;
-    font-size: 2.7vw;
+    font-size: 16px;
     text-decoration:none;
     color: #000;
   }
@@ -286,7 +286,7 @@
         margin: 0;
         padding: sp-get_vw(16) 0;
         writing-mode: unset;
-        font-size: 2.7vw;
+        font-size: 16px;
         color: #2d9748;
       }
       &-img {
@@ -556,10 +556,10 @@
       }
     }
     &__txt {
-      width: sp-get_vw(560);
+      width: 100%;
       padding-top: sp-get_vw(30);
       text-align: center;
-      font-size: 2.7vw;
+      font-size: 16px;
     }
     &__family {
       width: get_vw(260);
@@ -1024,19 +1024,18 @@
       }
       &-dt {
         margin-top: sp-get_vw(33);
-        font-size: 2.7vw;
+        font-size: 16px;
         &:first-child {
           margin-top: 0;
         }
       }
       &-dd {
-        font-size: 2.7vw;
+        font-size: 16px;
         line-height: 1.5;
       }
       &-vertical {
-        width: 30vw;
         padding-top: sp-get_vw(21);
-        padding-right: 0;
+        padding-right: 18vw;
         padding-left: 0;
       }
       &-txt {
@@ -1061,25 +1060,26 @@
     &__manufacture {
       flex-direction: column-reverse;
       &-word {
-        justify-content: space-around;
+        justify-content: space-between;
       }
       &-vertical {
         padding-top: sp-get_vw(21);
-        padding-left: sp-get_vw(70);
+        padding-left: 18vw;
       }
       &-txt {
         font-size: sp-get_vw(28);
       }
       &-side {
         padding-top: sp-get_vw(85);
-        padding-left: sp-get_vw(55);
+        padding-right: 18vw;
+        padding-left: 0;
       }
       &-dt {
         margin-top: sp-get_vw(33);
-        font-size: 2.7vw;
+        font-size: 16px;
       }
       &-dd {
-        font-size: 2.7vw;
+        font-size: 16px;
         line-height: 1.5;
       }
       &-packing {
@@ -1107,7 +1107,7 @@
         font-size: 3.64583vw;
       }
       &-dd {
-        font-size: 2.7vw;
+        font-size: 16px;
         line-height: 1.8;
       }
     }
@@ -1130,7 +1130,7 @@
       width: sp-get_vw(500);
       height: sp-get_vw(100);
       padding: 0 sp-get_vw(20);
-      font-size: 2.7vw;
+      font-size: 16px;
       border-radius: sp-get_vw(10);
       &-cookie {
         right: sp-get_vw(30);
@@ -1263,7 +1263,8 @@
     }
     &__explanation {
       margin-top: sp-get_vw(400);
-      font-size: 2.7vw;
+      padding: sp-get_vw(40);
+      font-size: 16px;
       line-height:1.8;
     }
     &__delicious {
@@ -1455,7 +1456,7 @@
       }
       &-txt {
         margin-top: 5vw;
-        font-size: 2.7vw;
+        font-size: 16px;
       }
     }
     &__recipe {
@@ -1472,7 +1473,7 @@
       }
       &-txt {
         margin-top: 5vw;
-        font-size: 2.7vw;
+        font-size: 16px;
       }
     }
   }
@@ -1608,7 +1609,7 @@
       &-description {
         min-height: sp-get_vw(150);
         padding: sp-get_vw(20) sp-get_vw(5);
-        font-size: 2.7vw;
+        font-size: 16px;
       }
     }
   }
@@ -2254,7 +2255,7 @@
     }
     &__select-item {
       margin-left: sp-get_vw(32);
-      font-size: 2.7vw;
+      font-size: 16px;
     }
     &__txt {
       &-box {
@@ -2288,7 +2289,7 @@
       height: 12vw;
       border-bottom: sp-get_vw(6) solid #08581c;
       border-radius: sp-get_vw(7);
-      font-size: 2.7vw;
+      font-size: 16px;
       &-txt {
         margin: 0 sp-get_vw(128);
       }
