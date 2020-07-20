@@ -88,10 +88,10 @@
         3〜5歳くらいのお⼦さまの1⽇の必要カロリーは<br>
         1,200〜1,400カロリーくらいが⽬安で、<br>
         おやつで摂取するカロリーは1⽇の総エネルギーの<br>
-        <span class="calorie__txt--blue">10〜20％(120〜280カロリー)以内が理想</span>と⾔われています。<br>
+        <span class="calorie__txt--blue">10〜20％(120〜280カロリー)以内が理想</span><br class="view-sp">と⾔われています。<br>
         <br>
-        “おいしい有機クッキー”は1枚当たり26〜28カロリーとなっており、<br>
-        <span class="calorie__txt--blue">5枚で130〜140カロリーが摂れ</span>、また⽐較的糖分も低く、<br>
+        “おいしい有機クッキー”は1枚当たり<br class="view-sp">26〜28カロリーとなっており、<br>
+        <span class="calorie__txt--blue">5枚で130〜140カロリーが摂れ</span>、また<br class="view-sp">⽐較的糖分も低く、<br class="view-pc">
         毎⽇⾷べても安⼼なクッキーです。<br>
       </p>
       <img class="calorie__cookie sa sa--rl" src="img/calorie_cookie.png" alt="クッキー">
@@ -185,8 +185,8 @@
           </div>
         </div>
         <div class="organic__order">
-          <a href="#fee" class="organic__btn-link">
-            <button class="organic__btn organic__btn--here sa sa--up">
+          <a href="#fee" class="organic__btn-link sa sa--up">
+            <button class="organic__btn organic__btn--here">
               <span>価格表とご注文はこちら</span>
               <img class="organic__btn-cookie" src="img/organic_btn-cookie.png" alt="下矢印">
             </button>
@@ -205,10 +205,10 @@
           作ってます。
         </p>
         <p class="world__explanation sa sa--up">
-          オーガニックで作られた原材料を<br>
-          岐⾩県にあります⻑良園の有機ＪＡＳ認定⼯場に集め、<br>
+          オーガニックで作られた原材料を<br class="br__pc">
+          岐⾩県にあります⻑良園の有機ＪＡＳ認定⼯場に集め、<br class="br__pc">
           添加物を⼊れずにおいしいクッキーを製造します。<br>
-          外国の有機ＪＡＳ認定も、⽇本の基準と同等の⾼い⽔準で<br>
+          外国の有機ＪＡＳ認定も、⽇本の基準と同等の⾼い⽔準で<br class="br__pc">
           各国の機関が⾏っておりますので安⼼です。
         </p>
         <p class="world__delicious">おいしい有機クッキーは、</p>
@@ -292,12 +292,14 @@
         <img class="fee__set-img fee__set-img9 sa sa--up" src="img/fee_9.png" alt="通常 9袋 3,980円(税込) オーツ⻨×3袋(5枚⼊り) ココア×3袋(5枚⼊り) ココアーモンド×3袋(5枚⼊り)">
       </div>
       <div class="fee__payment">
-        <div id="show" class="fee__btn sa sa--up">
-          <div>
-            <p class="fee__btn-txt">お⽀払いと発送に関して</p>
-            <p class="fee__btn-annotation">※お⽀払いはクレジットカード決済のみです。</p>
+        <div class="sa sa--up">
+          <div id="show" class="fee__btn">
+            <div>
+              <p class="fee__btn-txt">お⽀払いと発送に関して</p>
+              <p class="fee__btn-annotation">※お⽀払いはクレジットカード決済のみです。</p>
+            </div>
+            <img class="fee__btn-cookie" src="img/fee_btn-cookie.png" alt="プラス">
           </div>
-          <img class="fee__btn-cookie" src="img/fee_btn-cookie.png" alt="プラス">
         </div>
         <div id="layer" class="layer"></div>
         <div id="popup" class="popup">
@@ -350,18 +352,18 @@
         <h2 class="order__form-title">ご注文フォーム</h2>
       </div>
       <div class="order__form-bg sa sa--up">
-        <form method="post" action="">
+        <form method="post" action="mail.php" class="orderform">
           <div class="order__form-contents">
             <div class="order__item">
               <div class="order__item-name">お名前</div>
-              <div class="order__wrap-box"><input class="order__txt-box" name="name" type="text" placeholder="入力してください"></div>
+              <div class="order__wrap-box"><input class="order__txt-box" name="お名前" type="text" placeholder="入力してください"></div>
             </div>
             <div class="order__item">
               <div class="order__item-name order__item-name--multiple">ご注文商品</div>
               <div>
                 <div class="order__wrap-select">
                   <div>
-                    <input type="radio" id="01-D" name="radio01" checked="checked">
+                    <input type="radio" id="01-D" name="ご注文商品" value="お試し 3袋セット" checked="checked">
                     <label for="01-D" class="radio01">お試し 3袋セット</label>
                   </div>
                   <div class="order__select-item">1,000円</div>
@@ -369,14 +371,14 @@
                 </div>
                 <div class="order__wrap-select">
                   <div class="radio">
-                    <input type="radio" id="01-E" name="radio01">
+                    <input type="radio" id="01-E" name="ご注文商品" value="通常 3袋セット">
                     <label for="01-E" class="radio01">通常 3袋セット</label>
                   </div>
                   <div class="order__select-item">1,500円</div>
                   <div class="order__select-item">
                     <p>数量</p>
                     <div class="cp_ipselect cp_sl04">
-                      <select required>
+                      <select>
                         <option value="" hidden></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -388,14 +390,14 @@
                 </div>
                 <div class="order__wrap-select">
                   <div class="radio">
-                    <input type="radio" id="01-F" name="radio01">
+                    <input type="radio" id="01-F" name="ご注文商品" value="通常 9袋セット">
                     <label for="01-F" class="radio01">通常 9袋セット</label>
                   </div>
                   <div class="order__select-item">3,980円</div>
                   <div class="order__select-item">
                     <p>数量</p>
                     <div class="cp_ipselect cp_sl04">
-                      <select required>
+                      <select>
                         <option value="" hidden></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -410,19 +412,19 @@
             <div class="order__item">
               <div class="order__item-name order__item-name--multiple">メールアドレス</div>
               <div class="order__wrap-mail">
-                <input class="order__txt-box" name="mail" type="tel">
-                <img class="circle" src="img/surprised-mark.png" alt="ビックリマーク">
-                <p class="order__error">エラーメッセージが⼊ります</p>
+                <input class="order__txt-box" name="Email" type="email" required>
+                <!--<img class="circle" src="img/surprised-mark.png" alt="ビックリマーク">
+                <p class="order__error">エラーメッセージが⼊ります</p>-->
               </div>
             </div>
             <div class="order__item">
               <div class="order__item-name order__item-name--multiple">その他お問い合わせ</div>
-              <div class="order__wrap-box"><textarea class="order__txt-area" name="enquiry" cols="80" rows="8" placeholder="入力してください"></textarea></div>
+              <div class="order__wrap-box"><textarea class="order__txt-area" name="その他お問い合わせ" cols="80" rows="8" placeholder="入力してください"></textarea></div>
             </div>
             <div class="order__item">
               <div class="order__item-name"></div>
               <div class="order__wrap-box">
-                <input type="checkbox" id="01-A" name="checkbox01" checked="checked">
+                <input type="checkbox" id="01-A" name="プライバシーポリシーに同意" checked="checked" value="同意する">
                 <label for="01-A" class="checkbox01"><span class="order__txt-border">プライバシーポリシー</span>に同意</label>
               </div>
             </div>
@@ -462,6 +464,7 @@
   </div>
 
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type='text/javascript' src="./js/jquery.validate.min.js"></script>
   <script src="js/common.js"></script>
 </body>
 </html>

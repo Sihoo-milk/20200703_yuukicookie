@@ -30,11 +30,11 @@ $(function() {
 $(function() {
   // show popupボタンクリック時の処理
   $('#show').click(function(e) {
-    $('#popup, #layer').show();
+    $('#popup, #layer').fadeIn();
   });
   // レイヤー/ポップアップのcloseボタンクリック時の処理
   $('#close, #layer').click(function(e) {
-    $('#popup, #layer').hide();
+    $('#popup, #layer').fadeOut();
   });
 });
 
@@ -53,3 +53,32 @@ function toggleNav() {
   });
 }
 toggleNav();
+
+
+// バリデーションチェック
+$(function() {
+  console.log('fuga');
+  $(".orderform").validate({
+    rules : {
+      Email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      Email:{
+        required: "必須項目です。入力をお願いします。",
+        email: "Eメールの形式で入力して下さい。"
+      }
+    }
+  });
+});
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   list-style: none;
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
   font-feature-settings: "palt" 1;
 }
 
@@ -43,7 +43,7 @@
 
 .logo {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 20.23438vw;
@@ -130,6 +130,13 @@
   border-radius: 0.625vw;
   background: #2d9748;
   text-decoration: none;
+  transition-property: all;
+  transition: 0.3s linear;
+}
+.nav__link-content:hover {
+  border-bottom-color: #2d9748;
+  opacity: 1;
+  padding: 17px 0 7px;
 }
 
 .nav__btn-txt {
@@ -185,10 +192,10 @@
 @media screen and (max-width: 768px) {
   .global-nav {
     position: fixed;
-    right: -45.57292vw;
+    right: -48vw;
     /* これで隠れる */
     top: 0;
-    width: 45.57292vw;
+    width: 48vw;
     /* スマホに収まるくらい */
     padding-top: 17.31771vw;
     padding-bottom: 3.90625vw;
@@ -224,7 +231,7 @@
   .global-nav__item-link {
     display: block;
     padding: 2.08333vw 0;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
     text-decoration: none;
     color: #000;
   }
@@ -232,7 +239,8 @@
     position: absolute;
     left: 7.8125vw;
     width: 7.16146vw;
-    height: 0.13021vw;
+    /*height: 0.13021vw;*/
+    height: 1px;
     background-color: #795100;
     transition: all .6s;
   }
@@ -288,7 +296,7 @@
     margin: 0;
     padding: 2.08333vw 0;
     writing-mode: unset;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
     color: #2d9748;
   }
   .global-nav__btn-img {
@@ -354,15 +362,22 @@
   padding: 0 1.5625vw;
   font-size: 1.40625vw;
   font-weight: bold;
-  line-height: 3.33333333333;
+  height: 77px;
   letter-spacing: .15em;
   text-decoration: none;
   color: #fff;
   border-radius: 0.78125vw;
+  transition-property: all;
+  transition: 0.3s linear;
 }
+
+
 
 .mv__btn-link {
   text-decoration: none;
+}
+.mv__btn-link:hover {
+  opacity: 1;
 }
 
 .mv__btn-cookie {
@@ -375,10 +390,19 @@
   background: #0d5289;
   border-bottom: solid 0.3125vw #002641;
 }
+.mv__btn--what:hover {
+  padding-top: 5px;
+  border-bottom: solid 0.3125vw #0d5289;
+}
+
 
 .mv__btn--here {
   background: #2d9748;
   border-bottom: solid 0.3125vw #08581c;
+}
+.mv__btn--here:hover {
+  padding-top: 5px;
+  border-bottom: solid 0.3125vw #2d9748;
 }
 
 .mv__trial {
@@ -390,8 +414,9 @@
 
 @media screen and (max-width: 768px) {
   .mv {
-    height: 104.16667vw;
+    height: 130.16667vw;
     background-image: url(../img/mv_bg-sp.png);
+    background-position: 60% bottom;
   }
   .mv__main {
     background: none;
@@ -411,7 +436,7 @@
   }
   .mv__subtitle {
     padding-left: 11.84896vw;
-    font-size: 2.08333vw;
+    font-size: 2.5vw;
   }
   .mv__btns {
     flex-direction: column;
@@ -424,6 +449,7 @@
     padding: 0 2.60417vw;
     font-size: 2.34375vw;
     border-radius: 1.30208vw;
+    height: 13.02083vw;
   }
   .mv__btn-cookie {
     width: 3.125vw;
@@ -436,8 +462,8 @@
     border-bottom: solid 0.52083vw #08581c;
   }
   .mv__trial {
-    top: 78.77604vw;
-    width: 25.78125vw;
+    top: 92.77604vw;
+    width: 35.78125vw;
   }
 }
 
@@ -542,22 +568,24 @@
 
 @media screen and (max-width: 768px) {
   .calorie {
-    height: 110.02604vw;
+    height: 140.02604vw;
     padding-top: 13.93229vw;
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
+    background-position: center;
   }
   .calorie__title {
-    font-size: 3.64583vw;
+    font-size: 6.77083vw;
   }
   .calorie__title-bg {
-    width: 43.22917vw;
-    height: 25.39063vw;
-    margin-left: 23.4375vw;
+    width: 72.22917vw;
+    height: 35.39063vw;
+    margin-left: 16.4375vw;
     padding-top: 9.11458vw;
-    padding-left: 5.20833vw;
+    padding-left: 2.20833vw;
     background-image: url(../img/calorie_title-bg-sp.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position-y: 0vw;
     background-position-x: 0vw;
   }
@@ -565,7 +593,7 @@
     width: 72.91667vw;
     padding-top: 3.90625vw;
     text-align: center;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
   }
   .calorie__family {
     width: 20.3125vw;
@@ -676,7 +704,8 @@
 
 .organic__sweets {
   position: relative;
-  height: 53.90625vw;
+  /*height: 53.90625vw;*/
+  padding-bottom: 90px;
   background-image: url(../img/organic_sweets-bg.png);
   background-size: cover;
 }
@@ -867,6 +896,13 @@
 .organic__btn--here {
   background: #2d9748;
   border-bottom: solid 0.3125vw #08581c;
+  transition-property: all;
+  transition: 0.3s linear;
+}
+.organic__btn--here:hover {
+  border-bottom-color: #2d9748;
+  opacity: 1;
+  padding-top: 5px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -883,7 +919,8 @@
     width: 340px;
   }
   .organic__what-leaf--right {
-    width: 340px;
+    width: 350px;
+    right: -10px;
   }
   .organic__what-title {
     font-size: 52px;
@@ -960,7 +997,8 @@
     width: 400px;
   }
   .organic__jas-leaf--right {
-    width: 190px;
+    width: 200px;
+    right: -10px;
   }
   .organic__jas-title {
     font-size: 52px;
@@ -1040,25 +1078,31 @@
     height: 100%;
   }
   .organic__kind-word {
-    justify-content: space-around;
+    width: 100vw;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .organic__kind-side {
-    padding-top: 10.41667vw;
-    padding-left: 9.11458vw;
+    width: 70vw;
+    padding-top: 9vw;
+    padding-left: 18vw;
   }
   .organic__kind-dt {
     margin-top: 4.29688vw;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
   }
   .organic__kind-dt:first-child {
     margin-top: 0;
   }
   .organic__kind-dd {
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
+    line-height: 1.5;
   }
   .organic__kind-vertical {
+    width: 30vw;
     padding-top: 2.73438vw;
-    padding-right: 9.11458vw;
+    padding-right: 0;
     padding-left: 0;
   }
   .organic__kind-txt {
@@ -1098,10 +1142,11 @@
   }
   .organic__manufacture-dt {
     margin-top: 4.29688vw;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
   }
   .organic__manufacture-dd {
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
+    line-height: 1.5;
   }
   .organic__manufacture-packing {
     width: 100%;
@@ -1125,10 +1170,11 @@
     flex-direction: column;
   }
   .organic__boxes-dt {
-    font-size: 3.125vw;
+    font-size: 3.64583vw;
   }
   .organic__boxes-dd {
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
+    line-height: 1.8;
   }
   .organic__box {
     padding-bottom: 5.20833vw;
@@ -1149,7 +1195,7 @@
     width: 65.10417vw;
     height: 13.02083vw;
     padding: 0 2.60417vw;
-    font-size: 2.60417vw;
+    font-size: 2.7vw;
     border-radius: 1.30208vw;
   }
   .organic__btn-cookie {
@@ -1224,7 +1270,7 @@
 
 .world__distribution {
   display: block;
-  width: 70.3125vw;
+  width: 90vw;
   margin: 0 auto;
   padding-top: 4.6875vw;
 }
@@ -1270,9 +1316,10 @@
     padding-top: 20.83333vw;
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
+    background-position: center;
   }
   .world__title {
-    padding-left: 2.60417vw;
+    padding-left: 0;
     font-size: 6.77083vw;
   }
   .world__title-bg {
@@ -1282,16 +1329,20 @@
   }
   .world__collect {
     margin-top: 19.53125vw;
-    margin-left: 6.51042vw;
+    margin-left: 4.51042vw;
     font-size: 3.64583vw;
+  }
+  .world .br__pc {
+    display: none;
   }
   .world__explanation {
     margin-top: 52.08333vw;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
+    line-height:1.8;
   }
   .world__delicious {
     margin-top: 13.02083vw;
-    margin-right: 9.76562vw;
+    margin-right: 7.76562vw;
     font-size: 3.64583vw;
   }
   .world__distribution {
@@ -1481,35 +1532,36 @@
   }
   .commitment__okara {
     width: 88.54167vw;
-    height: 79.16667vw;
+    height: 113.16667vw;
     margin: 0 auto;
     padding-top: 7.8125vw;
     padding-right: 7.55208vw;
     padding-left: 8.85417vw;
-    background-image: url(../img/commitment_okara-bg-sp.png);
+    background-image: url(../img/commitment_okara-bg.png);
   }
   .commitment__okara-title {
-    font-size: 3.125vw;
+    font-size: 3.64583vw;
   }
   .commitment__okara-txt {
-    margin-top: 3.90625vw;
-    font-size: 2.08333vw;
+    margin-top: 5vw;
+    font-size: 2.7vw;
   }
   .commitment__recipe {
     width: 88.54167vw;
-    height: 79.16667vw;
+    height: 113.16667vw;
     margin: 0 auto;
     padding-top: 7.8125vw;
     padding-right: 7.55208vw;
     padding-left: 7.8125vw;
-    background-image: url(../img/commitment_recipe-bg-sp.png);
+    background-image: url(../img/commitment_recipe-bg.png);
+    background-position: center;
   }
   .commitment__recipe-title {
-    font-size: 3.125vw;
+    font-size: 3.64583vw;
   }
   .commitment__recipe-txt {
-    margin-top: 3.90625vw;
-    font-size: 2.08333vw;
+    margin-top: 5vw;
+    font-size: 2.7vw;
   }
 }
 
@@ -1651,12 +1703,12 @@
   }
   .type__item-name {
     padding-top: 1.95313vw;
-    font-size: 3.125vw;
+    font-size: 3.64583vw;
   }
   .type__item-description {
     min-height: 19.53125vw;
     padding: 2.60417vw 0.65104vw;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
   }
 }
 
@@ -1721,6 +1773,12 @@
   background-color: #0d5289;
   color: #fff;
   cursor: pointer;
+  transition-property: all;
+  transition: 0.3s linear;
+}
+.fee__btn:hover {
+  border-bottom-color: #0d5289;
+  padding: 30px 0 20px;
 }
 
 .fee__btn-txt {
@@ -1823,7 +1881,7 @@
     border-radius: 1.30208vw;
   }
   .fee__btn-txt {
-    font-size: 2.60417vw;
+    font-size: 2.7vw;
   }
   .fee__btn-annotation {
     font-size: 1.82292vw;
@@ -2038,6 +2096,12 @@
   line-height: 3;
   letter-spacing: .15em;
   color: #fff;
+  transition-property: all;
+  transition: 0.3s linear;
+}
+.order__btn:hover {
+  border-bottom-color: #2d9748;
+  padding-top: 5px;
 }
 
 .order__btn-txt {
@@ -2204,7 +2268,8 @@
   }
   .order__leaf-right1 {
     top: 215px;
-    width: 205px;
+    width: 250px;
+    right: -50px;
   }
   .order__leaf-right2 {
     top: 1567px;
@@ -2216,7 +2281,8 @@
   }
   .order__leaf-left2 {
     top: 1002px;
-    width: 190px;
+    left: -10px;
+    width: 200px;
   }
 }
 
@@ -2246,6 +2312,12 @@
   }
   .order__number {
     font-size: 7.8125vw;
+    font-size: 6vw;
+  }
+  .order__number a {
+    color: #2d9748!important;
+    text-decoration: none;
+    font-family: serif;
   }
   .order__day {
     font-size: 2.08333vw;
@@ -2276,7 +2348,7 @@
   .order__item-name {
     width: 100%;
     padding: 1.95313vw 0;
-    font-size: 2.08333vw;
+    font-size: 3.64583vw;
   }
   .order__wrap-box {
     width: 100%;
@@ -2292,7 +2364,7 @@
   }
   .order__select-item {
     margin-left: 4.16667vw;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
   }
   .order__txt-box {
     height: 7.8125vw;
@@ -2321,10 +2393,10 @@
   }
   .order__btn {
     width: 54.6875vw;
-    height: 9.11458vw;
+    height: 12vw;
     border-bottom: 0.78125vw solid #08581c;
     border-radius: 0.91146vw;
-    font-size: 2.60417vw;
+    font-size: 2.7vw;
   }
   .order__btn-txt {
     margin: 0 16.66667vw;
@@ -2411,8 +2483,10 @@
 .scroll {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  right: 0;
+  width: 123px;
   text-align: right;
+  z-index: 900;
 }
 
 .scroll__btn {
@@ -2433,6 +2507,10 @@
 @media screen and (max-width: 768px) {
   .arrow--right {
     font-size: 2.08333vw;
+  }
+  .scroll,
+  .scroll__btn {
+    width: 15vw;
   }
 }
 
@@ -2502,9 +2580,9 @@ input[type=radio]:checked + .radio01::after {
 
 @media screen and (max-width: 768px) {
   .radio01 {
-    width: 24.34896vw;
+    width: 32vw;
     padding-left: 7.16146vw;
-    font-size: 2.08333vw;
+    font-size: 2.7vw;
   }
   .radio01::before {
     top: -1.04167vw;
@@ -2978,3 +3056,249 @@ input[type=checkbox]:checked + .checkbox01::after {
 .my-parts span::after {
   transform: rotate(45deg);
 }
+
+
+
+
+
+
+/* 問い合わせ ------------------------------------------------------------------------- */
+/* 枠 */
+body#cnfm .bg1280 {
+  background-image: url(../img/confirm/bg_confirm.png),url(../img/confirm/bg_body.png);
+  background-repeat: repeat-x, repeat;
+  background-size: auto;
+  background-position: center top;
+}
+body#cnfm .order {
+  padding-top: 0;
+  background-image: none;
+  z-index: 10;
+}
+#formWrap {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 370px;
+}
+@media screen and (max-width: 768px){
+  body#cnfm .bg1280 {
+    background-size: 100%, auto;
+    background-position: center top;
+  }
+  #formWrap {
+    padding: 35vw 2.5vw 0;
+  }
+}
+/* フォームパーツ */
+.order__form-confirm-lead {
+  text-align: center;
+  margin-top: 35px;
+}
+.formTable {
+  widows: 100%;
+}
+.formTable th,
+.formTable td {
+  padding-bottom: 45px;
+}
+.formTable th {
+  width: 196px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 16px;
+}
+.formTable td {
+  width: 524px;
+  padding-left: 24px;
+}
+@media screen and (max-width: 768px){
+  .formTable th,
+  .formTable td {
+    display: block;
+    width: 100%;
+    font-size: 2.7vw;
+  }
+  .formTable th {
+    padding-bottom: 1vw;
+  }
+  .formTable td {
+    padding-bottom: 5vw;
+  }
+  .order__form-confirm-lead {
+    font-size: 2.7vw;
+  }
+}
+/* フォームの背景 */
+body#cnfm .order__form-bg {
+  position: relative;
+  height: auto;
+}
+body#cnfm .order__form-bg::after {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 5px;
+  bottom: -4px;
+  left: 0;
+  background-image: url(../img/confirm/bg_formft.png);
+}
+@media screen and (max-width: 768px){
+  body#cnfm .order__form-bg {
+    padding: 7vw 7vw 10vw 7vw;
+    border-radius: 1.5vw;
+  }
+  body#cnfm .order__form-bg::after {
+    width: 100%;
+  }
+}
+/* ボタン */
+body#cnfm .order__wrap-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+body#cnfm .order__btn-back {
+  width: 240px;
+  height: 70px;
+  margin-top: 30px;
+  border: 3px solid #2d9748;
+  border-radius: 7px;
+  font-size: 20px;
+  box-shadow: 0px 5px 0px -.5px rgba(6,88,28,1);
+  font-weight: 700;
+  transition-property: all;
+  transition: 0.3s linear;
+}
+body#cnfm .order__btn-back:hover {
+  height: 75px;
+  box-shadow: 0px 5px 0px -.5px rgba(6,88,28,0);
+}
+body#cnfm .order__btn-back .order__btn-txt {
+  margin: 0px 70px;
+  color: #2d9748;
+}
+@media screen and (max-width: 768px){
+  body#cnfm .order__btn-back {
+    width: 54.6875vw;
+    height: 12vw;
+    border-width: 0.78125vw;
+    border-radius: 0.91146vw;
+    font-size: 2.7vw;
+    box-shadow: 0px 0.78125vw 0px -.5px rgba(6,88,28,1);
+    margin-top: 3vw;
+  }
+}
+/* フェードインアイテム */
+body#cnfm .order__cookie1 {
+  top: -190px;
+}
+body#cnfm .order__leaf-right1,
+body#cnfm .order__cookie2,
+body#cnfm .order__leaf-left1 {
+  z-index: -1;
+}
+@media screen and (max-width: 768px){
+  body#cnfm .order__cookie1 {
+    top: -13vw;
+    left: -5vw;
+  }
+  body#cnfm .order__leaf-right1 {
+    top: 16vw;
+  }
+  body#cnfm .order__leaf-left1 {
+    z-index: 10;
+    top: auto;
+    bottom: 15vw;
+  }
+  body#cnfm .order__cookie2 {
+    top: auto;
+    bottom: 2vw;
+  }
+}
+/* 完了画面不要項目削除 */
+body#cnfm.thanks .formTable tr:nth-last-of-type(1),
+body#cnfm.thanks .formTable tr:nth-last-of-type(2) {
+  display: none;
+}
+body#cnfm .order__btn-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+/* レスポンシブ */
+.view-sp {
+  display: none;
+}
+@media screen and (max-width: 768px){
+  .view-sp {
+    display: block;
+  }
+  .view-pc {
+    display: none;
+  }
+}
+/* エラーチェック */
+.order__wrap-mail .error {
+  margin-top: 12px;
+  font-size: 16px;
+  letter-spacing: .1em;
+  color: #df1111;
+}
+.order__wrap-mail .order__txt-box.error {
+  background-image: url(../img/surprised-mark.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+@media screen and (max-width: 768px){
+  .order__wrap-mail .order__txt-box.error {
+    background-size: 4vw;
+    background-position: right 2vw center;
+  }
+  .order__wrap-mail .error {
+    margin-top: 0.9375vw;
+    font-size: 1.25vw;
+  }
+}
+
+
+/* フォーカス時のアウトライン非表示 ------------------------------------------------------------------------- */
+*:focus {
+outline: none;
+}
+
+
+/* hover設定 ------------------------------------------------------------------------- */
+a {
+  transition-property: all;
+  transition: 0.3s linear;
+}
+a:hover {
+  opacity: .8;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
