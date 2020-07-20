@@ -535,7 +535,7 @@
 }
 @media screen and (max-width: 768px) {
   .calorie {
-    height: 140.02604vw;
+    height: sp-get_vw(1259);
     padding-top: sp-get_vw(107);
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
@@ -565,7 +565,7 @@
       width: get_vw(260);
     }
     &__girl {
-      top: get_vw(895);
+      top: sp-get_vw(1000);
       right: 0;
       width: get_vw(260);
     }
