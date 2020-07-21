@@ -568,7 +568,7 @@
 
 @media screen and (max-width: 768px) {
   .calorie {
-    height: 163.93229vw;
+    height: 210.02604vw;
     padding-top: 13.93229vw;
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
@@ -599,7 +599,7 @@
     width: 20.3125vw;
   }
   .calorie__girl {
-    top: 130.20833vw;
+    top: 169.27083vw;
     right: 0;
     width: 20.3125vw;
   }
@@ -1051,7 +1051,7 @@
     padding-top: 0;
   }
   .organic__what {
-    height: 180.07812vw;
+    height: 210.54688vw;
     padding-top: 26.17188vw;
     background-image: url(../img/organic_what-bg-sp.png);
     background-size: cover;
@@ -1078,15 +1078,13 @@
     height: 100%;
   }
   .organic__kind-word {
-    width: 100vw;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
   }
   .organic__kind-side {
-    width: 70vw;
+    display: flex;
+    justify-content: center;
+    width: 70%;
     padding-top: 9vw;
-    padding-left: 18vw;
   }
   .organic__kind-dt {
     margin-top: 4.29688vw;
@@ -1100,15 +1098,18 @@
     line-height: 1.5;
   }
   .organic__kind-vertical {
+    display: flex;
+    justify-content: center;
+    width: 30%;
     padding-top: 2.73438vw;
-    padding-right: 18vw;
+    padding-right: 5.46875vw;
     padding-left: 0;
   }
   .organic__kind-txt {
-    font-size: 3.64583vw;
+    font-size: 5.20833vw;
   }
   .organic__sweets {
-    height: 163.67188vw;
+    height: 189.45312vw;
     padding-top: 20.57292vw;
     padding-bottom: 6.38021vw;
     background-image: url(../img/organic_sweets-bg-sp.png);
@@ -1126,19 +1127,22 @@
     flex-direction: column-reverse;
   }
   .organic__manufacture-word {
-    justify-content: space-between;
+    justify-content: center;
   }
   .organic__manufacture-vertical {
+    display: flex;
+    justify-content: center;
+    width: 30%;
     padding-top: 2.73438vw;
-    padding-left: 18vw;
   }
   .organic__manufacture-txt {
-    font-size: 3.64583vw;
+    font-size: 5.20833vw;
   }
   .organic__manufacture-side {
+    display: flex;
+    justify-content: center;
+    width: 70%;
     padding-top: 11.06771vw;
-    padding-right: 18vw;
-    padding-left: 0;
   }
   .organic__manufacture-dt {
     margin-top: 4.29688vw;
@@ -1157,6 +1161,7 @@
     padding-top: 15.49479vw;
     background-image: url(../img/organic_jas-bg-sp.png);
     background-size: cover;
+    background-position: top;
   }
   .organic__jas-title {
     font-size: 6.77083vw;
@@ -1170,7 +1175,9 @@
     flex-direction: column;
   }
   .organic__boxes-dt {
-    font-size: 3.64583vw;
+    padding-right: 1.95313vw;
+    padding-left: 1.95313vw;
+    font-size: 5.20833vw;
   }
   .organic__boxes-dd {
     font-size: 16px;
@@ -1235,10 +1242,11 @@
 .world__words {
   display: flex;
   justify-content: space-between;
+  padding-top: 7.8125vw;
 }
 
 .world__collect {
-  margin-top: 9.375vw;
+  margin-top: 2.34375vw;
   margin-left: 14.84375vw;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -1249,15 +1257,22 @@
   color: #0d5289;
 }
 
+.world__map {
+  display: block;
+  width: 54.6875vw;
+  height: 25.9375vw;
+  margin-top: 1.32812vw;
+}
+
 .world__explanation {
-  margin-top: 37.5vw;
+  width: 34.6875vw;
+  margin: 2.34375vw auto 0;
   font-size: 1.25vw;
   line-height: 2;
   letter-spacing: .1em;
 }
 
 .world__delicious {
-  margin-top: 7.8125vw;
   margin-right: 17.1875vw;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -1270,7 +1285,7 @@
 
 .world__distribution {
   display: block;
-  width: 90vw;
+  width: 70.3125vw;
   margin: 0 auto;
   padding-top: 4.6875vw;
 }
@@ -1312,11 +1327,11 @@
 
 @media screen and (max-width: 768px) {
   .world {
-    height: 100%;
+    height: 270.05208vw;
     padding-top: 20.83333vw;
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
   .world__title {
     padding-left: 0;
@@ -1336,7 +1351,7 @@
     display: none;
   }
   .world__explanation {
-    margin-top: 52.08333vw;
+    margin-top: 78.125vw;
     padding: 5.20833vw;
     font-size: 16px;
     line-height: 1.8;

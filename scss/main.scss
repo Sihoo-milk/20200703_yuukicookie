@@ -535,7 +535,7 @@
 }
 @media screen and (max-width: 768px) {
   .calorie {
-    height: sp-get_vw(1259);
+    height: sp-get_vw(1613);
     padding-top: sp-get_vw(107);
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
@@ -565,7 +565,7 @@
       width: get_vw(260);
     }
     &__girl {
-      top: sp-get_vw(1000);
+      top: sp-get_vw(1300);
       right: 0;
       width: get_vw(260);
     }
@@ -986,7 +986,7 @@
     height: 100%;
     padding-top: 0;
     &__what {
-      height: sp-get_vw(1383);
+      height: sp-get_vw(1617);
       padding-top: sp-get_vw(201);
       background-image: url(../img/organic_what-bg-sp.png);
       background-size: cover;
@@ -1012,15 +1012,13 @@
         height: 100%;
       }
       &-word {
-        width: 100vw;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        justify-content: center;
       }
       &-side {
-        width: 70vw;
+        display: flex;
+        justify-content: center;
+        width: 70%;
         padding-top: 9vw;
-        padding-left: 18vw;
       }
       &-dt {
         margin-top: sp-get_vw(33);
@@ -1034,16 +1032,19 @@
         line-height: 1.5;
       }
       &-vertical {
+        display: flex;
+        justify-content: center;
+        width: 30%;
         padding-top: sp-get_vw(21);
-        padding-right: 18vw;
+        padding-right: get_vw(70);
         padding-left: 0;
       }
       &-txt {
-        font-size: sp-get_vw(28);
+        font-size: sp-get_vw(40);
       }
     }
     &__sweets {
-      height: sp-get_vw(1257);
+      height: sp-get_vw(1455);
       padding-top: sp-get_vw(158);
       padding-bottom: sp-get_vw(49);
       background-image: url(../img/organic_sweets-bg-sp.png);
@@ -1060,19 +1061,22 @@
     &__manufacture {
       flex-direction: column-reverse;
       &-word {
-        justify-content: space-between;
+        justify-content: center;
       }
       &-vertical {
+        display: flex;
+        justify-content: center;
+        width: 30%;
         padding-top: sp-get_vw(21);
-        padding-left: 18vw;
       }
       &-txt {
-        font-size: sp-get_vw(28);
+        font-size: sp-get_vw(40);
       }
       &-side {
+        display: flex;
+        justify-content: center;
+        width: 70%;
         padding-top: sp-get_vw(85);
-        padding-right: 18vw;
-        padding-left: 0;
       }
       &-dt {
         margin-top: sp-get_vw(33);
@@ -1092,6 +1096,7 @@
       padding-top: sp-get_vw(119);
       background-image: url(../img/organic_jas-bg-sp.png);
       background-size: cover;
+      background-position: top;
       &-title {
         font-size: sp-get_vw(52);
         &-bg {
@@ -1104,7 +1109,9 @@
     &__boxes {
       flex-direction: column;
       &-dt {
-        font-size: 3.64583vw;
+        padding-right: sp-get_vw(15);
+        padding-left: sp-get_vw(15);
+        font-size: sp-get_vw(40);
       }
       &-dd {
         font-size: 16px;
@@ -1167,9 +1174,10 @@
   &__words {
     display: flex;
     justify-content: space-between;
+    padding-top: get_vw(100);
   }
   &__collect {
-    margin-top: get_vw(120);
+    margin-top: get_vw(30);
     margin-left: get_vw(190);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
@@ -1179,14 +1187,20 @@
     letter-spacing: .1em;
     color: #0d5289;
   }
+  &__map {
+    display: block;
+    width: get_vw(700);
+    height: get_vw(332);
+    margin-top: get_vw(17);
+  }
   &__explanation {
-    margin-top: get_vw(480);
+    width: get_vw(444);
+    margin: get_vw(30) auto 0;
     font-size: get_vw(16);
     line-height: 2;
     letter-spacing: .1em;
   }
   &__delicious {
-    margin-top: get_vw(100);
     margin-right: get_vw(220);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
@@ -1198,7 +1212,7 @@
   }
   &__distribution {
     display: block;
-    width: 90vw;
+    width: get_vw(900);
     margin: 0 auto;
     padding-top: get_vw(60);
   }
@@ -1239,11 +1253,11 @@
 }
 @media screen and (max-width: 768px) {
   .world {
-    height: 100%;
+    height: sp-get_vw(2074);
     padding-top: sp-get_vw(160);
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     &__title {
       padding-left: 0;
       font-size: sp-get_vw(52);
@@ -1262,7 +1276,7 @@
       display: none;
     }
     &__explanation {
-      margin-top: sp-get_vw(400);
+      margin-top: sp-get_vw(600);
       padding: sp-get_vw(40);
       font-size: 16px;
       line-height:1.8;
