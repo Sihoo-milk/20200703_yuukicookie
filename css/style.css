@@ -1261,7 +1261,7 @@
   display: block;
   width: 54.6875vw;
   height: 25.9375vw;
-  margin-top: 1.32812vw;
+  margin: 1.32812vw auto 0;
 }
 
 .world__explanation {
@@ -1327,8 +1327,8 @@
 
 @media screen and (max-width: 768px) {
   .world {
-    height: 270.05208vw;
-    padding-top: 20.83333vw;
+    height: 224.21875vw;
+    padding-top: 30.72917vw;
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
     background-position: top;
@@ -1343,7 +1343,6 @@
     background-image: url(../img/world_title-bg-sp.png);
   }
   .world__collect {
-    margin-top: 19.53125vw;
     margin-left: 4.51042vw;
     font-size: 3.64583vw;
   }
@@ -1351,18 +1350,13 @@
     display: none;
   }
   .world__explanation {
-    margin-top: 78.125vw;
-    padding: 5.20833vw;
+    width: 54.6875vw;
     font-size: 16px;
     line-height: 1.8;
   }
   .world__delicious {
-    margin-top: 13.02083vw;
     margin-right: 7.76562vw;
     font-size: 3.64583vw;
-  }
-  .world__distribution {
-    padding-top: 5.20833vw;
   }
 }
 
@@ -1547,13 +1541,13 @@
     flex-direction: column;
   }
   .commitment__okara {
-    width: 88.54167vw;
-    height: 113.16667vw;
+    width: 87.89062vw;
+    height: 179.6875vw;
     margin: 0 auto;
     padding-top: 7.8125vw;
     padding-right: 7.55208vw;
     padding-left: 8.85417vw;
-    background-image: url(../img/commitment_okara-bg.png);
+    background-image: url(../img/commitment_okara-bg-sp.png);
   }
   .commitment__okara-title {
     font-size: 3.64583vw;
@@ -1564,12 +1558,12 @@
   }
   .commitment__recipe {
     width: 88.54167vw;
-    height: 113.16667vw;
+    height: 179.6875vw;
     margin: 0 auto;
     padding-top: 7.8125vw;
     padding-right: 7.55208vw;
     padding-left: 7.8125vw;
-    background-image: url(../img/commitment_recipe-bg.png);
+    background-image: url(../img/commitment_recipe-bg-sp.png);
     background-position: center;
   }
   .commitment__recipe-title {

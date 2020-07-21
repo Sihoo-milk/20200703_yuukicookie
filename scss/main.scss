@@ -1191,7 +1191,7 @@
     display: block;
     width: get_vw(700);
     height: get_vw(332);
-    margin-top: get_vw(17);
+    margin: get_vw(17) auto 0;
   }
   &__explanation {
     width: get_vw(444);
@@ -1253,8 +1253,8 @@
 }
 @media screen and (max-width: 768px) {
   .world {
-    height: sp-get_vw(2074);
-    padding-top: sp-get_vw(160);
+    height: sp-get_vw(1722);
+    padding-top: sp-get_vw(236);
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
     background-position: top;
@@ -1268,7 +1268,6 @@
       }
     }
     &__collect {
-      margin-top: sp-get_vw(150);
       margin-left: 4.51042vw;
       font-size: sp-get_vw(28);
     }
@@ -1276,18 +1275,13 @@
       display: none;
     }
     &__explanation {
-      margin-top: sp-get_vw(600);
-      padding: sp-get_vw(40);
+      width: get_vw(700);
       font-size: 16px;
       line-height:1.8;
     }
     &__delicious {
-      margin-top: sp-get_vw(100);
       margin-right: 7.76562vw;
       font-size: sp-get_vw(28);
-    }
-    &__distribution {
-      padding-top: sp-get_vw(40);
     }
   }
 }
@@ -1458,13 +1452,13 @@
       flex-direction: column;
     }
     &__okara {
-      width: sp-get_vw(680);
-      height: 113.16667vw;
+      width: sp-get_vw(675);
+      height: sp-get_vw(1380);
       margin: 0 auto;
       padding-top: sp-get_vw(60);
       padding-right: sp-get_vw(58);
       padding-left: sp-get_vw(68);
-      background-image: url(../img/commitment_okara-bg.png);
+      background-image: url(../img/commitment_okara-bg-sp.png);
       &-title {
         font-size: 3.64583vw;
       }
@@ -1475,12 +1469,12 @@
     }
     &__recipe {
       width: sp-get_vw(680);
-      height: 113.16667vw;
+      height: sp-get_vw(1380);
       margin: 0 auto;
       padding-top: sp-get_vw(60);
       padding-right: sp-get_vw(58);
       padding-left: sp-get_vw(60);
-      background-image: url(../img/commitment_recipe-bg.png);
+      background-image: url(../img/commitment_recipe-bg-sp.png);
       background-position: center;
       &-title {
         font-size: 3.64583vw;
