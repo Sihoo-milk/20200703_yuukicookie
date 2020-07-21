@@ -414,7 +414,7 @@
 
 @media screen and (max-width: 768px) {
   .mv {
-    height: 130.16667vw;
+    height: 169.27083vw;
     background-image: url(../img/mv_bg-sp.png);
     background-position: 60% bottom;
   }
@@ -435,25 +435,31 @@
     background-position-y: 19.40104vw;
   }
   .mv__subtitle {
-    padding-left: 11.84896vw;
-    font-size: 2.5vw;
+    padding-left: 6.51042vw;
+    font-size: 16px;
   }
   .mv__btns {
     flex-direction: column;
     padding-top: 3.25521vw;
-    padding-left: 11.71875vw;
+    padding-left: 0;
   }
   .mv__btn {
-    margin-right: 1.95313vw;
-    margin-bottom: 1.95313vw;
-    padding: 0 2.60417vw;
-    font-size: 2.34375vw;
-    border-radius: 1.30208vw;
+    justify-content: center;
+    position: relative;
+    width: 78.125vw;
     height: 13.02083vw;
+    padding: 0 2.60417vw;
+    line-height: 13.02083vw;
+    margin: 0 auto 1.95313vw;
+    padding: 0 2.60417vw;
+    font-size: 16px;
+    border-radius: 1.30208vw;
   }
   .mv__btn-cookie {
+    position: absolute;
+    right: 3.90625vw;
     width: 3.125vw;
-    margin-left: 1.95313vw;
+    margin-left: 0;
   }
   .mv__btn--what {
     border-bottom: solid 0.52083vw #002641;
@@ -462,7 +468,7 @@
     border-bottom: solid 0.52083vw #08581c;
   }
   .mv__trial {
-    top: 92.77604vw;
+    top: 117.1875vw;
     width: 35.78125vw;
   }
 }
@@ -1203,6 +1209,7 @@
     height: 13.02083vw;
     padding: 0 2.60417vw;
     font-size: 16px;
+    line-height: 13.02083vw;
     border-radius: 1.30208vw;
   }
   .organic__btn-cookie {
@@ -1327,7 +1334,7 @@
 
 @media screen and (max-width: 768px) {
   .world {
-    height: 224.21875vw;
+    height: 100%;
     padding-top: 30.72917vw;
     background-image: url(../img/world_bg-sp.png);
     background-size: cover;
@@ -2381,16 +2388,17 @@
   }
   .order__select-item {
     margin-left: 0;
-    padding-left: 7.16146vw;
+    padding-left: 13.02083vw;
     font-size: 16px;
     line-height: 3.75;
   }
   .order__txt-box {
-    height: 7.8125vw;
+    height: 10.41667vw;
     padding: 0 2.34375vw;
     border: 0.13021vw solid #795100;
     border-radius: 0.52083vw;
-    font-size: 2.08333vw;
+    font-size: 16px;
+    line-height: 7.8125vw;
   }
   .order__txt-box::placeholder {
     color: #888;
@@ -2401,7 +2409,7 @@
     padding: 1.30208vw 2.34375vw;
     border: 0.13021vw solid #795100;
     border-radius: 0.52083vw;
-    font-size: 2.08333vw;
+    font-size: 16px;
   }
   .order__txt-border {
     border-bottom: 0.13021vw solid #000;
@@ -2411,11 +2419,13 @@
     font-size: 2.08333vw;
   }
   .order__btn {
+    align-items: center;
     width: 54.6875vw;
-    height: 12vw;
+    height: 9.11458vw;
     border-bottom: 0.78125vw solid #08581c;
     border-radius: 0.91146vw;
     font-size: 16px;
+    line-height: 9.11458vw;
   }
   .order__btn-txt {
     margin: 0 16.66667vw;
@@ -2600,17 +2610,17 @@ input[type=radio]:checked + .radio01::after {
 @media screen and (max-width: 768px) {
   .radio01 {
     width: 100%;
-    padding-left: 7.16146vw;
+    padding-left: 13.02083vw;
     font-size: 16px;
   }
   .radio01::before {
-    top: 5.59896vw;
+    top: 5.20833vw;
     width: 5.20833vw;
     height: 5.20833vw;
     border: 0.13021vw solid #795100;
   }
   .radio01::after {
-    top: 7.29167vw;
+    top: 6.90104vw;
     left: 1.69271vw;
     width: 1.82292vw;
     height: 1.82292vw;
@@ -2689,14 +2699,15 @@ input[type=radio]:checked + .radio01::after {
   }
   .cp_ipselect select {
     padding: 6px 38px 6px 12px;
+    font-size: 16px;
     color: #000;
   }
 }
 
 @media screen and (max-width: 768px) {
   .cp_ipselect {
-    width: 11.71875vw;
-    height: 5.20833vw;
+    width: 26.04167vw;
+    height: 10.41667vw;
     margin-left: 2.34375vw;
   }
   .cp_ipselect.cp_sl04 {
@@ -2705,9 +2716,9 @@ input[type=radio]:checked + .radio01::after {
   }
   .cp_ipselect.cp_sl04::before {
     right: 1.17188vw;
-    border-top: 0.52083vw solid #865500;
-    border-right: 0.52083vw solid transparent;
-    border-left: 0.52083vw solid transparent;
+    border-top: 1.30208vw solid #865500;
+    border-right: 1.30208vw solid transparent;
+    border-left: 1.30208vw solid transparent;
   }
   .cp_ipselect select {
     padding: 0.78125vw 4.94792vw 0.78125vw 1.5625vw;

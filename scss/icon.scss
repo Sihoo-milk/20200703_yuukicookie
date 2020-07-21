@@ -84,16 +84,16 @@ input[type=radio]:checked + .radio01::after {
 @media screen and (max-width: 768px) {
   .radio01 {
     width: 100%;
-    padding-left: sp-get_vw(55);
+    padding-left: sp-get_vw(100);
     font-size: 16px;
     &::before {
-      top: sp-get_vw(43);
+      top: sp-get_vw(40);
       width: sp-get_vw(40);
       height: sp-get_vw(40);
       border: sp-get_vw(1) solid #795100;
     }
     &::after {
-      top: sp-get_vw(56);
+      top: sp-get_vw(53);
       left: sp-get_vw(13);
       width: sp-get_vw(14);
       height: sp-get_vw(14);
@@ -167,23 +167,24 @@ input[type=radio]:checked + .radio01::after {
     }
     & select {
       padding: 6px 38px 6px 12px;
+      font-size: 16px;
       color: #000;
     }
   }
 }
 @media screen and (max-width: 768px) {
   .cp_ipselect {
-    width: sp-get_vw(90);
-    height: sp-get_vw(40);
+    width: sp-get_vw(200);
+    height: sp-get_vw(80);
     margin-left: sp-get_vw(18);
     &.cp_sl04 {
       border: sp-get_vw(1) solid #795100;
       border-radius: sp-get_vw(4);
       &::before {
         right: sp-get_vw(9);
-        border-top: sp-get_vw(4) solid #865500;
-        border-right: sp-get_vw(4) solid transparent;
-        border-left: sp-get_vw(4) solid transparent;
+        border-top: sp-get_vw(10) solid #865500;
+        border-right: sp-get_vw(10) solid transparent;
+        border-left: sp-get_vw(10) solid transparent;
       }
     }
     & select {
