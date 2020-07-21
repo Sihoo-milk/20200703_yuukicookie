@@ -1199,7 +1199,7 @@
     background-size: cover;
   }
   .organic__btn {
-    width: 65.10417vw;
+    width: 78.125vw;
     height: 13.02083vw;
     padding: 0 2.60417vw;
     font-size: 16px;
@@ -1886,7 +1886,7 @@
     margin: 0 auto 2.60417vw;
   }
   .fee__btn {
-    width: 65.10417vw;
+    width: 78.125vw;
     padding: 3.25521vw 0;
     border-bottom: solid 0.78125vw #002641;
     border-radius: 1.30208vw;
@@ -2367,16 +2367,23 @@
     padding-left: 0;
   }
   .order__wrap-select {
-    justify-content: space-between;
+    display: block;
+    padding-bottom: 6.51042vw;
     padding-left: 0;
+  }
+  .order__wrap-radio {
+    width: 100%;
+    line-height: 3.75;
   }
   .order__wrap-mail {
     width: 100%;
     padding-left: 0;
   }
   .order__select-item {
-    margin-left: 4.16667vw;
+    margin-left: 0;
+    padding-left: 7.16146vw;
     font-size: 16px;
+    line-height: 3.75;
   }
   .order__txt-box {
     height: 7.8125vw;
@@ -2592,18 +2599,18 @@ input[type=radio]:checked + .radio01::after {
 
 @media screen and (max-width: 768px) {
   .radio01 {
-    width: 32vw;
+    width: 100%;
     padding-left: 7.16146vw;
     font-size: 16px;
   }
   .radio01::before {
-    top: -1.04167vw;
+    top: 5.59896vw;
     width: 5.20833vw;
     height: 5.20833vw;
     border: 0.13021vw solid #795100;
   }
   .radio01::after {
-    top: 0.65104vw;
+    top: 7.29167vw;
     left: 1.69271vw;
     width: 1.82292vw;
     height: 1.82292vw;

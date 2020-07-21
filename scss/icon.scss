@@ -83,17 +83,17 @@ input[type=radio]:checked + .radio01::after {
 }
 @media screen and (max-width: 768px) {
   .radio01 {
-    width: 32vw;
+    width: 100%;
     padding-left: sp-get_vw(55);
     font-size: 16px;
     &::before {
-      top: sp-get_vw(-8);
+      top: sp-get_vw(43);
       width: sp-get_vw(40);
       height: sp-get_vw(40);
       border: sp-get_vw(1) solid #795100;
     }
     &::after {
-      top: sp-get_vw(5);
+      top: sp-get_vw(56);
       left: sp-get_vw(13);
       width: sp-get_vw(14);
       height: sp-get_vw(14);

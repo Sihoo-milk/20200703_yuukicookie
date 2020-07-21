@@ -1134,7 +1134,7 @@
       background-size: cover;
     }
     &__btn {
-      width: sp-get_vw(500);
+      width: sp-get_vw(600);
       height: sp-get_vw(100);
       padding: 0 sp-get_vw(20);
       font-size: 16px;
@@ -1777,7 +1777,7 @@
       }
     }
     &__btn {
-      width: sp-get_vw(500);
+      width: sp-get_vw(600);
       padding: sp-get_vw(25) 0;
       border-bottom:  solid sp-get_vw(6) #002641;
       border-radius: sp-get_vw(10);
@@ -2253,8 +2253,13 @@
         padding-left: 0;
       }
       &-select {
-        justify-content: space-between;
+        display: block;
+        padding-bottom: sp-get_vw(50);
         padding-left: 0;
+      }
+      &-radio {
+        width: 100%;
+        line-height: 3.75;
       }
       &-mail {
         width: 100%;
@@ -2262,8 +2267,10 @@
       }
     }
     &__select-item {
-      margin-left: sp-get_vw(32);
+      margin-left: 0;
+      padding-left: sp-get_vw(55);
       font-size: 16px;
+      line-height: 3.75;
     }
     &__txt {
       &-box {
