@@ -414,7 +414,7 @@
 
 @media screen and (max-width: 768px) {
   .mv {
-    height: 169.27083vw;
+    height: 182.29167vw;
     background-image: url(../img/mv_bg-sp.png);
     background-position: 60% bottom;
   }
@@ -422,10 +422,10 @@
     background: none;
   }
   .mv__title {
-    font-size: 8.07292vw;
+    font-size: 48px;
   }
   .mv__title-organic {
-    font-size: 6.68359vw;
+    font-size: 48px;
   }
   .mv__title-bg {
     padding-top: 20.70312vw;
@@ -468,7 +468,7 @@
     border-bottom: solid 0.52083vw #08581c;
   }
   .mv__trial {
-    top: 117.1875vw;
+    top: 148.4375vw;
     width: 35.78125vw;
   }
 }
@@ -482,21 +482,18 @@
 }
 
 .calorie__title {
-  text-align: center;
-  font-family: "851MkPOP_002";
-  font-size: 3.4375vw;
-  line-height: 1.36363636364;
-  letter-spacing: .1em;
-  color: #0d5289;
-}
-
-.calorie__title-bg {
   width: 43.75vw;
   height: 23.82812vw;
   margin: 0 auto;
   padding-top: 8.98438vw;
   background-image: url(../img/calorie_title-bg.png);
   background-size: cover;
+  text-align: center;
+  font-family: "851MkPOP_002";
+  font-size: 3.4375vw;
+  line-height: 1.36363636364;
+  letter-spacing: .1em;
+  color: #0d5289;
 }
 
 .calorie__txt {
@@ -546,12 +543,10 @@
     padding-top: 85px;
   }
   .calorie__title {
-    font-size: 44px;
-  }
-  .calorie__title-bg {
     width: 560px;
     height: 305px;
     padding-top: 115px;
+    font-size: 44px;
   }
   .calorie__txt {
     width: 560px;
@@ -574,26 +569,22 @@
 
 @media screen and (max-width: 768px) {
   .calorie {
+    position: relative;
     height: 210.02604vw;
     padding-top: 13.93229vw;
     background-image: url(../img/calorie_bg-sp.png);
     background-size: cover;
-    background-position: center;
   }
   .calorie__title {
-    font-size: 6.77083vw;
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    background-image: none;
+    font-size: 34px;
   }
   .calorie__title-bg {
-    width: 72.22917vw;
-    height: 35.39063vw;
-    margin-left: 16.4375vw;
-    padding-top: 9.11458vw;
-    padding-left: 2.20833vw;
-    background-image: url(../img/calorie_title-bg-sp.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: 0vw;
-    background-position-x: 0vw;
+    display: block;
+    width: 100%;
   }
   .calorie__txt {
     width: 100%;
@@ -602,6 +593,7 @@
     font-size: 16px;
   }
   .calorie__family {
+    top: 65.10417vw;
     width: 20.3125vw;
   }
   .calorie__girl {
@@ -1064,10 +1056,11 @@
   }
   .organic__what-title {
     margin-left: 0;
-    font-size: 6.77083vw;
+    text-align: center;
+    font-size: 34px;
   }
   .organic__what-title-bg {
-    width: 98.95833vw;
+    width: 100vw;
     height: 11.97917vw;
     display: flex;
     align-items: flex-end;
@@ -1122,7 +1115,8 @@
     background-size: cover;
   }
   .organic__sweets-title {
-    font-size: 6.77083vw;
+    text-align: center;
+    font-size: 34px;
   }
   .organic__sweets-title-bg {
     width: 100%;
@@ -1170,7 +1164,7 @@
     background-position: top;
   }
   .organic__jas-title {
-    font-size: 6.77083vw;
+    font-size: 34px;
   }
   .organic__jas-title-bg {
     width: 100vw;
@@ -1342,7 +1336,8 @@
   }
   .world__title {
     padding-left: 0;
-    font-size: 6.77083vw;
+    text-align: center;
+    font-size: 34px;
   }
   .world__title-bg {
     width: 100vw;
@@ -1351,7 +1346,7 @@
   }
   .world__collect {
     margin-left: 4.51042vw;
-    font-size: 3.64583vw;
+    font-size: 18px;
   }
   .world .br__pc {
     display: none;
@@ -1363,7 +1358,7 @@
   }
   .world__delicious {
     margin-right: 7.76562vw;
-    font-size: 3.64583vw;
+    font-size: 18px;
   }
 }
 
@@ -1532,7 +1527,8 @@
   }
   .commitment__title {
     padding-left: 0;
-    font-size: 6.77083vw;
+    text-align: center;
+    font-size: 34px;
   }
   .commitment__title-bg {
     width: 100%;
@@ -1557,7 +1553,7 @@
     background-image: url(../img/commitment_okara-bg-sp.png);
   }
   .commitment__okara-title {
-    font-size: 3.64583vw;
+    font-size: 24px;
   }
   .commitment__okara-txt {
     margin-top: 5vw;
@@ -1574,7 +1570,7 @@
     background-position: center;
   }
   .commitment__recipe-title {
-    font-size: 3.64583vw;
+    font-size: 24px;
   }
   .commitment__recipe-txt {
     margin-top: 5vw;
@@ -1695,7 +1691,7 @@
   }
   .type__title {
     padding-left: 0;
-    font-size: 6.77083vw;
+    font-size: 34px;
   }
   .type__title-bg {
     width: 100%;
@@ -1720,7 +1716,7 @@
   }
   .type__item-name {
     padding-top: 1.95313vw;
-    font-size: 3.64583vw;
+    font-size: 24px;
   }
   .type__item-description {
     min-height: 19.53125vw;
@@ -1872,7 +1868,7 @@
     background-image: url(../img/fee_bg-sp.png);
   }
   .fee__title {
-    font-size: 6.77083vw;
+    font-size: 34px;
   }
   .fee__title-bg {
     width: 100%;
@@ -2313,7 +2309,8 @@
     background-image: url(../img/order_bg-sp.png);
   }
   .order__title {
-    font-size: 6.77083vw;
+    text-align: center;
+    font-size: 34px;
   }
   .order__title-bg {
     width: 100%;
@@ -2330,8 +2327,7 @@
     background-image: url(../img/order_phone.png);
   }
   .order__number {
-    font-size: 7.8125vw;
-    font-size: 6vw;
+    font-size: 29px;
   }
   .order__number a {
     color: #2d9748 !important;
@@ -2339,10 +2335,10 @@
     font-family: serif;
   }
   .order__day {
-    font-size: 2.08333vw;
+    font-size: 16px;
   }
   .order__form-title {
-    font-size: 6.77083vw;
+    font-size: 34px;
   }
   .order__form-title-bg {
     width: 100%;
@@ -2367,7 +2363,7 @@
   .order__item-name {
     width: 100%;
     padding: 1.95313vw 0;
-    font-size: 3.64583vw;
+    font-size: 16px;
   }
   .order__wrap-box {
     width: 100%;
@@ -2820,7 +2816,7 @@ input[type=checkbox]:checked + .checkbox01::after {
   .checkbox01 {
     height: 5.20833vw;
     padding-left: 6.51042vw;
-    font-size: 2.08333vw;
+    font-size: 16px;
   }
   .checkbox01::before {
     width: 5.20833vw;

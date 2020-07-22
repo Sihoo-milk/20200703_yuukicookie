@@ -282,7 +282,7 @@ input[type=checkbox]:checked + .checkbox01::after {
   .checkbox01 {
     height: sp-get_vw(40);
     padding-left: sp-get_vw(50);
-    font-size: sp-get_vw(16);
+    font-size: 16px;
     &::before {
       width: sp-get_vw(40);
       height: sp-get_vw(40);
