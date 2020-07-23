@@ -451,12 +451,17 @@
 
 .calorie {
   position: relative;
+  max-width: 1280px;
+  max-height: 900px;
   height: get_vw(900);
+  margin: 0 auto;
   padding-top: get_vw(85);
   background-image: url(../img/calorie_bg.png);
   background-size: cover;
   &__title {
+    max-width: 560px;
     width: get_vw(560);
+    max-height: 305px;
     height: get_vw(305);
     margin: 0 auto;
     padding-top: get_vw(115);
@@ -470,6 +475,7 @@
     color: #0d5289;
   }
   &__txt {
+    max-width: 560px;
     width: get_vw(560);
     margin: 0 auto;
     padding-top: get_vw(30);
@@ -487,6 +493,7 @@
     position: absolute;
     top: get_vw(85);
     right: 0;
+    max-width: 418px;
     width: get_vw(418);
   }
   &__family {
@@ -494,6 +501,7 @@
     position: absolute;
     top: get_vw(320);
     left: 0;
+    max-width: 360px;
     width: get_vw(360);
   }
   &__girl {
@@ -501,37 +509,29 @@
     position: absolute;
     top: get_vw(495);
     right: 0;
+    max-width: 360px;
     width: get_vw(360);
   }
 }
 @media screen and (min-width: 1280px) {
   .calorie {
-    max-width: 1280px;
-    height: 900px;
-    margin: 0 auto;
     padding-top: 85px;
     &__title {
-      width: 560px;
-      height: 305px;
       padding-top: 115px;
       font-size: 44px;
     }
     &__txt {
-      width: 560px;
       padding-top: 30px;
       font-size: 16px;
     }
     &__cookie {
       top: 85px;
-      width: 418px;
     }
     &__family {
       top: 320px;
-      width: 360px;
     }
     &__girl {
       top: 495px;
-      width: 360px;
     }
   }
 }
@@ -546,12 +546,9 @@
       position: absolute;
       top: 110px;
       width: 100%;
+      height: auto;
       background-image: none;
       font-size: 34px;
-      &-bg {
-        display: block;
-        width: 100%;
-      }
     }
     &__txt {
       width: 100%;
@@ -573,7 +570,10 @@
 
 .organic {
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
   &__what {
+    max-height: 929px;
     height: get_vw(929);
     padding-top: get_vw(200);
     background-image: url(../img/organic_what-bg.png);
@@ -583,6 +583,7 @@
         display: block;
         position:absolute;
         top: 0;
+        max-width: 340px;
         width: get_vw(340);
       }
       &--right {
@@ -590,24 +591,23 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: get_vw(340);
+        max-width: 350px;
+        width: get_vw(350);
       }
     }
     &-title {
-      margin-left: get_vw(-15);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      max-height: 90px;
+      height: get_vw(90);
+      background-image: url(../img/organic_what-title-bg.png);
+      background-size: cover;
       font-family: "851MkPOP_002";
       font-size: get_vw(52);
       line-height: 1.15384615385;
       color: #0d5289;
-      &-bg {
-        width: get_vw(1280);
-        height: get_vw(90);
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background-image: url(../img/organic_what-title-bg.png);
-        background-size: cover;
-      }
     }
   }
   &__kind {
@@ -615,7 +615,9 @@
     margin-top: get_vw(53);
     &-family {
       display: block;
+      max-width: 730px;
       width: get_vw(730);
+      max-height: 430px;
       height: get_vw(430);
     }
     &-word {
@@ -656,7 +658,7 @@
   }
   &__sweets {
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: get_vw(90);
     background-image: url(../img/organic_sweets-bg.png);
     background-size: cover;
     &-leaf {
@@ -664,22 +666,22 @@
       position: absolute;
       top: get_vw(-163);
       left: 0;
+      max-width: 350px;
       width: get_vw(350);
     }
     &-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      max-height: 92px;
+      height: get_vw(92);
+      background-image: url(../img/organic_sweets-title-bg.png);
+      background-size: cover;
       font-family: "851MkPOP_002";
       font-size: get_vw(52);
       line-height: 1.15384615385;
       color: #0d5289;
-      &-bg {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: get_vw(1280);
-        height: get_vw(92);
-        background-image: url(../img/organic_sweets-title-bg.png);
-        background-size: cover;
-      }
     }
   }
   &__manufacture {
@@ -722,12 +724,15 @@
     }
     &-packing {
       display: block;
+      max-width: 730px;
       width: get_vw(730);
+      max-height: 430px;
       height: get_vw(430);
     }
   }
   &__jas {
     position: relative;
+    max-height: 888px;
     height: get_vw(888);
     background-image: url(../img/organic_jas-bg.png);
     &-leaf {
@@ -736,6 +741,7 @@
         position: absolute;
         top: get_vw(-118);
         left: 0;
+        max-width: 400px;
         width: get_vw(400);
       }
       &--right {
@@ -743,23 +749,23 @@
         position: absolute;
         top: 0;
         right: 0;
+        max-width: 190px;
         width: get_vw(190);
       }
     }
     &-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      max-height: 92px;
+      height: get_vw(92);
+      background-image: url(../img/organic_jas-title-bg.png);
+      background-size: cover;
       font-family: "851MkPOP_002";
       font-size: get_vw(52);
       line-height: 1.15384615385;
       color: #0d5289;
-      &-bg {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: get_vw(1280);
-        height: get_vw(92);
-        background-image: url(../img/organic_jas-title-bg.png);
-        background-size: cover;
-      }
     }
   }
   &__boxes {
@@ -784,10 +790,12 @@
   &__box {
     &-img {
       display: block;
+      max-width: 520px;
       width: get_vw(520);
     }
     &-txt {
       display: flex;
+      max-width: 520px;
       width: get_vw(520);
       padding-top: get_vw(20);
     }
@@ -802,7 +810,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 500px;
     width: get_vw(500);
+    max-height: 100px;
     height: get_vw(100);
     padding: 0 get_vw(20);
     font-size: get_vw(20);
@@ -818,11 +828,12 @@
       display: block;
       position: absolute;
       right: get_vw(30);
+      max-width: 31px;
       width: get_vw(31);
     }
     &--here {
       background: #2d9748;
-      border-bottom:  solid get_vw(4) #08581c;
+      border-bottom: get_vw(4) solid #08581c;
       transition-property: all;
       transition: 0.3s linear;
       &:hover {
@@ -835,35 +846,19 @@
 }
 @media screen and (min-width: 1280px) {
   .organic {
-    position: relative;
-    max-width: 1280px;
-    margin: 0 auto;
     &__what {
-      height: 929px;
       padding-top: 200px;
       &-leaf {
-        &--left {
-          width: 340px;
-        }
         &--right {
-          width: 350px;
           right: -10px;
         }
       }
       &-title {
         font-size: 52px;
-        &-bg {
-          width: 1280px;
-          height: 90px;
-        }
       }
     }
     &__kind {
       margin-top: 53px;
-      &-family {
-        width: 730px;
-        height: 430px;
-      }
       &-side {
         padding-top: 80px;
         padding-left: 58px;
@@ -884,16 +879,12 @@
       }
     }
     &__sweets {
+      padding-bottom: 90px;
       &-leaf {
         top: -163px;
-        width: 350px;
       }
       &-title {
         font-size: 52px;
-        &-bg {
-          width: 1280px;
-          height: 92px;
-        }
       }
     }
     &__manufacture {
@@ -915,29 +906,18 @@
       &-dd {
         font-size: 16px;
       }
-      &-packing {
-        width: 730px;
-        height: 430px;
-      }
     }
     &__jas {
-      height: 888px;
       &-leaf {
         &--left {
           top: -118px;
-          width: 400px;
         }
         &--right {
-          width: 200px;
           right: -10px;
         }
       }
       &-title {
         font-size: 52px;
-        &-bg {
-          width: 1280px;
-          height: 92px;
-        }
       }
     }
     &__boxes {
@@ -953,11 +933,7 @@
       }
     }
     &__box {
-      &-img {
-        width: 520px;
-      }
       &-txt {
-        width: 520px;
         padding-top: 20px;
       }
     }
@@ -965,14 +941,11 @@
       padding-top: 50px;
     }
     &__btn {
-      width: 500px;
-      height: 100px;
       padding: 0 20px;
       font-size: 20px;
       border-radius: 10px;
       &-cookie {
         right: 30px;
-        width: 31px;
       }
       &--here {
         border-bottom: 4px solid #08581c;
@@ -986,22 +959,20 @@
     padding-top: 0;
     &__what {
       height: sp-get_vw(1617);
-      padding-top: sp-get_vw(201);
+      padding-top: sp-get_vw(200);
       background-image: url(../img/organic_what-bg-sp.png);
       background-size: cover;
       &-title {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
         margin-left: 0;
+        background-image: url(../img/organic_what-title-bg-sp.png);
+        background-size: cover;
         text-align: center;
         font-size: 34px;
-        &-bg {
-          width: sp-get_vw(768);
-          height: sp-get_vw(92);
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          background-image: url(../img/organic_what-title-bg-sp.png);
-          background-size: cover;
-        }
       }
     }
     &__kind {
@@ -1050,6 +1021,7 @@
       background-image: url(../img/organic_sweets-bg-sp.png);
       background-size: cover;
       &-title {
+        height: auto;
         text-align: center;
         font-size: 34px;
         &-bg {
@@ -1099,6 +1071,7 @@
       background-size: cover;
       background-position: top;
       &-title {
+        height: auto;
         font-size: 34px;
         &-bg {
           width: sp-get_vw(768);
@@ -1153,25 +1126,26 @@
 }
 
 .world {
+  max-width: 1280px;
+  max-height: 1303px;
   height: get_vw(1303);
+  margin: 0 auto;
   padding-top: get_vw(236);
   background-image: url(../img/world_bg.png);
   background-size: cover;
   &__title {
-    padding-left: get_vw(20);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    max-height: 100px;
+    height: get_vw(100);
+    background-image: url(../img/world_title-bg.png);
+    background-size: cover;
     font-family: "851MkPOP_002";
     font-size: get_vw(52);
     line-height: 1.15384615385;
     color: #0d5289;
-    &-bg {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: get_vw(1280);
-      height: get_vw(100);
-      background-image: url(../img/world_title-bg.png);
-      background-size: cover;
-    }
   }
   &__words {
     display: flex;
@@ -1191,7 +1165,9 @@
   }
   &__map {
     display: block;
+    max-width: 700px;
     width: get_vw(700);
+    max-height: 332px;
     height: get_vw(332);
     margin: get_vw(17) auto 0;
   }
@@ -1214,6 +1190,7 @@
   }
   &__distribution {
     display: block;
+    max-width: 900px;
     width: get_vw(900);
     margin: 0 auto;
     padding-top: get_vw(60);
@@ -1221,34 +1198,28 @@
 }
 @media screen and (min-width: 1280px) {
   .world {
-    max-width: 1280px;
-    height: 1303px;
-    margin: 0 auto;
     padding-top: 236px;
     &__title {
       padding-left: 20px;
       font-size: 52px;
-      &-bg {
-        width: 1280px;
-        height: 100px;
-      }
     }
     &__collect {
-      margin-top: 120px;
+      margin-top: 30px;
       margin-left: 190px;
       font-size: 28px;
     }
+    &__map {
+      margin: 17px auto 0;
+    }
     &__explanation {
-      margin-top: 480px;
+      margin: 30px auto 0;
       font-size: 16px;
     }
     &__delicious {
-      margin-top: 100px;
       margin-right: 220px;
       font-size: 28px;
     }
     &__distribution {
-      width: 900px;
       padding-top: 60px;
     }
   }
@@ -1261,6 +1232,7 @@
     background-size: cover;
     background-position: top;
     &__title {
+      height: auto;
       padding-left: 0;
       text-align: center;
       font-size: 34px;
@@ -1291,32 +1263,33 @@
 
 .commitment {
   position: relative;
+  max-width: 1280px;
+  height: 1050px;
   height: get_vw(1050);
+  margin: 0 auto;
   padding-top: get_vw(119);
   background-image: url(../img/commitment_bg.png);
   background-size: cover;
   &__title {
-    padding-left: get_vw(45);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    max-height: 90px;
+    height: get_vw(90);
+    background-image: url(../img/commitment_title-bg.png);
+    background-size: cover;
     font-family: "851MkPOP_002";
     font-size: get_vw(52);
     line-height: 1.15384615385;
     color: #0d5289;
-    &-bg {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      width: get_vw(1280);
-      height: get_vw(90);
-      padding-top: get_vw(35);
-      background-image: url(../img/commitment_title-bg.png);
-      background-size: cover;
-    }
   }
   &__icon-okara {
     position: absolute;
     top: get_vw(200);
     display: block;
-    width: get_vw(1280);
+    max-width: 1280px;
+    width: 100%;
   }
   &__explanation {
     display: flex;
@@ -1324,7 +1297,9 @@
     margin-top: get_vw(49);
   }
   &__okara {
+    max-width: 520px;
     width: get_vw(520);
+    max-height: 671px;
     height: get_vw(671);
     margin-left: get_vw(82);
     padding-top: get_vw(60);
@@ -1351,7 +1326,9 @@
     }
   }
   &__recipe {
+    max-width: 520px;
     width: get_vw(520);
+    max-height: 671px;
     height: get_vw(671);
     margin-right: get_vw(90);
     padding-top: get_vw(60);
@@ -1380,29 +1357,17 @@
 }
 @media screen and (min-width: 1280px) {
   .commitment {
-    max-width: 1280px;
-    height: 1050px;
-    margin: 0 auto;
     padding-top: 119px;
     &__title {
-      padding-left: 45px;
       font-size: 52px;
-      &-bg {
-        width: 1280px;
-        height: 90px;
-        padding-top: 35px;
-      }
     }
     &__icon-okara {
       top: 200px;
-      width: 1280px;
     }
     &__explanation {
       margin-top: 49px;
     }
     &__okara {
-      width: 520px;
-      height: 671px;
       margin-left: 82px;
       padding-top: 60px;
       padding-right: 58px;
@@ -1416,8 +1381,6 @@
       }
     }
     &__recipe {
-      width: 520px;
-      height: 671px;
       margin-right: 90px;
       padding-top: 60px;
       padding-right: 58px;
@@ -1438,6 +1401,7 @@
     background-image: url(../img/commitment_bg-sp.png);
     background-size: cover;
     &__title {
+      height: auto;
       padding-left: 0;
       text-align: center;
       font-size: 34px;
@@ -1492,24 +1456,28 @@
 }
 
 .type {
+  max-width: 1280px;
+  max-height: 834px;
   height: get_vw(834);
+  margin: 0 auto;
   padding-top: get_vw(150);
   background-image: url(../img/type_bg.png);
   background-size: cover;
   &__title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    max-height: 80px;
+    height: get_vw(80);
     padding-left: get_vw(30);
+    background-image: url(../img/type_title-bg.png);
+    background-size: cover;
     font-family: "851MkPOP_002";
     font-size: get_vw(52);
     line-height: 1.15384615385;
     color: #0d5289;
     &-bg {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      width: get_vw(1280);
-      height: get_vw(80);
-      background-image: url(../img/type_title-bg.png);
-      background-size: cover;
     }
   }
   &__explanation {
@@ -1521,6 +1489,7 @@
     padding: 0 get_vw(82) 0;
   }
   &__item {
+    max-width: 340px;
     width: get_vw(340);
     font-size: get_vw(16);
     &-img {
@@ -1536,7 +1505,8 @@
       letter-spacing: .1em;
     }
     &-description {
-      min-height: get_vw(118);
+      min-height: 118px;
+      height: get_vw(118);
       padding: get_vw(11) 0;
       font-size: get_vw(16);
       line-height: 2;
@@ -1550,17 +1520,10 @@
 }
 @media screen and (min-width: 1280px) {
   .type {
-    max-width: 1280px;
-    height: 834px;
-    margin: 0 auto;
     padding-top: 150px;
     &__title {
       padding-left: 30px;
       font-size: 52px;
-      &-bg {
-        width: 1280px;
-        height: 80px;
-      }
     }
     &__explanation {
       padding-top: 69px;
@@ -1569,15 +1532,12 @@
       padding: 0 82px 0;
     }
     &__item {
-      width: 340px;
       font-size: 16px;
       &-name {
         padding-top: 15px;
-        text-align: center;
         font-size: 24px;
       }
       &-description {
-        min-height: 136px;
         padding: 20px 0;
         font-size: 16px;
       }
@@ -1591,6 +1551,7 @@
     background-image: url(../img/type_bg-sp.png);
     background-size: cover;
     &__title {
+      height: auto;
       padding-left: 0;
       font-size: 34px;
       &-bg {
@@ -1628,42 +1589,45 @@
 }
 
 .fee {
+  max-width: 1280px;
+  max-height: 1079px;
   height: get_vw(1079);
+  margin: 0 auto;
   padding-top: get_vw(116);
   background-image: url(../img/fee_bg.png);
   background-size: cover;
   &__title {
+    max-width: 1280px;
+    width: 100%;
+    max-height: 90px;
+    height: get_vw(90);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: url(../img/fee_title-bg.png);
+    background-size: cover;
     font-family: "851MkPOP_002";
     font-size: get_vw(52);
     line-height: 1.15384615385;
     color: #0d5289;
-    &-bg {
-      width: get_vw(1280);
-      height: get_vw(90);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      background-image: url(../img/fee_title-bg.png);
-      background-size: cover;
-    }
   }
   &__trial {
+    max-width: 1097px;
     width: get_vw(1097);
     margin: 0 auto;
   }
   &__set {
     display: flex;
     justify-content: space-between;
+    max-width: 1097px;
     width: get_vw(1097);
     margin: get_vw(15) auto 0;
     &-img {
       display: block;
+      max-width: 535px;
       width: get_vw(535);
+      max-height: 267px;
       height: get_vw(267);
-      &3 {
-      }
-      &9 {
-      }
     }
   }
   &__payment {
@@ -1677,9 +1641,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 500px;
     width: get_vw(500);
     padding: get_vw(25) 0;
-    border-bottom:  solid get_vw(6) #002641;
+    border-bottom: get_vw(6) solid #002641;
     border-radius: get_vw(10);
     background-color: #0d5289;
     color: #fff;
@@ -1706,38 +1671,24 @@
       display: block;
       position: absolute;
       right: get_vw(29);
+      max-width: 31px;
       width: get_vw(31);
     }
   }
 }
 @media screen and (min-width: 1280px) {
   .fee {
-    max-width: 1280px;
-    height: 1079px;
     padding-top: 116px;
-    margin: 0 auto;
     &__title {
       font-size: 52px;
-      &-bg {
-        width: 1280px;
-        height: 90px;
-      }
-    }
-    &__trial {
-      width: 1097px;
     }
     &__set {
-      width: 1097px;
-      &-img {
-        width: 535px;
-        height: 267px;
-      }
+      margin: 15px auto 0;
     }
     &__payment {
       padding-top: 90px;
     }
     &__btn {
-      width: 500px;
       padding: 25px 0;
       border-bottom: 6px solid #002641;
       border-radius: 10px;
@@ -1749,7 +1700,6 @@
       }
       &-cookie {
         right: 29px;
-        width: 31px;
       }
     }
   }
@@ -1801,25 +1751,27 @@
 
 .order {
   position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
   padding-top: get_vw(250);
   padding-bottom: get_vw(135);
   background-image: url(../img/order_bg.png);
   background-size: cover;
   &__title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 1280px;
+    width: get_vw(1280);
+    max-height: 90px;
+    height: get_vw(90);
+    background-image: url(../img/order_title-bg.png);
+    background-size: cover;
     padding-left: get_vw(30);
     font-family: "851MkPOP_002";
     font-size: get_vw(52);
     line-height: 1.15384615385;
     color: #0d5289;
-    &-bg {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      width: get_vw(1280);
-      height: get_vw(90);
-      background-image: url(../img/order_title-bg.png);
-      background-size: cover;
-    }
   }
   &__phone {
     display: flex;
@@ -1831,7 +1783,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 530px;
       width: get_vw(530);
+      max-height: 158px;
       height: get_vw(158);
       background-image: url(../img/order_phone.png);
       background-size: cover;
@@ -1851,22 +1805,23 @@
   }
   &__form {
     &-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      max-height: 90px;
+      height: get_vw(90);
+      background-image: url(../img/order_form-title-bg.png);
+      background-size: cover;
       font-family: "851MkPOP_002";
       font-size: get_vw(52);
       line-height: 1.15384615385;
       color: #0d5289;
-      &-bg {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: get_vw(1280);
-        height: get_vw(90);
-        background-image: url(../img/order_form-title-bg.png);
-        background-size: cover;
-      }
     }
     &-bg {
+      max-width: 900px;
       width: get_vw(900);
+      max-height: 1048px;
       height: get_vw(1048);
       margin: get_vw(55) auto 0;
       padding: get_vw(80) get_vw(90) get_vw(92);
@@ -1887,6 +1842,7 @@
     &-name {
       display: flex;
       align-items: center;
+      max-width: 196px;
       width: get_vw(196);
       vertical-align: top;
       text-align: left;
@@ -1902,6 +1858,7 @@
   }
   &__wrap {
     &-box {
+      max-width: 524px;
       width: get_vw(524);
       padding-left: get_vw(24);
     }
@@ -1912,6 +1869,7 @@
     }
     &-mail {
       position: relative;
+      max-width: 524px;
       width: get_vw(524);
       padding-left: get_vw(24);
     }
@@ -1930,6 +1888,7 @@
   &__txt {
     &-box {
       width: 100%;
+      max-height: 60px;
       height: get_vw(60);
       padding: 0 get_vw(18);
       border: get_vw(1) solid #795100;
@@ -1946,6 +1905,7 @@
     &-area {
       resize: none;
       width: 100%;
+      max-height: 200px;
       height: get_vw(200);
       padding: get_vw(10) get_vw(18);
       border: get_vw(1) solid #795100;
@@ -1972,7 +1932,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 420px;
     width: get_vw(420);
+    max-height: 70px;
     height: get_vw(70);
     background: #2d9748;
     border-bottom: get_vw(6) solid #08581c;
@@ -1998,6 +1960,7 @@
       position: absolute;
       top: get_vw(-27);
       left: 0;
+      max-width: 360px;
       width: get_vw(360);
     }
     &2 {
@@ -2005,6 +1968,7 @@
       position: absolute;
       top: get_vw(527);
       right: get_vw(0);
+      max-width: 318px;
       width: get_vw(318);
     }
   }
@@ -2015,13 +1979,15 @@
         position: absolute;
         top: get_vw(215);
         right: 0;
-        width: get_vw(205);
+        width: 250px;
+        width: get_vw(250);
       }
       &2 {
         display: block;
         position: absolute;
         top: get_vw(1567);
         right: 0;
+        max-width: 100px;
         width: get_vw(100);
       }
     }
@@ -2030,38 +1996,30 @@
         display: block;
         position: absolute;
         top: get_vw(587);
+        max-width: 200px;
         width: get_vw(200);
       }
       &2 {
         display: block;
         position: absolute;
         top: get_vw(1002);
-        width: get_vw(190);
+        max-width: 200px;
+        width: get_vw(200);
       }
     }
   }
 }
 @media screen and (min-width: 1280px) {
   .order {
-    max-width: 1280px;
-    margin: 0 auto;
     padding-top: 250px;
     padding-bottom: 135px;
     &__title {
       padding-left: 30px;
       font-size: 52px;
-      &-bg {
-        width:1280px;
-        height: 90px;
-      }
     }
     &__phone {
       padding-top: 31px;
       padding-bottom: 83px;
-      &-box {
-        width: 530px;
-        height: 158px;
-      }
     }
     &__number {
       font-size: 60px;
@@ -2072,14 +2030,8 @@
     &__form {
       &-title {
         font-size: 52px;
-        &-bg {
-          width: 1280px;
-          height: 90px;
-        }
       }
       &-bg {
-        width: 900px;
-        height: 1048px;
         margin: 55px auto 0;
         padding: 80px 90px 92px;
       }
@@ -2090,7 +2042,6 @@
     &__item {
       padding-bottom: 45px;
       &-name {
-        width: 196px;
         vertical-align: top;
         font-size: 16px;
         &--multiple {
@@ -2100,14 +2051,12 @@
     }
     &__wrap {
       &-box {
-        width: 524px;
         padding-left: 24px;
       }
       &-select {
         padding-left: 24px;
       }
       &-mail {
-        width: 524px;
         padding-left: 24px;
       }
     }
@@ -2117,14 +2066,12 @@
     }
     &__txt {
       &-box {
-        height: 60px;
         padding: 0 18px;
         border: 1px solid #795100;
         border-radius: 4px;
         font-size: 16px;
       }
       &-area {
-        height: 200px;
         padding: 10px 18px;
         border: 1px solid #795100;
         border-radius: 4px;
@@ -2139,8 +2086,6 @@
       font-size: 16px;
     }
     &__btn {
-      width: 420px;
-      height: 70px;
       border-bottom: 6px solid #08581c;
       border-radius: 7px;
       font-size: 20px;
@@ -2152,35 +2097,28 @@
       &1 {
         top: -27px;
         left: 0;
-        width: 360px;
       }
       &2 {
-        display: block;
         top: 527px;
-        width: 318px;
       }
     }
     &__leaf {
       &-right {
         &1 {
           top: 215px;
-          width: 250px;
           right: -50px;
         }
         &2 {
           top: 1567px;
-          width: 100px;
         }
       }
       &-left {
         &1 {
           top: 587px;
-          width: 200px;
         }
         &2 {
           top: 1002px;
           left: -10px;
-          width: 200px;
         }
       }
     }
@@ -2193,6 +2131,7 @@
     padding-bottom: sp-get_vw(150);
     background-image: url(../img/order_bg-sp.png);
     &__title {
+      height: auto;
       text-align: center;
       font-size: 34px;
       &-bg {
@@ -2223,6 +2162,7 @@
     }
     &__form {
       &-title {
+        height: auto;
         font-size: 34px;
         &-bg {
           width: 100%;
@@ -2364,11 +2304,10 @@
     letter-spacing: .1em;
     color: #988b76;
   }
-  &__address {
-  }
   &__sns {
     display: block;
-    width: get_vw(1280);
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
   }
   &__copyright {
@@ -2383,9 +2322,6 @@
     &__under {
       padding: 28px 0 25px;
       font-size: 14px;
-    }
-    &__sns {
-      width: 1280px;
     }
   }
 }
@@ -2408,11 +2344,16 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 123px;
   text-align: right;
   z-index: 900;
   &__btn {
+    max-width: 94px;
     width: get_vw(94);
     vertical-align: bottom;
+  }
+}
+@media screen and (max-width: 768px) {
+  .scroll__btn {
+    width: 15vw;
   }
 }
