@@ -1,0 +1,228 @@
+/* 問い合わせ ------------------------------------------------------------------------- */
+/* 枠 */
+body#cnfm .bg1280 {
+  background-image: url(../img/confirm/bg_confirm.png),url(../img/confirm/bg_body.png);
+  background-repeat: repeat-x, repeat;
+  background-size: auto;
+  background-position: center top;
+}
+body#cnfm .order {
+  padding-top: 0;
+  background-image: none;
+  z-index: 10;
+}
+#formWrap {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 370px;
+}
+@media screen and (max-width: 768px){
+  body#cnfm .bg1280 {
+    background-size: 100%, auto;
+    background-position: center top;
+  }
+  #formWrap {
+    padding: 35vw 2.5vw 0;
+  }
+}
+/* フォームパーツ */
+.order__form-confirm-lead {
+  text-align: center;
+  margin-top: 35px;
+}
+.formTable {
+  widows: 100%;
+}
+.formTable th,
+.formTable td {
+  padding-bottom: 45px;
+}
+.formTable th {
+  width: 196px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 16px;
+}
+.formTable td {
+  width: 524px;
+  padding-left: 24px;
+}
+@media screen and (max-width: 768px){
+  .formTable th,
+  .formTable td {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+  }
+  .formTable th {
+    padding-bottom: 1vw;
+  }
+  .formTable td {
+    padding-bottom: 5vw;
+  }
+  .order__form-confirm-lead {
+    font-size: 16px;
+  }
+}
+/* フォームの背景 */
+body#cnfm .order__form-bg {
+  position: relative;
+  height: auto;
+}
+body#cnfm .order__form-bg::after {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 5px;
+  bottom: -4px;
+  left: 0;
+  background-image: url(../img/confirm/bg_formft.png);
+}
+@media screen and (max-width: 768px){
+  body#cnfm .order__form-bg {
+    padding: 7vw 7vw 10vw 7vw;
+    border-radius: 1.5vw;
+  }
+  body#cnfm .order__form-bg::after {
+    width: 100%;
+  }
+}
+/* ボタン */
+body#cnfm .order__wrap-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+body#cnfm .order__btn-back {
+  width: 240px;
+  height: 70px;
+  margin-top: 30px;
+  border: 3px solid #2d9748;
+  border-radius: 7px;
+  font-size: 20px;
+  box-shadow: 0px 5px 0px -.5px rgba(6,88,28,1);
+  font-weight: 700;
+  transition-property: all;
+  transition: 0.3s linear;
+}
+body#cnfm .order__btn-back:hover {
+  height: 75px;
+  box-shadow: 0px 5px 0px -.5px rgba(6,88,28,0);
+}
+body#cnfm .order__btn-back .order__btn-txt {
+  margin: 0px 70px;
+  color: #2d9748;
+}
+@media screen and (max-width: 768px){
+  body#cnfm .order__btn-back {
+    width: 54.6875vw;
+    height: 12vw;
+    border-width: 0.78125vw;
+    border-radius: 0.91146vw;
+    font-size: 16px;
+    box-shadow: 0px 0.78125vw 0px -.5px rgba(6,88,28,1);
+    margin-top: 3vw;
+  }
+}
+/* フェードインアイテム */
+body#cnfm .order__cookie1 {
+  top: -190px;
+}
+body#cnfm .order__leaf-right1,
+body#cnfm .order__cookie2,
+body#cnfm .order__leaf-left1 {
+  z-index: -1;
+}
+@media screen and (max-width: 768px){
+  body#cnfm .order__cookie1 {
+    top: -13vw;
+    left: -5vw;
+  }
+  body#cnfm .order__leaf-right1 {
+    top: 16vw;
+  }
+  body#cnfm .order__leaf-left1 {
+    z-index: 10;
+    top: auto;
+    bottom: 15vw;
+  }
+  body#cnfm .order__cookie2 {
+    top: auto;
+    bottom: 2vw;
+  }
+}
+/* 完了画面不要項目削除 */
+body#cnfm.thanks .formTable tr:nth-last-of-type(1),
+body#cnfm.thanks .formTable tr:nth-last-of-type(2) {
+  display: none;
+}
+body#cnfm .order__btn-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+/* レスポンシブ */
+.view-sp {
+  display: none;
+}
+@media screen and (max-width: 768px){
+  .view-sp {
+    display: block;
+  }
+  .view-pc {
+    display: none;
+  }
+}
+/* エラーチェック */
+.order__wrap-mail .error {
+  margin-top: 12px;
+  font-size: 16px;
+  letter-spacing: .1em;
+  color: #df1111;
+}
+.order__wrap-mail .order__txt-box.error {
+  background-image: url(../img/surprised-mark.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+@media screen and (max-width: 768px){
+  .order__wrap-mail .order__txt-box.error {
+    background-size: 4vw;
+    background-position: right 2vw center;
+  }
+  .order__wrap-mail .error {
+    margin-top: 0.9375vw;
+    font-size: 1.25vw;
+  }
+}
+
+
+/* フォーカス時のアウトライン非表示 ------------------------------------------------------------------------- */
+*:focus {
+outline: none;
+}
+
+
+/* hover設定 ------------------------------------------------------------------------- */
+a {
+  transition-property: all;
+  transition: 0.3s linear;
+}
+a:hover {
+  opacity: .8;
+}
