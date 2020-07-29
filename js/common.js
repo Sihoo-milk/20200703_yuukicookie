@@ -39,11 +39,15 @@ $(function() {
 });
 
 
+
+
 // バーガーメニュー
 function toggleNav() {
   var body = document.body;
   var hamburger = document.getElementById('js-hamburger');
   var blackBg = document.getElementById('js-black-bg');
+  var hamburgerPC = document.getElementById('js-hamburger--pc');
+  var blackBgPC = document.getElementById('js-black-bg--pc');
 
   hamburger.addEventListener('click', function() {
     body.classList.toggle('nav-open');
@@ -51,8 +55,36 @@ function toggleNav() {
   blackBg.addEventListener('click', function() {
     body.classList.remove('nav-open');
   });
+  hamburgerPC.addEventListener('click', function() {
+    body.classList.toggle('nav-open');
+  });
+  blackBgPC.addEventListener('click', function() {
+    body.classList.remove('nav-open');
+  });
 }
 toggleNav();
+
+
+// スクロールで表示されるバーガーメニュー
+jQuery(function($){
+  $(window).on('load scroll', function(){
+    if ($(window).scrollTop() > 700) {
+      $('#js-hamburger--pc').fadeIn(400);
+    } else {
+      $('#js-hamburger--pc').fadeOut(400);
+    }
+  });
+});
+
+jQuery(function($){
+  $(window).on('load scroll', function(){
+    if ($(window).scrollTop() < 600) {
+      $('#nav').fadeIn(400);
+    } else {
+      $('#nav').fadeOut(400);
+    }
+  });
+});
 
 
 // バリデーションチェック
