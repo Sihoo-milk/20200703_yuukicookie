@@ -269,6 +269,7 @@
   position: fixed;
   right: 0;
   top: 0;
+  display: none;
   width: 10.83333vw;
   /* クリックしやすいようにちゃんと幅を指定する */
   height: 9.31771vw;
@@ -926,8 +927,9 @@
 
 .organic__jas {
   position: relative;
-  height: 69.375vw;
+  height: 82.375vw;
   background-image: url(../img/organic_jas-bg.png);
+  background-size: cover;
 }
 
 .organic__jas-leaf--left {
@@ -1044,7 +1046,7 @@
 
 @media screen and (min-width: 1280px) {
   .organic__what {
-    height: 929px;
+    height: 907px;
     padding-top: 200px;
   }
   .organic__what-leaf--left {
@@ -1122,7 +1124,7 @@
     height: 430px;
   }
   .organic__jas {
-    height: 888px;
+    height: 1055px;
   }
   .organic__jas-leaf--left {
     top: -118px;
@@ -1160,6 +1162,7 @@
   }
   .organic__order {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
   .organic__btn {
     width: 500px;
@@ -1428,9 +1431,9 @@
 @media screen and (min-width: 1280px) {
   .world {
     max-width: 1280px;
-    height: 1303px;
+    height: 1136px;
     margin: 0 auto;
-    padding-top: 236px;
+    padding-top: 69px;
   }
   .world__title {
     padding-left: 20px;
@@ -2310,7 +2313,7 @@
 
 @media screen and (min-width: 1280px) {
   .order__wrap {
-    padding-top: 250px;
+    padding-top: 178px;
     padding-bottom: 135px;
   }
   .order__title {

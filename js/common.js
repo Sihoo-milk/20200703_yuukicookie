@@ -69,19 +69,19 @@ toggleNav();
 jQuery(function($){
   $(window).on('load scroll', function(){
     if ($(window).scrollTop() > 700) {
-      $('#js-hamburger--pc').fadeIn(400);
+      $('#js-hamburger--pc').fadeIn(0);
     } else {
-      $('#js-hamburger--pc').fadeOut(400);
+      $('#js-hamburger--pc').fadeOut(0);
     }
   });
 });
 
 jQuery(function($){
   $(window).on('load scroll', function(){
-    if ($(window).scrollTop() < 600) {
-      $('#nav').fadeIn(400);
+    if ($(window).scrollTop() < 700) {
+      $('#nav').fadeIn(0);
     } else {
-      $('#nav').fadeOut(400);
+      $('#nav').fadeOut(0);
     }
   });
 });
