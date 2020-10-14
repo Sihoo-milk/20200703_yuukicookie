@@ -66,9 +66,10 @@
 }
 
 .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
+  display: block !important;
   margin-right: 2.34375vw;
   z-index: 100;
 }
@@ -191,7 +192,7 @@
 }
 @media screen and (max-width: 768px) {
   .nav {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -319,10 +320,10 @@
 @media screen and (max-width: 768px) {
   .global-nav {
     position: fixed;
-    right: -48vw;
+    right: -70vw;
     /* これで隠れる */
     top: 0;
-    width: 48vw;
+    width: 70vw;
     /* スマホに収まるくらい */
     padding-top: 17.31771vw;
     padding-bottom: 3.90625vw;
